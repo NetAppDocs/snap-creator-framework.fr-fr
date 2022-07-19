@@ -1,0 +1,55 @@
+---
+permalink: sap-hana-ops/task_starting_the_snapvault_relationships_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: sap, hana, starting, start, snapvault, relationship, clustered, data, ontap 
+summary: Avant de démarrer une relation SnapVault, vous devez définir une règle SnapMirror. 
+---
+= Démarrage des relations SnapVault avec clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de démarrer une relation SnapVault, vous devez définir une règle SnapMirror.
+
+. Pour les systèmes de stockage exécutant clustered Data ONTAP, vous démarrez les relations SnapVault en exécutant la commande suivante.
++
+[listing]
+----
+hana::> snapmirror policy create -vserver hana2b -policy SV_HANA
+hana::> snapmirror policy add-rule -vserver hana2b -policy SV_HANA -snapmirror-label daily -keep 20
+hana::> snapmirror policy add-rule -vserver hana2b -policy SV_HANA -snapmirror-label hourly -keep 10
+
+hana::> snapmirror policy show -vserver hana2b -policy SV_HANA
+
+                   Vserver: hana2b
+    SnapMirror Policy Name: SV_HANA
+              Policy Owner: vserver-admin
+               Tries Limit: 8
+         Transfer Priority: normal
+ Ignore accesstime Enabled: false
+   Transfer Restartability: always
+                   Comment: -
+     Total Number of Rules: 2
+                Total Keep: 8
+                     Rules: Snapmirror-label  Keep Preserve Warn
+                            ----------------- ---- -------- ----
+                            daily              20  false      0
+                            hourly             10  false      0
+----
++
+La règle doit contenir des règles pour toutes les classes de rétention (étiquettes) utilisées dans la configuration Snap Creator. Les commandes ci-dessus montrent comment créer une règle SnapMirror dédiée SV_HANA
+
+. Pour créer et démarrer la relation SnapVault sur la console du cluster de backup, exécutez les commandes suivantes.
++
+[listing]
+----
+hana::> snapmirror create -source-path hana1a:hana_data -destination-path
+hana2b:backup_hana_data -type XDP –policy SV_HANA
+Operation succeeded: snapmirror create the relationship with destination
+hana2b:backup_hana_data.
+
+hana::> snapmirror initialize -destination-path hana2b:backup_hana_data -type XDP
+----
+

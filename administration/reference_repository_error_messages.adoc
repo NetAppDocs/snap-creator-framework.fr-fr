@@ -1,0 +1,568 @@
+---
+permalink: administration/reference_repository_error_messages.html 
+sidebar: sidebar 
+keywords: table, repository, error, message, global, configuration, repo 
+summary: 'Le tableau suivant répertorie les messages d"erreur du référentiel.' 
+---
+= Messages d'erreur du référentiel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le tableau suivant répertorie les messages d'erreur du référentiel.
+
+|===
+| Code d'erreur | Message d'erreur | Description/résolution 
+
+
+ a| 
+RÉFÉRENTIEL 01001
+ a| 
+La configuration globale n'existe pas
+ a| 
+Vérifiez si le fichier global.conf existe dans le dossier confits.
+
+
+
+ a| 
+RÉFÉRENTIEL 01002
+ a| 
+La configuration globale existe déjà
+ a| 
+Le fichier global.conf existe déjà dans le dossier confits. Supprimez d'abord le fichier de configuration globale ou mettez à jour le fichier existant.
+
+
+
+ a| 
+RÉFÉRENTIEL 01103
+ a| 
+Échec de la création de la configuration globale avec l'erreur [%s]
+ a| 
+Impossible de créer le fichier global.conf dans le dossier configs. Vérifier les autorisations de l'utilisateur exécutant Snap Creator par rapport au répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 01203
+ a| 
+Échec de la mise à jour de la configuration globale avec l'erreur [%s]
+ a| 
+Impossible de mettre à jour le fichier global.conf dans le dossier configs. Vérifier les autorisations de l'utilisateur exécutant Snap Creator par rapport au répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 01303
+ a| 
+Échec de la suppression de la configuration globale avec l'erreur [%s]
+ a| 
+Impossible de supprimer le fichier global.conf dans le dossier configurations. Vérifiez si le fichier est présent dans le dossier configs ou vérifiez les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire
+
+
+
+ a| 
+RÉFÉRENTIEL 01403
+ a| 
+Échec de l'exportation de la configuration globale avec l'erreur [%s]
+ a| 
+Impossible de lire le fichier global.conf dans le dossier confits. Vérifiez si votre fichier de configuration global est supprimé.
+
+
+
+ a| 
+RÉFÉRENTIEL 01503
+ a| 
+Échec de l'importation de la configuration globale [%s] avec l'erreur [%s]
+ a| 
+Impossible de mettre à jour le fichier global.conf dans le dossier configs. Vérifier les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 01603
+ a| 
+Echec de la récupération de la configuration globale avec l'erreur [%s]
+ a| 
+Impossible de lire le fichier global.conf dans le dossier confits. Vérifiez si votre fichier de configuration global est supprimé.
+
+
+
+ a| 
+RÉFÉRENTIEL 02002
+ a| 
+Le profil [%s] existe déjà, utilisez un autre nom.
+ a| 
+Le profil portant le même nom existe déjà. Si le profil n'est pas visible, l'utilisateur n'a pas la permission sur ce profil.
+
+
+
+ a| 
+RÉFÉRENTIEL 02003
+ a| 
+Le profil [%s] n'existe pas
+ a| 
+Vérifiez que votre profil a été renommé ou supprimé. Par ailleurs, il se peut que l'utilisateur n'ait pas la permission sur ce profil.
+
+
+
+ a| 
+RÉFÉRENTIEL 02103
+ a| 
+Échec de la création de la configuration du profil global [%s] avec l'erreur [%s]
+ a| 
+Impossible de créer le fichier global.conf dans le profil. Vérifier les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 02106
+ a| 
+Échec de la création de la configuration du profil [%s] avec l'erreur [%s]
+ a| 
+Impossible de créer le profil dans le dossier configs. Vérifier les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 02203
+ a| 
+Échec de la mise à jour de la configuration du profil [%s] avec l'erreur [%s]
+ a| 
+Impossible de mettre à jour le profil dans le dossier configs. Vérifier les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 02213
+ a| 
+Échec du changement de nom du profil [%s] à [%s] avec l'erreur [%s]
+ a| 
+Impossible de renommer le profil dans le dossier configs. Vérifiez les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire ou vérifiez si votre profil est déjà renommé ou supprimé.
+
+
+
+ a| 
+RÉFÉRENTIEL 02303
+ a| 
+Échec de la suppression de la configuration du profil [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 02403
+ a| 
+Échec de l'exportation de la configuration du profil [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 02503
+ a| 
+Échec de l'importation de la configuration du profil [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 02603
+ a| 
+Echec de la récupération du profil global avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 02606
+ a| 
+Echec de la récupération du profil [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 02703
+ a| 
+Échec de la liste des profils avec l'erreur [%s]
+ a| 
+Echec de la liste des profils. Vérifiez le chemin du dossier configurations.
+
+
+
+ a| 
+RÉFÉRENTIEL 03002
+ a| 
+La configuration [%s] existe déjà pour le profil [%s]
+ a| 
+Le fichier de configuration portant le même nom existe déjà pour le profil donné. Choisissez un autre nom.
+
+
+
+ a| 
+RÉFÉRENTIEL 03103
+ a| 
+La création de la configuration [%s] pour le profil [%s] a échoué avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 03203
+ a| 
+Échec de la mise à jour de la configuration [%s] pour le profil [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 03212
+ a| 
+Echec du changement de nom de la configuration [%s] du profil [%s] à [%s]
+ a| 
+Impossible de renommer la configuration à partir du profil. Vérifiez si votre configuration est renommée ou supprimée et vérifiez également les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 03303
+ a| 
+Échec de la suppression de la configuration [%s] du profil [%s]
+ a| 
+Impossible de supprimer la configuration du profil dans le dossier configurations. Vérifier les autorisations de l'utilisateur exécutant Snap Creator sur le répertoire.
+
+
+
+ a| 
+RÉFÉRENTIEL 03403
+ a| 
+L'exportation de la configuration [%s] pour le profil [%s] a échoué avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 03503
+ a| 
+L'importation de la configuration [%s] dans le profil [%s] a échoué avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 03603
+ a| 
+Echec de la récupération de la configuration [%s] du profil [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 03703
+ a| 
+Echec de l'affichage des configurations du profil [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04003
+ a| 
+Échec de lecture du catalogue pour le profil [%s], la configuration [%s] et l'horodatage [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04103
+ a| 
+Échec de l'écriture du catalogue pour le profil [%s], la configuration [%s] et l'horodatage [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04203
+ a| 
+Échec de la purge du catalogue pour le profil [%s], la configuration [%s] et l'horodatage [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04303
+ a| 
+Echec du catalogue d'investissement pour le profil [%s] et la configuration [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04304
+ a| 
+La configuration [%s] n'existe pas
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04309
+ a| 
+Échec de l'ajout de l'objet de stratégie [%s]
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04313
+ a| 
+Échec de la suppression de l'objet de stratégie pour l'ID de stratégie : %s.
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04315
+ a| 
+Échec de la mise à jour de l'objet de stratégie : %s
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04316
+ a| 
+Échec de la liste des stratégies
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04321
+ a| 
+Échec de l'ajout de l'objet de type de sauvegarde [%s]
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04323
+ a| 
+L'entrée de type de sauvegarde n'existe pas pour l'ID de type de sauvegarde : %s.
+ a| 
+Passez un type de sauvegarde valide.
+
+
+
+ a| 
+RÉFÉRENTIEL 04325
+ a| 
+La suppression de l'objet de type de sauvegarde a échoué pour l'ID de type de sauvegarde : %s
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04327
+ a| 
+Échec de la mise à jour de l'objet de type de sauvegarde : %s
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04328
+ a| 
+Impossible de lister les types de sauvegarde
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04333
+ a| 
+Échec de l'ajout de l'objet de travail du planificateur [%s]
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04335
+ a| 
+L'entrée du travail du planificateur n'existe pas pour l'ID de travail : %s
+ a| 
+Passez une tâche de planificateur valide.
+
+
+
+ a| 
+RÉFÉRENTIEL 04337
+ a| 
+Échec de la suppression de l'objet de travail du planificateur pour l'ID de tâche : %s
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04339
+ a| 
+Échec de la mise à jour de l'objet de travail du planificateur : %s
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04340
+ a| 
+Échec de la liste des tâches du planificateur
+ a| 
+Erreur de base de données ; vérifiez le suivi de pile pour plus d'informations.
+
+
+
+ a| 
+RÉFÉRENTIEL 04341
+ a| 
+L'ajout de l'objet de stratégie a échoué, la stratégie [%s] du même nom existe déjà
+ a| 
+La règle portant le même nom existe déjà ; essayez avec un autre nom.
+
+
+
+ a| 
+RÉFÉRENTIEL 04342
+ a| 
+L'ajout de l'objet de type de sauvegarde a échoué, le type de sauvegarde [%s] portant le même nom existe déjà
+ a| 
+Le type de sauvegarde portant le même nom existe déjà ; essayez avec un autre nom.
+
+
+
+ a| 
+RÉFÉRENTIEL 04343
+ a| 
+L'ajout de l'objet Planificateur a échoué, le planificateur [%s] avec le même nom de tâche existe déjà
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04344
+ a| 
+Échec de la mise à jour du profil [%s]. Le profil est vide.
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04345
+ a| 
+Le type de stratégie ne peut pas être nul lors de l'ajout d'une nouvelle stratégie
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04346
+ a| 
+L'objet de stockage ne peut pas être nul
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04347
+ a| 
+Échec de l'ajout de l'objet de stockage, le stockage [%s] avec le même nom/IP existe déjà
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04348
+ a| 
+Impossible de récupérer les détails de stockage. Erreur de base de données !
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04349
+ a| 
+Nom d'hôte non valide. Le stockage portant le nom d'hôte/l'adresse IP [%s] n'existe pas
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04350
+ a| 
+Le nom d'hôte ne peut pas être nul
+ a| 
+Nom d'hôte non valide
+
+
+
+ a| 
+RÉFÉRENTIEL 04351
+ a| 
+Échec de la suppression du stockage [%s] avec l'erreur [%s]
+ a| 
+Impossible de supprimer le stockage. Erreur de base de données !
+
+
+
+ a| 
+RÉFÉRENTIEL 04355
+ a| 
+Échec de la mise à jour du stockage [%s] avec l'erreur [%s]
+ a| 
+Échec de la mise à jour du stockage. Erreur de base de données !
+
+
+
+ a| 
+RÉFÉRENTIEL 04356
+ a| 
+L'objet cluster ne peut pas être nul
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04358
+ a| 
+Échec de l'ajout du stockage [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04359
+ a| 
+Échec de la mise à jour du cluster [%s] avec l'erreur [%s]
+ a| 
+
+
+
+ a| 
+RÉFÉRENTIEL 04360
+ a| 
+Échec de l'ajout de l'objet cluster, le cluster [%s] avec le même nom/IP existe déjà
+ a| 
+Le cluster portant le même nom d'hôte existe déjà
+
+|===

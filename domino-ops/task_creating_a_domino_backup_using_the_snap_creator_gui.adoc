@@ -1,0 +1,30 @@
+---
+permalink: domino-ops/task_creating_a_domino_backup_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases, on-demand, on, demand 
+summary: 'Nous vous conseillons de sauvegarder vos bases de données dès qu"elles sont disponibles dans le système de stockage NetApp. Vous pouvez planifier des sauvegardes récurrentes après la sauvegarde initiale.' 
+---
+= Sauvegarde des bases de données à la demande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nous vous conseillons de sauvegarder vos bases de données dès qu'elles sont disponibles dans le système de stockage NetApp. Vous pouvez planifier des sauvegardes récurrentes après la sauvegarde initiale.
+
+Vous devez avoir créé le fichier de configuration de la sauvegarde, comme décrit dans xref:task_using_the_gui_to_create_a_configuration_file.adoc[Création d'un fichier de configuration].
+
+. Dans le volet profils et configurations, sélectionnez le fichier de configuration et cliquez sur *actions* > *sauvegarde*.
+. Dans la boîte de dialogue Paramètres supplémentaires, sélectionnez la stratégie pour la tâche de sauvegarde dans la liste déroulante *Stratégie* et cliquez sur *OK*.
++
+image::../media/scfw_domino_select_a_policy.gif[Cette image est expliquée par le texte qui l'entoure.]
+
++
+
+NOTE: Vous devez avoir configuré la stratégie dans le fichier de configuration.
+
++
+Snap Creator lance la tâche de sauvegarde. Les informations sur le travail s'affichent dans le volet Console.
+
+

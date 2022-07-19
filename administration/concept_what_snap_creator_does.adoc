@@ -1,0 +1,38 @@
+---
+permalink: administration/concept_what_snap_creator_does.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, unix, applications, third-party, databases, hypervisors, windows, aix, hp-ux, linux, solaris, extensibility 
+summary: '`Snap Creator Framework vous permet d"utiliser des plug-ins personnalisés et préemballés qui standardisent et simplifient la protection des données pour une grande variété d"applications, de bases de données et d"hyperviseurs tiers dans les environnements Windows et UNIX (AIX, HP-UX, Linux et Solaris).' 
+---
+= À quoi sert Snap Creator Framework
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework vous permet d'utiliser des plug-ins personnalisés et prédéfinis qui standardisent et simplifient la protection des données pour une grande variété d'applications, de bases de données et d'hyperviseurs tiers dans les environnements Windows et UNIX (AIX, HP-UX, Linux et Solaris).
+
+Snap Creator offre ce qui suit en exploitant les fonctionnalités Snapshot, SnapVault, Open Systems SnapVault et SnapMirror, ainsi que les fonctions de protection des données NetApp Management Console, la console Operations Manager et FlexClone :
+
+* Protection de données cohérente entre les applications
++
+Une solution centralisée pour la sauvegarde des informations stratégiques, qui s'intègre aux architectures applicatives existantes afin d'assurer la cohérence des données et de réduire les coûts d'exploitation.
+
+* Extensibilité
++
+Accélérer l'intégration grâce à l'architecture modulaire et à l'automatisation basée sur des règles
+
+* Possibilité de transfert vers le cloud
++
+Cette fonctionnalité Snap Creator, indépendante du système d'exploitation, prend en charge les plateformes physiques et virtuelles, et assure l'interopérabilité avec les environnements CLOUD ET IT à la demande.
+
+* Fonctionnalité de clonage
++
+Le clonage de données compact est pris en charge à des fins de développement et de test.
+
+
+
+L'illustration suivante présente les composants de Snap Creator Framework :
+
+image::../media/scfw_overview_41_refresh_administration.gif[vue d'ensemble de l'acquisition 41 actualisation de l'administration]

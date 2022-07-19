@@ -1,0 +1,62 @@
+---
+permalink: sap-hana-ops/concept_backup_solution_components.html 
+sidebar: sidebar 
+keywords: backup, solution, components, sap, hana 
+summary: 'La solution de sauvegarde Snap Creator pour SAP HANA se compose d"une sauvegarde de fichiers de données SAP HANA, via des copies Snapshot basées sur le stockage, de la réplication des sauvegardes de fichiers de données vers un emplacement de sauvegarde secondaire hors site, de la sauvegarde de fichiers journaux SAP HANA à l"aide de la fonctionnalité de sauvegarde des journaux de base de données HANA, du contrôle de l"intégrité des blocs de base de données via une sauvegarde basée sur Et l"organisation des fichiers de données, des sauvegardes de fichiers journaux et du catalogue de sauvegardes SAP HANA.' 
+---
+= Composants de la solution de sauvegarde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La solution de sauvegarde Snap Creator pour SAP HANA se compose d'une sauvegarde de fichiers de données SAP HANA, via des copies Snapshot basées sur le stockage, de la réplication des sauvegardes de fichiers de données vers un emplacement de sauvegarde secondaire hors site, de la sauvegarde de fichiers journaux SAP HANA à l'aide de la fonctionnalité de sauvegarde des journaux de base de données HANA, du contrôle de l'intégrité des blocs de base de données via une sauvegarde basée sur Et l'organisation des fichiers de données, des sauvegardes de fichiers journaux et du catalogue de sauvegardes SAP HANA.
+
+Snap Creator exécute également des sauvegardes de bases de données en association avec un plug-in pour SAP HANA. Le plug-in assure la cohérence de la base de données afin que les copies Snapshot créées sur le système de stockage primaire soient basées sur une image cohérente de la base de données SAP HANA.
+
+Snap Creator permet ainsi de répliquer les images cohérentes de bases de données sur un stockage secondaire à l'aide de SnapVault. Généralement, différentes règles de conservation sont définies pour les sauvegardes sur le stockage primaire et sur le stockage secondaire. Snap Creator gère la conservation à la fois au niveau du stockage primaire et du stockage secondaire,
+
+La sauvegarde des journaux est exécutée automatiquement par les outils de base de données SAP HANA. La destination de la sauvegarde des journaux ne doit pas se trouver sur le même système de stockage où se trouve le volume des journaux de la base de données. Il est recommandé de configurer la destination de sauvegarde des journaux sur le même stockage secondaire où les sauvegardes des bases de données sont répliquées avec SnapVault. Avec cette configuration, le stockage secondaire a des besoins de disponibilité similaires à ceux du stockage primaire de sorte qu'il s'assure que les sauvegardes des journaux peuvent toujours être écrites sur le stockage secondaire.
+
+image::../media/sap_hana_database_log_backup.gif[Sauvegarde des journaux et des bases de données SAP HANA]
+
+Les programmes de sauvegarde et stratégies de conservation doivent être définis en fonction des besoins du client. Le tableau suivant présente un exemple de configuration des différentes règles de rétention et de planification.
+
+|===
+|  | Exécuté par Snap Creator | Le stockage primaire | Le stockage secondaire 
+
+
+ a| 
+Sauvegardes de bases de données
+ a| 
+Annexe 1 : toutes les 4 heures
+ a| 
+Conservation : 6 (\=> 6 copies Snapshot toutes les heures)
+ a| 
+Conservation : 6 (\=> 6 copies Snapshot toutes les heures)
+
+
+
+ a| 
+Annexe 2 : une fois par jour
+ a| 
+Conservation : 3 (\=> 3 copies Snapshot quotidiennes)
+ a| 
+Conservation : 28 (4 semaines) (\=> 28 copies Snapshot quotidiennes)
+ a| 
+Sauvegardes des journaux
+
+
+
+ a| 
+Calendrier des outils de base de données SAP HANA : toutes les 15 minutes
+ a| 
+NA
+ a| 
+Conservation : 28 jours (4 semaines)
+ a| 
+Vérification de l'intégrité des blocs
+
+|===
+Dans cet exemple, six sauvegardes quotidiennes et trois heures sont conservées sur le stockage primaire. Sur le système de stockage secondaire, les sauvegardes des bases de données sont conservées pendant quatre semaines. Pour pouvoir restaurer une sauvegarde de données, vous devez définir la même rétention pour les sauvegardes de journaux.

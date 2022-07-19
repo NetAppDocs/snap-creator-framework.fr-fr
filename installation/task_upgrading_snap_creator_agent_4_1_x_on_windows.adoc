@@ -1,0 +1,75 @@
+---
+permalink: installation/task_upgrading_snap_creator_agent_4_1_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, snap, creator, agent, 4.1.x, windows 
+summary: Vous pouvez effectuer la mise à niveau à partir de Snap Creator Agent 4.1.x sous Windows. 
+---
+= Mise à niveau de Snap Creator Agent 4.1.x sous Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer la mise à niveau à partir de Snap Creator Agent 4.1.x sous Windows.
+
+* Vous avez arrêté le service Snap Creator Agent (`snapcreatoragentservice`) Avant de sauvegarder les répertoires Snap Creator Agent pour s'assurer que les données sauvegardées sont complètes.
++
+Par exemple, vous pouvez utiliser le composant logiciel enfichable Services pour arrêter le service :
+
++
+.. Sélectionnez *Démarrer* > *Exécuter* et saisissez `services.msc`.
+.. Recherchez et sélectionnez le service Snap Creator Agent, puis arrêtez le service. Vous pouvez également ouvrir une invite de commandes et entrer la commande suivante :
+
+
++
+[listing]
+----
+sc stop snapcreatoragentservice
+----
+* Vous avez sauvegardé les répertoires suivants ainsi que tous les sous-répertoires et fichiers associés dans le répertoire Snap Creator Agent (C:\Program Files\NetApp\NetApp_Snap_Creator_Framework\scAgent4.1.x) :
++
+** Propriétés de Snap Creator Agent (..\etc), qui contient les fichiers allowed_commands.config et agent.properties
+** Journaux (...\logs)
+** Plug-ins (..\plugins) *Remarque :* ne supprimez pas les copies de sauvegarde Snap Creator 4.1.x que vous avez créées.
+
+
+
+
+Les chemins fournis dans les étapes suivantes font référence au chemin d'installation par défaut pour Windows. Les informations sur le chemin d'accès peuvent différer de votre chemin d'installation si les valeurs par défaut n'ont pas été utilisées.
+
+. Arrêtez le service Snap Creator Agent si vous ne l'avez pas déjà fait.
++
+Pour plus d'informations sur l'arrêt du service, reportez-vous aux détails fournis plus haut dans cette rubrique.
+
+. Désinstallez Snap Creator (pour Windows) en sélectionnant *Démarrer* > *programmes* > *Snap Creator* > *Désinstaller NetApp Snap Creator Framework*.
++
+Pour plus d'informations, reportez-vous aux informations sur la désinstallation de Snap Creator sous Windows.
+
+. Installez la dernière version de Snap Creator Agent.
++
+Pour plus de détails, reportez-vous aux informations sur l'installation de Snap Creator Agent sous Windows.
+
+. Si vous avez choisi de démarrer Snap Creator Agent en tant que service après avoir installé le dernier Snap Creator Server, arrêtez le service.
++
+Pour plus d'informations sur l'arrêt du service, reportez-vous aux détails fournis plus haut dans cette rubrique.
+
+. Copiez le répertoire des journaux Snap Creator 4.1.x sauvegardés vers le dernier emplacement (C:\Program Files\NetApp\Snap_Creator_Framework\SCAgent4.1.x\logs).
+. Copiez le répertoire des plug-ins Snap Creator 4.1.x sauvegardés vers le dernier emplacement (C:\Program Files\NetApp\Snap_Creator_Framework\SCAgent4.1.x\plugins).
+. Copiez le répertoire des propriétés de l'agent Snap Creator 4.1.x sauvegardé vers le dernier emplacement (C:\Program Files\NetApp\Snap_Creator_Framework\SCAgent4.1.x\etc.).
+. Démarrez le service Snap Creator Agent en effectuant l'une des opérations suivantes :
++
+** Utilisez le composant logiciel enfichable Services et démarrez le service.
+** Saisissez la commande suivante à l'invite de commande :
++
+[listing]
+----
+sc start snapcreatoragentservice
+----
+
+
++
+
+NOTE: Toute modification apportée aux fichiers allowed_commands.config ou agent.properties nécessite de redémarrer Snap Creator Agent s'il est en cours d'exécution lorsque les modifications sont effectuées.
+
+

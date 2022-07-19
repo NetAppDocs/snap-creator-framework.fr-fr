@@ -1,0 +1,64 @@
+---
+permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
+summary: 'Vous pouvez afficher l"état d"un travail dans le moniteur de tâches Snap Creator. Vous pouvez afficher un journal des actions de travail dans le volet Console pendant que le travail est en cours d"exécution, ou dans le journal des tâches. Plusieurs journaux spécialisés sont également disponibles.' 
+---
+= Affichage de l'état des travaux et des journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher l'état d'un travail dans le moniteur de tâches Snap Creator. Vous pouvez afficher un journal des actions de travail dans le volet Console pendant que le travail est en cours d'exécution, ou dans le journal des tâches. Plusieurs journaux spécialisés sont également disponibles.
+
+Vous pouvez afficher les journaux suivants dans l'interface graphique :
+
+|===
+| Journal | Description 
+
+
+ a| 
+Sortie
+ a| 
+Fournit des informations détaillées pour un travail.
+
+
+
+ a| 
+Débogage
+ a| 
+Fournit des informations détaillées et des informations utiles pour le débogage.
+
+
+
+ a| 
+INTERFACE GRAPHIQUE
+ a| 
+La section fournit des informations sur les actions de l'interface graphique Snap Creator.
+
+
+
+ a| 
+Stderr
+ a| 
+Fournit des informations sur les erreurs écrites sur les erreurs standard (volet Rapports uniquement).
+
+
+
+ a| 
+Erreur
+ a| 
+Fournit toutes les informations d'erreur (volet Rapports uniquement).
+
+|===
+Vous pouvez afficher tous les journaux d'un éditeur de texte si vous préférez ne pas utiliser le volet surveillance des travaux ou Rapports. Les journaux résident dans le répertoire d'installation de Snap Creator Server.
+
+*Informations connexes*
+
+xref:task_using_the_snap_creator_job_monitor_to_review_logs.adoc[Affichage de l'état des travaux et journaux dans le moniteur des travaux]
+
+xref:task_using_the_snap_creator_reports_option_to_view_logs.adoc[Affichage des journaux dans le volet Rapports]
+
+xref:task_creating_an_scdump_using_the_snap_creator_gui.adoc[Utilisation de scdump pour rassembler les journaux dans un format compressé]

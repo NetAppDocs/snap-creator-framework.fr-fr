@@ -1,0 +1,74 @@
+---
+permalink: administration/reference_pre_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap, clone, exit 
+summary: Snap Creator Server inclut plusieurs commandes PRÉDÉFINIES de fichiers de configuration. 
+---
+= COMMANDES PRÉALABLES
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Server inclut plusieurs commandes PRÉDÉFINIES de fichiers de configuration.
+
+
+NOTE: Pour Windows, `cmd.exe /c` Doit être inclus avant toute PRÉ-commande.
+
+|===
+| Commande | Description 
+
+
+ a| 
+PRE_APP_QUIESCE_ CMD ##
+ a| 
+Il s'agit de la commande de démarrage de sauvegarde avant application, où ## est un nombre compris entre 01 et 99.
+
+
+
+ a| 
+PRE_NTAP_CMD ##
+ a| 
+Il s'agit de la commande pré-Snapshot, où ## est un nombre compris entre 01 et 99 ; elle s'exécute avant toutes les opérations.
+
+
+
+ a| 
+PRE_APP_UNQUIESTED_CMD ##
+ a| 
+Il s'agit de la commande d'arrêt de sauvegarde pré-application, où ## est un nombre compris entre 01 et 99.
+
+
+
+ a| 
+PRE_NTAP_CLONE_ DELETE_CMD ##
+ a| 
+Il s'agit de la commande de suppression pré-clone, où ## est un nombre compris entre 01 et 99. *Remarque :* l'objet de la commande clone delete est d'appeler un script de montage ou des commandes de sorte que les LUN clonées puissent être montées pour la sauvegarde (probablement sur bande).
+
+
+
+ a| 
+PRE_EXIT_CMD ##
+ a| 
+Il s'agit d'une commande facultative exécutée après une erreur fatale, mais avant la fermeture de Snap Creator. Cela est utile pour revenir à l'état qu'il était avant que Snap Creator ne s'exécutait.*Note:*
+
+* Cette commande retourne une application en mode de fonctionnement normal avant que Snap Creator ne se ferme en raison d'une erreur.
+* Ceci est ignoré si vous utilisez NOM_APP car il est géré en interne dans Snap Creator.
+
+
+
+
+ a| 
+PRE_RESTORE_CMD ##
+ a| 
+Il s'agit d'une commande facultative qui peut être exécutée avant de saisir une restauration interactive. Cela vous permet d'interagir avec l'application en cours de restauration. Par exemple, vous pouvez fermer l'application avant d'effectuer une restauration. *Remarque :* ce n'est pas pris en charge avec le plug-in MySQL.
+
+
+
+ a| 
+PRE_CLONE_CREATE _ CMD ##
+ a| 
+Il s'agit d'une commande facultative qui peut être exécutée avant le clonage d'ONTAPI, où ## est un nombre compris entre 01 et 99.
+
+|===

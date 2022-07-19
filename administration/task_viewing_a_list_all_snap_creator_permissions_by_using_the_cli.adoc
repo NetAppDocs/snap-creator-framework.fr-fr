@@ -1,0 +1,29 @@
+---
+permalink: administration/task_viewing_a_list_all_snap_creator_permissions_by_using_the_cli.html 
+sidebar: sidebar 
+keywords: snap, creator, snapcreator, permission, cli 
+summary: 'Vous pouvez créer une liste de toutes les autorisations Snap Creator qui peuvent être affectées à un rôle à l"aide de l"interface de ligne de commande (CLI) uniquement.' 
+---
+= Création d'une liste de toutes les autorisations Snap Creator à l'aide de l'interface de ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une liste de toutes les autorisations Snap Creator qui peuvent être affectées à un rôle à l'aide de l'interface de ligne de commande (CLI) uniquement.
+
+. Saisissez la commande suivante :
++
+`snapcreator --server host_name --port port_number --user sc_user_name --passwd sc_passwd --action permissionsList -verbose`
+
++
+Voici un exemple :
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 --action permList --verbose
+----
+

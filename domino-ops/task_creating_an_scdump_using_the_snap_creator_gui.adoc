@@ -1,0 +1,87 @@
+---
+permalink: domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, using scdump, gathering, logs, compressed, format 
+summary: 'Vous pouvez utiliser l"action Snap mp pour collecter les journaux dans une archive de fichiers compressés. Vous pouvez ensuite envoyer ces archives au support technique ou à un expert Snap Creator pour les consulter.' 
+---
+= Utilisation de scdump pour rassembler les journaux dans un format compressé
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'action Snap mp pour collecter les journaux dans une archive de fichiers compressés. Vous pouvez ensuite envoyer ces archives au support technique ou à un expert Snap Creator pour les consulter.
+
+Vous devez avoir créé un fichier de configuration de sauvegarde et de restauration.
+
+Un sdump inclut les fichiers suivants :
+
+|===
+| Fichier | Description 
+
+
+ a| 
+scdump.txt
+ a| 
+Contient la version de Snap Creator Agent et le système d'exploitation hôte, la version de Data ONTAP et la version de Domino.
+
+
+
+ a| 
+engine.log
+ a| 
+Contient des informations sur les opérations du moteur de flux de travail Snap Creator.
+
+
+
+ a| 
+gui.log
+ a| 
+Contient des informations sur les opérations et les messages de l'interface graphique Snap Creator. Plusieurs journaux peuvent être inclus.
+
+
+
+ a| 
+sc_server.log
+ a| 
+Contient des informations détaillées sur les opérations Snap Creator Server. Plusieurs journaux peuvent être inclus.
+
+
+
+ a| 
+journaux de sortie
+ a| 
+Contient des informations détaillées pour les tâches. Les journaux de sortie pour toutes les configurations du profil sélectionné sont inclus.
+
+
+
+ a| 
+journaux de débogage
+ a| 
+Contient des informations détaillées et des informations utiles pour le débogage. Les journaux de débogage de toutes les configurations du profil sélectionné sont inclus.
+
+
+
+ a| 
+journaux d'erreurs
+ a| 
+Contient des informations d'erreur pour les journaux. Des journaux d'erreurs pour toutes les configurations du profil sélectionné sont inclus.
+
+
+
+ a| 
+fichiers de configuration
+ a| 
+Tous les fichiers de configuration du profil sélectionné sont inclus, y compris les fichiers de configuration globale.
+
+|===
+
+NOTE: Bien qu'un fichier de configuration soit l'entrée de scdump, l'utilitaire collecte des informations pour toutes les configurations du profil parent.
+
+. Dans le volet profils et configurations, sélectionnez un fichier de configuration et cliquez sur *actions* > *scdump*.
++
+scdump rassemble les journaux et les autres fichiers dans une archive de fichiers compressés.
+
+. Dans la boîte de dialogue de téléchargement, cliquez sur *Ouvrir* ou *Enregistrer*, selon les besoins.
+

@@ -1,0 +1,137 @@
+---
+permalink: administration/reference_maxdb_plug_in.html 
+sidebar: sidebar 
+keywords: maxdb, plug-in, automates, backup, restore, operations 
+summary: Le plug-in MaxDB automatise les opérations de sauvegarde et de restauration sur les bases de données MaxDB. 
+---
+= Plug-in maxdb
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in MaxDB automatise les opérations de sauvegarde et de restauration sur les bases de données MaxDB.
+
+
+NOTE: Pour obtenir les dernières informations sur le support technique ou pour afficher les matrices de compatibilité, consultez la matrice d'interopérabilité.
+
+Le plug-in MaxDB offre les caractéristiques suivantes :
+
+* Structure centralisée pour la sauvegarde, la restauration et le clonage des bases de données MaxDB
+* Intégration avec la base de données et provisionnement de la cohérence des applications
+* Utilisation de la technologie Snapshot pour créer des copies instantanées de la base de données
+* Utilisation d'SnapRestore pour restaurer une copie Snapshot précédente, et par conséquent une base de données cohérente avec l'application, en quelques secondes, indépendamment de la capacité ou du nombre de fichiers
+* Utilisation de la technologie FlexClone pour créer des clones compacts et rapides des bases de données basées sur des sauvegardes de copies Snapshot
+
+
+Le tableau suivant répertorie les paramètres du plug-in MaxDB, fournit leurs paramètres et les décrit :
+
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+NOM_APPLICATION
+ a| 
+max db
+ a| 
+Spécifie le nom de l'application.
+
+
+
+ a| 
+XUSER_ENABLE
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Active ou désactive l'utilisation d'un xuser pour MaxDB de sorte qu'un mot de passe ne soit pas requis pour l'utilisateur de la base de données.
+ a| 
+HANDLE_LOGWRITER
+ a| 
+(Y
+
+
+
+| N)  a| 
+Exécute les opérations suspendre journal (N) ou reprendre journal (y).
+ a| 
+DBMCLICMD
+
+
+
+ a| 
+chemin_vers_dbmcli_cmd
+ a| 
+Indique le chemin d'accès à la commande MaxDB dbmcli.si ce n'est pas le cas, dbmcli est utilisé sur le chemin de recherche.
+
+
+NOTE: Dans un environnement Windows, le chemin doit être inclus dans les guillemets doubles ("...").
+ a| 
+SQLCLIMD
+
+
+
+ a| 
+chemin_vers_sqlcli_cmd
+ a| 
+Spécifie le chemin de la commande MaxDB sqlcli.si elle n'est pas définie, sqlcli est utilisé dans le chemin de recherche.
+ a| 
+MAXDB_UPDATE_HIST_LOG
+
+
+
+ a| 
+(Y
+| N)  a| 
+Indique au programme de sauvegarde MaxDB si le journal d'historique MaxDB doit être mis à jour ou non.
+
+
+
+ a| 
+MAXDB_DATABASES
+ a| 
+db_name:nom_utilisateur/mot de passe
+ a| 
+Répertorie les bases de données à sauvegarder avec le nom d'utilisateur et le mot de passe.plusieurs bases de données et noms d'utilisateur peuvent être spécifiés à l'aide d'une liste séparée par des virgules : par exemple, `db1:user1/password,db2:user2/password`.
+
+
+
+ a| 
+MAXDB_CHECK_SNAPSHOT_DIR
+ a| 
+Exemple : `+SID1:directory[,directory...];[SID2:directory[,directory...]+`
+ a| 
+Vérifie le bon déroulement de l'opération de copie Snapshot Snap Creator et s'assure de la création de la copie Snapshot. Cela s'applique uniquement à NFS. Le répertoire doit pointer vers l'emplacement qui contient le répertoire .snapshot.
+
+Plusieurs répertoires peuvent être inclus dans une liste séparée par des virgules. Plusieurs bases de données peuvent être spécifiées sous la forme d'une liste séparée par des points-virgules.
+
+Dans MaxDB 7.8 et versions ultérieures, la demande de sauvegarde de la base de données est marquée comme ayant échoué dans l'historique des sauvegardes.
+
+
+
+ a| 
+MAXDB_BACKUP_TEMPLATES
+ a| 
+Exemple de nom_modèle : `na_snap`
+ a| 
+Spécifie un modèle de sauvegarde pour chaque base de données.le modèle doit déjà exister et être un type externe de modèle de sauvegarde.
+
+Pour activer l'intégration des copies Snapshot pour MaxDB 7.8 et versions ultérieures, vous devez disposer de la fonctionnalité du serveur d'arrière-plan MaxDB et d'un modèle de sauvegarde MaxDB déjà configuré.
+
+
+
+ a| 
+MAXDB_BG_SERVER_PREFIX
+ a| 
+Exemple de préfixe_serveur_bg : `na_bg`
+ a| 
+Spécifie le préfixe du nom du serveur en arrière-plan. Si LE paramètre MAXDB_BACKUP_TEMPLATES est défini, vous devez également définir LE paramètre MAXDB_BG_SERVER_PREFIX. Si vous ne définissez pas le préfixe, la valeur par défaut `na_bg_DATABASE` est utilisé.
+
+|===
+*Informations connexes*
+
+http://mysupport.netapp.com/matrix["Matrice d'interopérabilité : mysupport.netapp.com/matrix"]

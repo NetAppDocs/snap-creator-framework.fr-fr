@@ -1,0 +1,18 @@
+---
+permalink: sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html 
+sidebar: sidebar 
+keywords: resuming, resume, restart, snapvault, relationship, after, restore 
+summary: 'Toute restauration non effectuée à l"aide de la dernière sauvegarde Snapshot supprime la relation SnapVault sur les systèmes de stockage primaire.' 
+---
+= Reprise d'une relation SnapVault après une restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Toute restauration non effectuée à l'aide de la dernière sauvegarde Snapshot supprime la relation SnapVault sur les systèmes de stockage primaire.
+
+Une fois le processus de restauration et de restauration terminé, la relation SnapVault doit être reprise afin que les sauvegardes puissent être à nouveau exécutées avec Snap Creator. Sinon, Snap Creator génère un message d'erreur, car le département informatique ne trouve plus la relation SnapVault sur les systèmes de stockage primaires.
+
+Le transfert de données requis repose sur un transfert delta, si une copie Snapshot commune est toujours présente entre le volume source et le volume de destination.

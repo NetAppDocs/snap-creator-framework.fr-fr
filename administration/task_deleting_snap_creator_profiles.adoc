@@ -1,0 +1,27 @@
+---
+permalink: administration/task_deleting_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: delete, snap, creator, profile 
+summary: Vous pouvez supprimer des profils Snap Creator. 
+---
+= Suppression de profils
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer des profils Snap Creator.
+
+La suppression d'un profil supprime également les fichiers de configuration associés au profil.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *configurations*.
++
+Les profils Snap Creator existants sont répertoriés dans le volet profils et configurations.
+
+. Cliquez avec le bouton droit de la souris sur le profil à supprimer et sélectionnez *Supprimer*.
+. Cliquez sur *Oui* dans le message de confirmation
++
+Le profil et les fichiers de configuration associés sont supprimés définitivement de Snap Creator.
+
+

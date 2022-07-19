@@ -1,0 +1,14 @@
+---
+permalink: sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html 
+sidebar: sidebar 
+keywords: restoring, restore, database, primary, storage, failure 
+summary: 'Après une panne du stockage primaire ou lorsque toutes les copies Snapshot sont supprimées des volumes du stockage primaire, Snap Creator ne pourra pas gérer la restauration, car il n"y aura plus de relation SnapVault sur les systèmes de stockage primaire.' 
+---
+= La restauration des bases de données après une panne du stockage primaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après une panne du stockage primaire ou lorsque toutes les copies Snapshot sont supprimées des volumes du stockage primaire, Snap Creator ne pourra pas gérer la restauration, car il n'y aura plus de relation SnapVault sur les systèmes de stockage primaire.

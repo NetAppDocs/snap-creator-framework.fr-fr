@@ -1,0 +1,37 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, job, status, logs, monitor 
+summary: 'Snap Creator Job Monitor est une interface de type tableau de bord pour les tâches Snap Creator. Vous pouvez utiliser le moniteur des travaux pour afficher l"état des travaux et télécharger les journaux.' 
+---
+= Affichage de l'état des travaux et journaux dans le moniteur des travaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Job Monitor est une interface de type tableau de bord pour les tâches Snap Creator. Vous pouvez utiliser le moniteur des travaux pour afficher l'état des travaux et télécharger les journaux.
+
+Le moniteur des tâches indique l'état des tâches comme suit :
+
+* image:../media/scfw_domino_icon_job_in_progress.gif["Cette image est expliquée par le texte qui l'entoure."] indique un travail en cours.
+* image:../media/scfw_domino_icon_job_successful.gif["Cette image est expliquée par le texte qui l'entoure."] indique qu'un travail s'est terminé avec succès.
+* image:../media/scfw_domino_icon_job_completed_with_errors.gif["Cette image est expliquée par le texte qui l'entoure."] indique un travail qui s'est terminé avec des erreurs.
+* image:../media/scfw_domino_icon_job_failed.gif["Cette image est expliquée par le texte qui l'entoure."] indique un travail qui a échoué.
++
+.. Dans le volet profils et configurations, sélectionnez le fichier de configuration et cliquez sur *Management* > *Job Monitor* en haut de la fenêtre Snap Creator Framework.
++
+Le volet surveillance des travaux s'affiche, dans lequel vous pouvez afficher l'état des travaux.
+
+.. Sélectionnez un travail, puis cliquez sur *Télécharger les journaux* > *Log_Type*, où Log_Type est l'un des éléments suivants :
++
+*** *Out Logs* fournit des informations détaillées pour un travail.
+*** *Journaux de débogage* fournit des informations détaillées ainsi que des informations utiles pour le débogage.
+*** *GUI Logs* fournit des informations sur les actions de l'interface graphique Snap Creator.le journal de l'interface utilisateur n'est pas spécifique au travail sélectionné.
+
+
+.. Dans la boîte de dialogue de téléchargement, cliquez sur *Ouvrir* ou *Enregistrer*, selon les besoins.
+
+
+

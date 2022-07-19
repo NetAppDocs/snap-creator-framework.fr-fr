@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: modifying, modify, configuration, database, integrity, checks, sap, hana 
+summary: 'Vous pouvez modifier les paramètres configurés pour les vérifications d"intégrité de la base de données. L"opération suivante de vérification de l"intégrité planifiée ou à la demande reflète les informations mises à jour.' 
+---
+= Modification de la configuration pour les vérifications d'intégrité de la base de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les paramètres configurés pour les vérifications d'intégrité de la base de données. L'opération suivante de vérification de l'intégrité planifiée ou à la demande reflète les informations mises à jour.
+
+. Cliquez sur le profil SAP HANA.
+. Sélectionnez la configuration à modifier et cliquez sur *HANA Integrity Check Settings*.
++
+image::../media/modifying_database_integrity_check_configuration.gif[Modification de la configuration des vérifications d'intégrité de base de données]
+
+. Modifiez les informations, puis cliquez sur *Enregistrer*.
+

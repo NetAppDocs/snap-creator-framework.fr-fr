@@ -1,0 +1,52 @@
+---
+permalink: administration/task_creating_backups_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: create, backup, snap, creator, gui, configuration, backup, action, parameter 
+summary: 'Vous pouvez créer des sauvegardes à l"aide de l"interface graphique Snap Creator.' 
+---
+= Création de sauvegardes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des sauvegardes à l'aide de l'interface graphique Snap Creator.
+
+L'une des conditions suivantes doit être remplie :
+
+* Une stratégie de sauvegarde doit être définie dans le fichier de configuration ; ou
+* Un objet de stratégie doit être configuré et affecté au profil.
++
+
+NOTE: Si un objet de stratégie est défini, il écrasera toutes les entrées qui peuvent se trouver dans le fichier de configuration.
+
++
+.. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *configurations*.
+.. Dans l'onglet *configurations*, dans le volet *profils et Configuration*, sélectionnez le fichier de configuration.
+.. Sélectionnez *actions* > *sauvegarde*.
++
+image::../media/backup_select.gif[sélection de sauvegarde]
+
+.. Dans la boîte de dialogue Paramètres supplémentaires, sélectionnez la stratégie, puis cliquez sur *OK* pour lancer la sauvegarde.
++
+
+NOTE: Si aucune stratégie créée par l'utilisateur n'est attribuée à la configuration, les heures, les jours, les semaines et les mois sont les sélections disponibles dans la liste déroulante *Policy*. Si une ou plusieurs stratégies créées par l'utilisateur ont été attribuées à la configuration, elles sont affichées dans la liste déroulante *Policy*.
+
++
+image::../media/additional_parameters.gif[paramètres supplémentaires]
+
+.. Vérifiez que les informations relatives à la tâche de sauvegarde sont affichées dans le volet *Console*.
++
+image::../media/console_area_backup.gif[sauvegarde de la zone de la console]
+
++
+Dans cet exemple, le résultat indique que l'opération Snap Creator a abouti.
+
++
+
+NOTE: Le volet *Console* affiche uniquement les informations les plus pertinentes ; il s'agit du mode détaillé. Pour afficher des informations détaillées sur le travail qui vient d'être exécuté, sélectionnez *Rapports* > *journaux* en haut de la page. Dans la vue journaux, le profil, le fichier de configuration, le type de journal et un journal spécifique peuvent être sélectionnés.
+
+
+
+

@@ -1,0 +1,66 @@
+---
+permalink: administration/reference_db2_plug_in.html 
+sidebar: sidebar 
+keywords: db2, plug-in, communicate, database 
+summary: Le plug-in DB2 utilise la commande db2 pour communiquer avec la base de données. 
+---
+= Plug-in DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in DB2 utilise la commande db2 pour communiquer avec la base de données.
+
+Le tableau suivant répertorie les paramètres du plug-in DB2, fournit les paramètres et décrit les paramètres.
+
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+NOM_APPLICATION
+ a| 
+db2
+ a| 
+Fournit le nom de l'application.
+
+
+
+ a| 
+DB2_DATABASES
+ a| 
+db_name:nom_utilisateur
+ a| 
+Répertorie les bases de données DB2 et le nom d'utilisateur.plusieurs bases de données et noms d'utilisateur peuvent être spécifiés comme une liste séparée par des points-virgules : par exemple, `db1:user1;db2:user2`.
+
+
+
+ a| 
+DB2_CMD
+ a| 
+chemin_vers_db2cli_cmd
+ a| 
+Spécifie le chemin utilisé pour initialiser la connexion à la base de données afin que d'autres commandes puissent être exécutées sur la base de données.
+
+* Environnement UNIX :``db2_install_directory/sqllib/bin/db2``
++
+Par exemple : `/home/db2inst1/sqllib/bin/db2`
+
+* Windows : `db2_install_directory\SQLLIB\BIN\db2cmd.exe`
++
+Par exemple : `C:\"Program Files"\IBM\SQLLIB\BIN\db2cmd.exe`
+
+
+
+Si aucun chemin n'est spécifié, sqllib/db2 est utilisé comme chemin d'accès.
+
+|===
+*Remarque :* le plug-in DB2 gère les opérations WAFL (Write Anywhere File Layout) par défaut. Si vous souhaitez sauvegarder une sauvegarde de groupe de cohérence avec le plug-in DB2, définissez le paramètre sur N. Si vous définissez ce paramètre sur y, des opérations de synchronisation supplémentaires et redondantes sont effectuées.
+
+Pour obtenir les informations les plus récentes sur le support technique ou pour consulter les matrices de compatibilité, consultez la matrice d'interopérabilité.
+
+*Informations connexes*
+
+http://mysupport.netapp.com/matrix["Matrice d'interopérabilité : mysupport.netapp.com/matrix"]

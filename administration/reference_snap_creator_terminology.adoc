@@ -1,0 +1,146 @@
+---
+permalink: administration/reference_snap_creator_terminology.html 
+sidebar: sidebar 
+keywords: snap, creator, terminology,action, backup, lun, clone, volume, agent, monitor, archive, log, configuration, discover, global, job, mount, ossv, profile, policy, quiesce, restore, scdump, schedule, umount, unquiesce, watchdog 
+summary: Snap Creator se compose de quelques constructions différentes, et il est important de comprendre le langage et les concepts. 
+---
+= Terminologie Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator se compose de quelques constructions différentes, et il est important de comprendre le langage et les concepts.
+
+* *Action*
++
+Snap Creator peut effectuer différentes actions sur les fichiers de configuration. Il s'agit généralement d'un flux de travail défini pour obtenir le résultat souhaité. Pour exécuter une action, sélectionnez un fichier de configuration dans l'interface utilisateur graphique, cliquez sur *action* et sélectionnez l'une des actions suivantes dans la liste déroulante :
+
++
+** *Sauvegarde*
++
+Sauvegarde l'environnement spécifié dans un fichier de configuration. Le workflow de sauvegarde est une action en plusieurs étapes qui change en fonction des paramètres du fichier de configuration sélectionné. Par exemple, une opération de sauvegarde avec un plug-in configuré peut arrêter une application ou une base de données, effectuer une copie Snapshot de tous les volumes définis, suspendre l'application ou la base de données sélectionnée, effectuer une mise à jour de SnapVault et/ou de SnapMirror, agir sur toutes les règles de conservation ou agir sur tous les paramètres du journal d'archivage.
+
+** *Clone de LUN*
++
+Crée une nouvelle copie Snapshot d'une LUN et cloner la nouvelle copie Snapshot.
+
+** *Clone de volume*
++
+Crée une nouvelle copie Snapshot d'un volume et clone la nouvelle copie Snapshot.
+
+
+
+* *Moniteur d'agent*
++
+Agent Monitor interroge le Snap Creator Server pour tous les agents définis dans les fichiers de configuration et interroge les agents pour vérifier leur état. Le moniteur d'agent signale si l'agent est en cours d'exécution, le port écouté par l'agent et la version de l'agent utilisée.
+
+* *Journal d'archives*
++
+L'action du journal d'archivage agit sur tous les paramètres du paramètre de gestion du journal d'archivage du fichier de configuration. Cette action purge généralement les journaux qui ne sont plus nécessaires par Snap Creator.
+
+* *Fichier de configuration*
++
+Un fichier de configuration est au cœur de Snap Creator. Il configure Snap Creator, permet aux plug-ins d'applications de s'exécuter, définit les variables nécessaires et définit les volumes qui sont capturés dans les copies Snapshot. Les fichiers de configuration se composent de différents paramètres qui peuvent être définis de façon à affecter le comportement de Snap Creator. Le fichier de configuration est souvent raccourci vers la configuration ou la configuration.
+
+* *Découverte*
++
+L'action de détection effectue une détection au niveau du stockage sur l'environnement détaillé dans le fichier de configuration. Les plug-ins ne prennent pas tous en charge la découverte.
+
+* *Fichier de configuration globale*
++
+Fichier de configuration pouvant agir soit au niveau superglobal (les paramètres affectent tous les fichiers de configuration de l'environnement Snap Creator Server dans son ensemble), soit au niveau du profil (les paramètres affectent tous les fichiers de configuration d'un profil spécifié). Les paramètres superglobaux seront remplacés par les paramètres spécifiés dans un niveau global de profil. De même, les paramètres spécifiés dans un fichier de configuration remplaceront les paramètres d'un fichier de configuration global de niveau super ou profil. Le fichier de configuration globale est souvent raccourci vers la configuration globale.
+
+* *Travail*
++
+Toutes les opérations effectuées par Snap Creator sont considérées comme des tâches. Certaines actions peuvent comprendre plusieurs tâches. Tous les travaux exécutés par Snap Creator sont répertoriés dans le moniteur des travaux.
+
+* *Moniteur d'emploi*
++
+Job Monitor est une interface de tableau de bord simple à utiliser qui permet de consulter facilement l'état des tâches Snap Creator en cours d'exécution ou exécutées précédemment. Le moniteur de tâches est activé lors de la configuration et peut stocker de 1 à 1,000 tâches.
+
+* *Mont*
++
+L'action de montage vous permet de spécifier une copie Snapshot existante qui sera clonée et montée.
+
+* *OSSV*
++
+L'action OSSV (Open Systems SnapVault) exécute des opérations OSSV.
+
+* *Profil*
++
+Un profil est essentiellement un dossier utilisé pour organiser les fichiers de configuration. Les profils servent également d'objets pour le contrôle d'accès basé sur des rôles (RBAC), ce qui signifie que vous pouvez uniquement accéder à certains profils et fichiers de configuration contenus dans.
+
+* *Politique*
++
+La politique est courte pour la politique de conservation. Une règle définit généralement les règles de conservation Snapshot (le nombre de copies à conserver) et l'âge (l'ancien doit être copié avant de le supprimer). Par exemple, une politique quotidienne pourrait conserver la valeur de 30 jours de copies Snapshot qui doivent être âgées d'au moins 30 jours. (Le paramètre d'âge de conservation empêche l'utilisation de plusieurs copies Snapshot le même jour de contourner les SLA pouvant selon lesquels une copie Snapshot doit être antérieure à 30 jours.) Si SnapVault est utilisé, la règle définit également tous les paramètres de conservation de la copie SnapVault. Actuellement, les règles peuvent être stockées directement dans un fichier de configuration ou dans le cadre d'un objet de stratégie. Si une stratégie fait partie d'un fichier de configuration, elle peut être appelée stratégie de rétention locale.
+
+* *Objet de politique*
++
+Un objet de stratégie est une règle de conservation qui peut être appliquée au niveau du profil. Tout comme une règle, un objet de règle définit des règles de conservation, mais il peut également définir un planning et un libellé. Voici quelques composants d'un objet de règle :
+
++
+** *Type de sauvegarde*
++
+Un type de sauvegarde est une étiquette qui peut être définie par l'objet de règle.
+
+** *Attributions de politiques*
++
+Les affectations de stratégies attribuent une stratégie (créée dans la gestion des stratégies) à un profil spécifique de profils.
+
+** *Gestion des politiques*
++
+La gestion des règles crée une règle au sein de l'objet de règle. Cela permet de définir le nombre et l'âge de conservation des copies Snapshot. Si SnapVault est utilisé, le nombre et l'âge de rétention associés peuvent également être définis. La gestion des stratégies permet également la sélection facultative d'un programme de stratégies et d'un type de sauvegarde.
+
+** *Programmes de police*
++
+Les planifications de règles définissent une action à effectuer sur un planning spécifié.
+
+
+
+* *Quiesce*
++
+L'action de mise au repos effectue les actions nécessaires pour placer une application ou une base de données dans un état cohérent. Bien que l'action soit nommée quiesce, il se peut que ce ne soit pas une véritable opération de mise en veille en fonction du plug-in ou du paramètre du fichier de configuration. Par exemple, le plug-in Domino effectue des appels d'API Domino pour mettre des bases de données Domino à l'état de démarrage de sauvegarde, tandis que le plug-in DB2 effectue la commande d'interruption d'écriture DB2.
+
+* *Restaurer*
++
+L'action de restauration exécute une opération de restauration de volume ou de fichier unique sur un ou plusieurs volumes spécifiés dans le fichier de configuration. En fonction du plug-in utilisé dans les fichiers de configuration, d'autres opérations de restauration peuvent être disponibles.
+
+* *scdump*
++
+Scdump est une opération de dépannage qui rassemble tous les fichiers de configuration et les fichiers journaux au niveau du profil, ainsi qu'un certain nombre de journaux et d'informations d'environnement Snap Creator Server standard. Tous ces fichiers réunis sont compressés dans un fichier zip que vous êtes invité à télécharger. Le fichier zip scdump peut ensuite être envoyé par e-mail ou téléchargé à l'assistance pour analyse.
+
+* *Annexes*
++
+Snap Creator Server contient un planificateur centralisé. Cela permet de planifier des tâches Snap Creator via un planning de règles (qui fait partie d'objets de règle) ou de les créer directement via le planificateur. Le planificateur exécute jusqu'à 10 travaux simultanément et met en file d'attente des travaux supplémentaires jusqu'à la fin d'un travail en cours d'exécution.
+
+* *Snap Creator Agent*
++
+Snap Creator Agent est généralement installé sur le même hôte que celui où une application ou une base de données est installée. L'agent est l'endroit où se trouvent les plug-ins. L'agent est parfois raccourci vers scAgent dans Snap Creator.
+
+* *Snap Creator Framework*
++
+Snap Creator est une infrastructure qui permet, et le nom complet du produit est NetApp Snap Creator Framework.
+
+* *Plug-ins Snap Creator*
++
+Les plug-ins sont utilisés pour placer les applications ou les bases de données dans un état cohérent. Snap Creator contient plusieurs plug-ins qui font déjà partie du fichier binaire et ne nécessitent aucune installation supplémentaire.
+
+* *Snap Creator Server*
++
+Snap Creator Server est généralement installé sur un hôte physique ou virtuel. Le serveur héberge l'interface graphique Snap Creator et les bases de données nécessaires pour stocker des informations sur les tâches, les planifications, les utilisateurs, les rôles, les profils, fichiers de configuration et métadonnées à partir des plug-ins. Le serveur est parfois raccourci vers scServer dans Snap Creator.
+
+* *Umount*
++
+L'action umount permet de spécifier un point de montage existant à démonter.
+
+* *Mise au repos*
++
+L'action d'annulation de la mise au repos effectue les actions nécessaires pour rétablir le mode de fonctionnement normal d'une application ou d'une base de données. Bien que l'action soit nommée mise au repos, il se peut que cette opération ne soit pas une véritable mise au repos, en fonction du plug-in ou du paramètre du fichier de configuration. Par exemple, le plug-in Domino effectue des appels d'API Domino pour mettre des bases de données Domino en état d'arrêt de sauvegarde, tandis que le plug-in DB2 effectue la commande write reprendre.
+
+* *Chien de garde*
++
+Le chien de garde fait partie de Snap Creator Agent qui surveille l'état des travaux que l'agent exécute. Si l'agent ne répond pas dans un délai spécifié, le chien de garde peut redémarrer l'agent ou mettre fin à des actions spécifiques. Par exemple, si une opération de mise en veille dépasse la valeur de temporisation, le chien de garde peut arrêter l'action de mise en veille et lancer une mise en veille pour rétablir le mode de fonctionnement normal de la base de données.
+
+

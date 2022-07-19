@@ -1,0 +1,53 @@
+---
+permalink: administration/concept_what_snap_creator_agent_is.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, quiesce, server, plug-in, multi-tenant 
+summary: 'Snap Creator Agent, généralement installé sur le même hôte où une application ou une base de données est installée, gère les commandes de mise en veille et d"annulation de la mise en attente depuis Snap Creator Server vers une application donnée, et correspond à l"emplacement des plug-ins. L"agent est parfois raccourci vers scAgent dans Snap Creator.' 
+---
+= Présentation de Snap Creator Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Agent, généralement installé sur le même hôte où une application ou une base de données est installée, gère les commandes de mise en veille et d'annulation de la mise en attente depuis Snap Creator Server vers une application donnée, et correspond à l'emplacement des plug-ins. L'agent est parfois raccourci vers scAgent dans Snap Creator.
+
+L'agent Snap Creator reçoit des communications de l'interface agent du serveur Snap Creator via l'interface RESTful agent et HTTPS uniquement. Cela signifie des communications sécurisées et chiffrées, une fonctionnalité extrêmement importante dans les environnements mutualisés et cloud. Les certificats auto-signés permettent l'utilisation d'un certificat généré avec l'agent Snap Creator. De plus, Snap Creator Agent est protégé par une combinaison configurable d'utilisateurs et de mots de passe, qui est stockée sur disque.
+
+L'illustration suivante décrit l'architecture de l'agent Snap Creator :
+
+image::../media/scfw_agent_architecture_41_refresh.gif[actualisation de l'architecture de l'agent scfw 41]
+
+Le composant Snap Creator Agent (parfois raccourci vers scAgent dans Snap Creator lui-même) inclut les parties suivantes :
+
+* *Gestionnaires d'opération et d'exécution*
++
+Le Gestionnaire des opérations prend en charge les demandes entrantes, sortantes et complétées. Le Gestionnaire d'exécution est responsable de l'exécution des requêtes.
+
+* *Piscine Thread*
++
+Composé de threads de travail, le pool de threads est utilisé pour exécuter plusieurs tâches.
+
++
+Ce paramètre détermine le nombre d'opérations simultanées à un moment donné. Le Gestionnaire d'exécution exécute un plug-in et il l'exécute dans l'un des threads du pool de threads. Si le pool de threads comporte huit threads, vous pouvez exécuter simultanément huit opérations de plug-in. Les nouvelles opérations entrantes sont mises en file d'attente, jusqu'à ce que les threads soient à nouveau libres.
+
+* *Chien de garde*
++
+Déclenché par le Gestionnaire d'exécution pour certaines opérations, généralement en attente, le chien de garde appelle à nouveau le Gestionnaire d'exécution après une heure spécifiée pour arrêter l'opération, si nécessaire, et exécute une opération d'annulation correspondante. Par exemple, la fonction de mise en attente du plug-in est appelée pour mettre l'application en mode de sauvegarde. Le chien de garde commence à écouter. Si la mise en veille n'est pas exécutée dans la fenêtre de temps spécifiée, le chien de garde arrête la mise en veille de l'application et la ramène en mode de fonctionnement normal. Cela permet de s'assurer que la base de données n'est pas bloquée en mode de sauvegarde.
+
+* *Context Store*
++
+En tenant toutes les informations nécessaires pour la durée de vie du flux de travail, le magasin de contexte fournit des objets de contexte au plug-in selon les besoins et, si un flux de travail échoue ou n'est jamais terminé, l'objet de contexte est supprimé après un certain temps.
+
++
+Pour les workflows qui ne se terminent pas ou qui échouent dans un état non défini, il y a un temps de contexte maximum spécifié dans install_path/etc/agent.properties: CONTEXT_LIFETIME_IN_MSEC=1800000 (la valeur par défaut, 30 minutes). Si cette valeur est augmentée, l'agent Snap Creator occupe plus de mémoire.
+
+* *Plug-in Factory*
++
+Le plug-in Factory démarre le plug-in et garantit son fonctionnement dans un espace isolé. L'usine de plug-in communique également avec la boutique contextuelle pour accéder aux informations stockées. Elle permet également d'exécuter des plug-ins Perl et natifs à partir de Snap Creator à l'aide du moteur d'intégration Plug-in.
+
++
+Snap Creator Agent peut également utiliser des plug-ins écrits dans d'autres langues que Java.
+
+

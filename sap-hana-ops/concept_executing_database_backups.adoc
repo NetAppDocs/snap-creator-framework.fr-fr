@@ -1,0 +1,14 @@
+---
+permalink: sap-hana-ops/concept_executing_database_backups.html 
+sidebar: sidebar 
+keywords: executing, database, backups 
+summary: 'Vous pouvez sauvegarder votre base de données SAP HANA à l"aide de l"interface graphique Snap Creator ou de la ligne de commandes. Pour planifier des sauvegardes, vous pouvez utiliser le planificateur dans l"interface graphique, ou utiliser la ligne de commande en combinaison avec un planificateur externe comme cron.' 
+---
+= Exécution des sauvegardes de base de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder votre base de données SAP HANA à l'aide de l'interface graphique Snap Creator ou de la ligne de commandes. Pour planifier des sauvegardes, vous pouvez utiliser le planificateur dans l'interface graphique, ou utiliser la ligne de commande en combinaison avec un planificateur externe comme cron.

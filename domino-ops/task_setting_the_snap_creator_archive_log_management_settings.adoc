@@ -1,0 +1,74 @@
+---
+permalink: domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html 
+sidebar: sidebar 
+keywords: domino, ibm, cleaning up, purging, archives, archived, copies, transaction, logs 
+summary: 'Si vous utilisez la journalisation des transactions Domino, le plug-in IBM Domino archive les copies des journaux de transactions Domino dans le répertoire changeinfo afin de les utiliser dans les opérations de restauration à la minute. Vous devez activer la gestion du journal de transactions avant que Snap Creator nettoie les copies des journaux de transactions dont vous n"avez plus besoin.' 
+---
+= Nettoyage des copies archivées des journaux de transactions Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez la journalisation des transactions Domino, le plug-in IBM Domino archive les copies des journaux de transactions Domino dans le répertoire changeinfo afin de les utiliser dans les opérations de restauration à la minute. Vous devez activer la gestion du journal de transactions avant que Snap Creator nettoie les copies des journaux de transactions dont vous n'avez plus besoin.
+
+Le plug-in Domino stocke les fichiers changeinfo et les copies archivées des journaux de transactions Domino dans le répertoire changeinfo. Le plug-in nettoie automatiquement les fichiers .info en fonction de la stratégie de conservation de la configuration. Il ne nettoie pas les copies inutiles des journaux de transactions sauf si vous activez explicitement la gestion du journal de transactions dans Snap Creator.
+
+Lors de la configuration de la gestion du journal de transactions, assurez-vous de trouver un équilibre approprié entre le nombre de copies archivées des journaux de transactions que vous souhaitez conserver pour les opérations de restauration à la minute et la taille du volume contenant le répertoire changeinfo.
+
+
+IMPORTANT: Ne définissez pas le paramètre répertoire du journal d'archivage sur le chemin des journaux de transactions Domino. Vous risqueriez d'endommager votre environnement Domino.
+
+. Dans le volet profils et configurations, sélectionnez le fichier de configuration et cliquez sur l'onglet *Archive Log Management*.
+. Dans l'onglet *Archive Log Management*, spécifiez les valeurs suivantes pour les paramètres de gestion du journal de transactions :
++
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+Activation du journal d'archivage
+ a| 
+Y
+ a| 
+Active le nettoyage du journal de transactions.
+
+
+
+ a| 
+Conservation du journal d'archivage
+ a| 
+Entrez une valeur supérieure ou égale au nombre de jours de conservation des copies Snapshot.
+ a| 
+Nombre de jours pour conserver les journaux de transactions.
+
+
+
+ a| 
+Répertoire du journal d'archivage
+ a| 
+info change/logs
+ a| 
+Le répertoire à nettoyer. *Important :* ne spécifiez pas le chemin des journaux de transactions Domino. Vous risqueriez d'endommager votre environnement Domino.
+
+
+
+ a| 
+Extension du journal d'archivage
+ a| 
+ a| 
+Extension des copies des fichiers journaux de transactions Domino.
+
+
+
+ a| 
+Archiver la recherche récursive du journal
+ a| 
+N
+ a| 
+Le plug-in Snap Creator place les fichiers .txn dans le sous-répertoire logs du répertoire changeinfo, de sorte qu'une recherche récursive n'est pas nécessaire.
+
+|===
+. Cliquez sur *Enregistrer* dans le volet contenu de configuration pour enregistrer vos modifications.
+

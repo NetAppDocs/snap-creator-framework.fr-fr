@@ -1,0 +1,52 @@
+---
+permalink: installation/concept_plug_ins_for_application_integration.html 
+sidebar: sidebar 
+keywords: plug-in, application, integration 
+summary: Les plug-ins sont utilisés pour placer les applications ou les bases de données dans un état cohérent. Snap Creator contient plusieurs plug-ins qui font déjà partie du fichier binaire et ne nécessitent aucune installation supplémentaire. 
+---
+= Plug-ins pour l'intégration d'applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les plug-ins sont utilisés pour placer les applications ou les bases de données dans un état cohérent. Snap Creator contient plusieurs plug-ins qui font déjà partie du fichier binaire et ne nécessitent aucune installation supplémentaire.
+
+Les types d'applications pris en charge sont les applications de base de données, de messagerie électronique, d'hyperviseur ou personnalisées. Les plug-ins suivants sont pris en charge pour une utilisation avec Snap Creator :
+
+* Plug-ins d'applications et de bases de données :
++
+** DB2
+** IBM Domino (Domino)
+** Max db
+** MySQL
++
+
+NOTE: Le plug-in MySQL ne prend pas en charge les opérations de sauvegarde et de restauration pour plusieurs bases de données.
+
+** Oracle
+** Dispositif d'analytique haute performance SAP (HANA)
+** Sybase Adaptive Server Enterprise (ASE)
+
+
+* Plug-ins SnapManager :
++
+** SnapManager pour Microsoft Exchange
+** SnapManager pour Microsoft SQL Server
+
+
+* Plug-ins d'hyperviseur :
++
+** Citrix XenServer
+** Machine virtuelle basée sur kernel Red Hat (KVM)
+** VMware (vSphere pour une sauvegarde de machines virtuelles individuelles et vCloud Director pour la sauvegarde vApp)
+
+
+
+
+Les plug-ins personnalisés (également appelés « communautés ») sont écrits par la communauté des développeurs. Ils peuvent être activés par Snap Creator, mais ne sont pas pris en charge. Ces plug-ins exploitent l'interface fournie par Snap Creator et permettent aux développeurs de se concentrer sur leurs applications cibles.
+
+Pour plus d'informations, consultez la http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Forum de la communauté sur Snap Creator Framework"] le site.
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["Guide d'administration de Snap Creator Framework 4.3.3"]

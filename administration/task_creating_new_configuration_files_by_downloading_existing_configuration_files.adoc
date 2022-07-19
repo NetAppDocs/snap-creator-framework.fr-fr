@@ -1,0 +1,23 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html 
+sidebar: sidebar 
+keywords: configuration, file, downloading, gui, snap, creator 
+summary: 'Vous pouvez créer de nouveaux fichiers de configuration en téléchargeant des fichiers existants et en les important sous de nouveaux noms de fichiers à l"aide de l"interface graphique Snap Creator.' 
+---
+= Création de nouveaux fichiers de configuration en téléchargeant des fichiers de configuration existants
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer de nouveaux fichiers de configuration en téléchargeant des fichiers existants et en les important sous de nouveaux noms de fichiers à l'aide de l'interface graphique Snap Creator.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *configurations*.
+. Dans le volet profils et configurations, cliquez avec le bouton droit de la souris sur le fichier de configuration et sélectionnez *Télécharger*.
+. Enregistrez le fichier comme requis-path/required-filename.ext
++
+
+NOTE: N'oubliez pas de donner un nom unique pour ce nouveau fichier ; sinon, veillez à renommer le fichier avant de le télécharger afin d'éviter d'écraser le fichier de configuration d'origine.
+
+

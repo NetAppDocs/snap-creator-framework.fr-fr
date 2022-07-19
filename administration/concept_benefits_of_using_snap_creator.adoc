@@ -1,0 +1,23 @@
+---
+permalink: administration/concept_benefits_of_using_snap_creator.html 
+sidebar: sidebar 
+keywords: benefits, using, snap, creator, framework, hypervisors, applications, databsases, microsoft, sql, ibm, db2, maxdb, sap, hana, imt, oracle 
+summary: Snap Creator Framework offre une structure logicielle simple et flexible qui répond à divers besoins en stockage. 
+---
+= Avantages de Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework offre une structure logicielle simple et flexible qui répond à divers besoins en stockage.
+
+Snap Creator est utilisé dans les contextes suivants pour répondre à différents besoins en stockage :
+
+* Il s'agit d'une interface unique pour la gestion des environnements comprenant plusieurs systèmes d'exploitation, hyperviseurs, applications et bases de données.
+* Pour la sauvegarde, la restauration et le clonage d'applications ou de bases de données qui ne disposent pas d'une offre SnapManager (par exemple IBM DB2, MaxDB ou SAP HANA).
+* En tant qu'interface centralisée pour la sauvegarde et la surveillance si SnapManager pour Microsoft Exchange Server et SnapManager pour Microsoft SQL Server ont été configurés dans votre environnement.
+* Lorsqu'une application ou une base de données (comme Oracle) associée à une solution SnapManager est utilisée, mais que l'environnement hôte ne répond pas aux exigences de la matrice d'interopérabilité (IMT) ou similaires.
+* Lors du remplacement de scripts personnalisés pour les actions de stockage, offrent ainsi une méthode cohérente pour créer des copies Snapshot, réaliser des mises à jour de SnapVault ou SnapMirror, cloner des volumes ou des LUN, et appeler des scripts personnalisés n'importe où via le workflow Snap Creator.
+

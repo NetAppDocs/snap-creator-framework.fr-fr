@@ -1,0 +1,77 @@
+---
+permalink: installation/task_upgrading_snap_creator_server_4_1_x_on_unix_based_systems.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.1.x, unix, unix-based 
+summary: Vous pouvez effectuer la mise à niveau à partir de Snap Creator Server 4.1.x sur des systèmes UNIX. 
+---
+= Mise à niveau de Snap Creator Server 4.1.x sur des systèmes UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer la mise à niveau à partir de Snap Creator Server 4.1.x sur des systèmes UNIX.
+
+* Vous avez arrêté les processus Snap Creator avant de sauvegarder les répertoires Snap Creator pour vous assurer que les données sauvegardées sont bien terminées.
++
+Par exemple, entrez les commandes suivantes :
+
++
+[listing]
+----
+/install_path/scServer4.1.0/bin/scServer stop
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+* Vous avez sauvegardé les répertoires suivants, ainsi que tous les sous-répertoires et fichiers associés, dans le sous-répertoire Snap Creator 4.1.x Server Engine (/install_path/scServer4.1.x/Engine) :
++
+** Base de données Snap Creator (../snapcreator)
+** Propriétés du serveur Snap Creator (../etc.)
+** Fichiers de configuration (../configs)
+** Journaux (.../logs)
+** Référentiel de plug-in, si activé (../snapcreatorPlugin) *Remarque :* vous ne devez pas supprimer les copies de sauvegarde Snap Creator 4.1.x.
+
+
+
+
+Les chemins fournis dans les étapes suivantes font référence au chemin d'installation par défaut. Les informations sur le chemin d'accès peuvent différer de votre chemin d'installation si les valeurs par défaut n'ont pas été utilisées.
+
+Une fois le processus de mise à niveau terminé, vous devez prendre en compte les problèmes suivants :
+
+* Si la base de données Snap Creator mise à niveau contient certaines tâches marquées comme « en cours », l'état reste le même, même après la fin du processus de mise à niveau.
+* L'administrateur par défaut du dernier Snap Creator doit être un administrateur dans Snap Creator 4.1.x.
++
+Si l'utilisateur 4.1.x n'est pas un administrateur, la mise à niveau affecte un rôle d'opérateur à l'utilisateur 4.1.x.
+
++
+.. Arrêtez les processus Snap Creator si ce n'est pas déjà fait.
++
+Pour plus d'informations sur l'arrêt des processus, reportez-vous aux détails fournis plus haut dans cette rubrique.
+
+.. Installez la dernière version de Snap Creator, mais ne démarrez pas Snap Creator Server.
++
+Pour plus de détails, voir les informations sur l'installation de Snap Creator Server sous UNIX.
+
+.. Copiez le répertoire de base de données Snap Creator 4.1.x sauvegardé au dernier emplacement à l'adresse /install_path/scServer4.1.x/Engine/snapcreator.
+.. Copiez le répertoire de configuration 4.1.x sauvegardé à l'emplacement le plus récent dans /install_path/scServer4.1.x/Engine/configs).
+.. Copiez le répertoire des journaux sauvegardés 4.1.x vers le dernier emplacement dans /install_path/scServer4.1.x/Engine/logs.
+.. Accédez au sous-répertoire du moteur dans le chemin d'installation de Snap Creator sous /install_path/scServer4.1.x/Engine.
+.. Mettez à niveau Snap Creator en entrant la commande suivante : java -jar snapcreator.jar -upgrade
+
+
+
+
+Une fois le processus de mise à niveau terminé, démarrez Snap Creator Server en entrant la commande suivante :
+
+[listing]
+----
+/install_path/scServer4.1.x/bin/scServer start
+----
+Supprimez également le répertoire d'installation de Snap Creator 4.1.x.
+
+
+IMPORTANT: Ne supprimez pas vos copies de sauvegarde tant que vous n'avez pas besoin de revenir à une version antérieure.
+
+Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié (https://IP_address:gui_port)[].
+
+Vous devez vous connecter via HTTPS ; sinon, la connexion n'est pas redirigée automatiquement vers une connexion HTTPS et l'interface utilisateur ne fonctionnera pas.

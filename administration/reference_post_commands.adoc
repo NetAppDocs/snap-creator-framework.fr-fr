@@ -1,0 +1,60 @@
+---
+permalink: administration/reference_post_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, post, command, quiescecmde, cmd, ntap, app, post, transfer 
+summary: Snap Creator Server inclut plusieurs commandes POST de fichier de configuration. 
+---
+= COMMANDES DE POST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Server inclut plusieurs commandes POST de fichier de configuration.
+
+|===
+| Commande | Description 
+
+
+ a| 
+POST_APP_ QUIESCECMD ##
+ a| 
+Il s'agit d'une commande de démarrage de sauvegarde post-application, où ## est un nombre compris entre 01 et 99.
+
+
+
+ a| 
+POST_NTAP_CMD ##
+ a| 
+Il s'agit d'une commande post, où ## est un nombre compris entre 01 et 99. Cette opération est exécutée une fois toutes les opérations terminées.
+
+
+
+ a| 
+POST_APP_UNQUIESTED _CMD ##
+ a| 
+Il s'agit d'une commande d'arrêt de sauvegarde post-application, où ## est un nombre compris entre 01 et 99.
+
+
+
+ a| 
+POST_NTAP_DATA_ TRANSFER_CMD ##
+ a| 
+Il s'agit d'une commande post-transfert de données qui s'exécute après un transfert SnapVault ou SnapMirror, où ## est un nombre compris entre 01 et 99.
+
+
+
+ a| 
+POST_RESTAURATION_ CMD ##
+ a| 
+Il s'agit d'une commande facultative qui peut être exécutée après une restauration interactive. Il vous permet d'interagir avec l'application en cours de restauration. Une fois la restauration terminée, vous pouvez démarrer l'application. *Remarque :* ce n'est pas pris en charge avec le plug-in MySQL.
+
+
+
+ a| 
+POST_CLONE_CREATE_ CMD ##
+ a| 
+Il s'agit d'une commande facultative qui peut être exécutée après le clonage d'ONTAPI, où ## est un nombre compris entre 01 et 99. Les commandes permettent d'effectuer des opérations telles que le montage de systèmes de fichiers clonés.
+
+|===

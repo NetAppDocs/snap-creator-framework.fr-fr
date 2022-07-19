@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: start, verify, snap, creator, agent, port, managing, unix, windows 
+summary: Vous pouvez démarrer, vérifier et arrêter Snap Creator Agent, modifier le port Agent et gérer la sécurité Agent sur vos systèmes Windows et UNIX. 
+---
+= Gestion de Snap Creator Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez démarrer, vérifier et arrêter Snap Creator Agent, modifier le port Agent et gérer la sécurité Agent sur vos systèmes Windows et UNIX.

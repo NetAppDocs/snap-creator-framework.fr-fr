@@ -1,0 +1,20 @@
+---
+permalink: administration/task_viewing_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: snap, creator, profile, view 
+summary: Vous pouvez afficher la liste des profils Snap Creator existants. 
+---
+= Affichage des profils
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher la liste des profils Snap Creator existants.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *configurations*.
++
+Les profils Snap Creator existants sont répertoriés dans le volet profils et configurations.
+
+

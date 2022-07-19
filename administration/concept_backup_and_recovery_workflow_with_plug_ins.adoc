@@ -1,0 +1,27 @@
+---
+permalink: administration/concept_backup_and_recovery_workflow_with_plug_ins.html 
+sidebar: sidebar 
+keywords: backup, recovery, workflow, snap, creator, framework 
+summary: 'Vous pouvez utiliser le flux de travail comme guide pour vos processus de sauvegarde et de restauration à l"aide de l"interface graphique Snap Creator.' 
+---
+= Workflow de sauvegarde et de restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le flux de travail comme guide pour vos processus de sauvegarde et de restauration à l'aide de l'interface graphique Snap Creator.
+
+Pour effectuer ces tâches, Snap Creator doit être en cours d'exécution et l'interface graphique Snap Creator doit être ouverte. Si ce n'est pas le cas, vous pouvez saisir l'URL du Snap Creator Server dans un navigateur Web ("https://IP_address:gui_port"[] Par défaut, le port est 8443), puis connectez-vous à l'aide des informations d'identification de l'interface graphique Snap Creator.
+
+L'illustration suivante décrit l'ensemble des tâches de sauvegarde et de restauration de votre système lors de l'utilisation de plug-ins :
+
+
+NOTE: Les tâches décrites dans le workflow peuvent également être effectuées à partir de l'interface de ligne de commande (CLI). Pour plus d'informations sur l'interface de ligne de commande, reportez-vous aux références associées pour plus d'informations sur la ligne de commande CLI.
+
+image::../media/sc_workflow_with_plugin.gif[workflow sc avec plug-in]
+
+*Informations connexes*
+
+xref:reference_guidelines_for_using_the_snap_creator_command_line.adoc[Instructions d'utilisation de l'interface de ligne de commandes Snap Creator]

@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_roles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, user, gui, role, management 
+summary: 'Vous pouvez attribuer des rôles aux utilisateurs Snap Creator à l"aide de l"interface graphique Snap Creator.' 
+---
+= Affectation de rôles aux utilisateurs Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez attribuer des rôles aux utilisateurs Snap Creator à l'aide de l'interface graphique Snap Creator.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *utilisateurs et rôles* > *gestion des utilisateurs*.
+. Dans l'onglet gestion des utilisateurs, sélectionnez le nom d'utilisateur souhaité, puis cliquez sur *affecter des profils*.
+. Déplacez les rôles souhaités de la colonne de gauche vers la colonne de droite, puis cliquez sur *Enregistrer*.
++
+Vous pouvez sélectionner et faire glisser les rôles entre les colonnes ou cliquer sur la flèche pour déplacer les rôles entre les colonnes.
+
+. Vérifiez que le rôle a été attribué en sélectionnant l'utilisateur et en affichant le rôle affecté dans le volet *profils et rôles affectés*.
+

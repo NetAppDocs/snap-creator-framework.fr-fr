@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_troubleshooting_snap_creator_gui_errors.html 
+sidebar: sidebar 
+keywords: unix, environments, snap, creator, gui, troubleshoot, errors, troubleshooting 
+summary: 'Dans les environnements UNIX, l"accès à l"interface graphique Snap Creator peut se produire avec certaines erreurs. Vous devez être conscient de ces erreurs et savoir comment les résoudre.' 
+---
+= Dépannage des erreurs de l'interface graphique Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans les environnements UNIX, l'accès à l'interface graphique Snap Creator peut se produire avec certaines erreurs. Vous devez être conscient de ces erreurs et savoir comment les résoudre.

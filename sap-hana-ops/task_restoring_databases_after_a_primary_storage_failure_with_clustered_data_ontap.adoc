@@ -1,0 +1,44 @@
+---
+permalink: sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: sap, hana, restore, restoring, databases, primary, storage, failure, clustered, data, ontap 
+summary: 'Vous pouvez restaurer une base de données SAP HANA après une panne d"un système de stockage primaire exécutant clustered Data ONTAP.' 
+---
+= La restauration des bases de données après une panne du stockage primaire grâce à clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer une base de données SAP HANA après une panne d'un système de stockage primaire exécutant clustered Data ONTAP.
+
+Si l'on suppose que le volume primaire est totalement perdu, il faut créer un nouveau volume primaire, puis le restaurer à partir du volume de sauvegarde.
+
+. Créez un volume primaire avec une protection des données de type.
++
+[listing]
+----
+hana::> volume create -vserver hana1a -volume hana_data -aggregate aggr_sas_101 -size 300G -state online -type DP -policy default -autosize-mode grow_shrink -space-guarantee none
+-snapshot-policy none -foreground true
+[Job 6744] Job is queued: Create hana_data.
+[Job 6744] Job succeeded: Successful
+----
+. Restaurez toutes les données à partir du volume de sauvegarde.
++
+[listing]
+----
+hana::> snapmirror restore -destination-path hana1a:hana_data -source-path hana2b:backup_hana_data -source-snapshot sc-backup-daily_20140505121000
+[Job 6746] Job is queued: snapmirror restore from source "hana2b:backup_hana_data" for the
+snapshot sc-backup-daily_20140505121000.
+
+hana::> job show -id 6746
+Owning
+Job ID Name                 Vserver    Node           State
+------ -------------------- ---------- -------------- ----------
+6746   SnapMirror restore   hana        hana01        Running
+       Description: snapmirror restore from source "hana2b:backup_hana_data" for the snapshot sc-backup-daily_20140505121000
+----
+
+
+Une fois le processus de restauration terminé, vous utilisez SAP HANA pour effectuer la restauration.

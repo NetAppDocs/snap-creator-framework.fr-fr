@@ -1,0 +1,18 @@
+---
+permalink: administration/concept_creating_clones.html 
+sidebar: sidebar 
+keywords: creating, clones, lunes, volumes, cloning, snapshot 
+summary: 'Il existe deux méthodes de clonage des volumes ou DES LUN : à partir d"une nouvelle sauvegarde et à partir d"une sauvegarde existante.' 
+---
+= Création de clones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il existe deux méthodes de clonage des volumes ou DES LUN : à partir d'une nouvelle sauvegarde et à partir d'une sauvegarde existante.
+
+* La création d'un clone à partir d'une nouvelle sauvegarde consiste à créer une copie Snapshot, à cloner la nouvelle copie Snapshot, puis à monter la copie clonée.
+* La création d'un clone à partir d'une sauvegarde existante consiste à cloner une copie Snapshot existante, puis à monter la copie clonée.
+

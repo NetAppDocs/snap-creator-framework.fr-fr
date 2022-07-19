@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_0_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.0.x 
+summary: Lorsque vous effectuez une mise à niveau à partir de Snap Creator 4.0.x, le schéma de base de données est mis à niveau. 
+---
+= Mise à niveau depuis Snap Creator 4.0.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous effectuez une mise à niveau à partir de Snap Creator 4.0.x, le schéma de base de données est mis à niveau.

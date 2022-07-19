@@ -1,0 +1,24 @@
+---
+permalink: sap-hana-ops/task_scheduling_file_based_backup.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, file-based, backup 
+summary: 'Pour les configurations SAP HANA, vous pouvez planifier des opérations supplémentaires, telles que la sauvegarde basée sur des fichiers et les vérifications de l"intégrité des bases de données. Vous pouvez planifier l"opération de sauvegarde basée sur des fichiers afin d"effectuer à des intervalles spécifiques.' 
+---
+= Planification de sauvegardes basées sur des fichiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour les configurations SAP HANA, vous pouvez planifier des opérations supplémentaires, telles que la sauvegarde basée sur des fichiers et les vérifications de l'intégrité des bases de données. Vous pouvez planifier l'opération de sauvegarde basée sur des fichiers afin d'effectuer à des intervalles spécifiques.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *Schedules*, puis cliquez sur *Create*.
+. Dans la fenêtre Nouveau travail, entrez les détails du travail.
++
+La stratégie de sauvegarde basée sur les fichiers est définie par défaut sur « aucune ».
+
++
+image::../media/creating_file_based_backup_schedules.gif[Création de planifications de sauvegarde basées sur des fichiers]
+
+

@@ -1,0 +1,107 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_agent_3_6_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 3.6.x, unix 
+summary: Vous pouvez effectuer la mise à niveau directement depuis Snap Creator Agent 3.6.x sous UNIX. 
+---
+= Mise à niveau de Snap Creator Agent 3.6.x sous UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer la mise à niveau directement depuis Snap Creator Agent 3.6.x sous UNIX.
+
+* Vous avez arrêté Snap Creator Agent avant de sauvegarder les répertoires Snap Creator Agent pour vous assurer que les données sauvegardées sont bien terminées.
++
+Par exemple, entrez la commande suivante :
+
++
+[listing]
+----
+/install_path/scAgent3.6.x/bin/scAgent stop
+----
+* Vous avez sauvegardé les répertoires suivants, ainsi que tous les sous-répertoires et fichiers associés, dans le répertoire Snap Creator Agent (/chemin_installation/sAgent3.6.x) :
++
+** fichier agent.conf (../config/agent.conf)
+** Consigne le répertoire, si activé (../logs)
+** Répertoire plug-ins (../plugins)
+
+
+
+
+Dans les versions antérieures à 4.1, Snap Creator Agent utilisait un fichier nommé agent.conf pour lister les commandes en dehors de Snap Creator qui pouvaient être exécutées sur un Snap Creator Agent. Dans 4.1, le fichier allowed_commands.config est utilisé.
+
+De même, le fichier agent.conf a répertorié les hôtes avec lesquels Snap Creator Agent était autorisé à communiquer. Par défaut, Snap Creator Agent a autorisé les communications avec tous les serveurs Snap Creator. Cependant, si vous choisissez d'utiliser cette fonction dans les versions précédentes de Snap Creator, le paramètre AGED_HOSTS du fichier agent.properties remplace maintenant cette fonctionnalité.
+
+
+NOTE: Si vous n'avez pas utilisé ces paramètres, une installation simple du nouvel agent est tout ce qu'il faut.
+
+Les chemins fournis dans les étapes suivantes font référence au chemin d'installation par défaut. Les chemins d'accès des commandes ci-dessous peuvent différer de ceux de votre chemin d'installation.
+
+. Arrêtez Snap Creator Agent si vous ne l'avez pas déjà fait.
++
+Pour plus d'informations, consultez les détails fournis plus haut dans cette rubrique.
+
+. Installez le dernier Snap Creator Agent, mais ne démarrez pas Snap Creator Agent.
++
+Pour plus de détails, reportez-vous aux informations sur l'installation de Snap Creator Agent sous UNIX.
+
+. Ouvrez la copie sauvegardée du fichier agent.conf dans un éditeur de texte.
++
+Voici un exemple d'agent.conf :
+
++
+[listing]
+----
+host: scServer@Lyon
+command: rc_domino
+----
+. Ouvrez le nouveau fichier allowed_commands.config (/install_path/scAgent4.1.x/etc/allowed_commands.config) dans un éditeur de texte et copiez la ligne de commande depuis agent.conf dans le fichier allowed_commands.config. Cependant, en raison de la sécurité améliorée dans le dernier Snap Creator, assurez-vous que la commande soit entièrement qualifiée.
++
+Dans l'exemple précédent, le fichier allowed_commands.config doit contenir les éléments suivants :
+
++
+[listing]
+----
+command: /etc/init.d/rc_domino
+----
++
+
+NOTE: Si la commande contient des espaces, vous devez encapsuler la commande dans des guillemets.
+
++
+Vous pouvez ajouter des commandes selon vos besoins, chaque commande étant sur une ligne distincte.
+
++
+Enregistrez et fermez le fichier après avoir effectué des modifications.
+
+. Ouvrez le fichier agent.properties (/install_path/sAgent4.1.x/etc/agent.properties) dans un éditeur de texte et modifiez l'entrée par défaut de AUTHORIZED_HOSTS=* pour refléter le paramètre d'hôte dans le fichier agent.conf, puis enregistrez et fermez le fichier.
++
+Dans l'exemple précédent, le paramètre AGED_HOSTS doit contenir les éléments suivants :
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Lyon
+----
++
+Les hôtes peuvent être ajoutés si nécessaire, en utilisant des virgules pour séparer les noms d'hôte. Les noms d'hôte et les adresses IP sont pris en charge :
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Lyon, 10.10.10.192, Fuji01
+----
+. Démarrez Snap Creator Agent en entrant la commande suivante :
++
+[listing]
+----
+/install_path/scAgent4.1.x/bin/scAgent start
+----
+
+
+*Informations connexes*
+
+xref:task_installing_the_snap_creator_agent_on_unix.adoc[Installation de Snap Creator Agent sur des systèmes UNIX]

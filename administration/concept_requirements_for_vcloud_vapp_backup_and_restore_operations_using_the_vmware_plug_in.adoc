@@ -1,0 +1,35 @@
+---
+permalink: administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, backup, vcloud, vapp, vmware, director, api, vsphere, director, vcenter, vdc 
+summary: 'Snap Creator prend en charge la sauvegarde de vCloud vApp via le plug-in VMware. Les copies de sauvegarde vApp et des machines virtuelles sont effectuées par le plug-in VMware via l"API vCloud Director et l"API vSphere, respectivement appelées sur VMware vCloud Director et sur le serveur VMware vCenter.' 
+---
+= Exigences de sauvegarde et de restauration de vApp vCloud à l'aide du plug-in VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator prend en charge la sauvegarde de vCloud vApp via le plug-in VMware. Les copies de sauvegarde vApp et des machines virtuelles sont effectuées par le plug-in VMware via l'API vCloud Director et l'API vSphere, respectivement appelées sur VMware vCloud Director et sur le serveur VMware vCenter.
+
+Pour que les opérations de sauvegarde et de restauration vApp réussissent, vous devez fournir les informations suivantes dans le fichier de configuration :
+
+* L'IP vCloud et les identifiants
+* Les organisations vCloud, les data centers virtuels (VDC) et les noms de vApp sont indiqués
+
+
+
+NOTE: Si plusieurs vCenter sont rattachés à vCloud, le mot de passe de tous les serveurs vCenter doit être identique.
+
+Vous devez tenir compte des éléments suivants lors de l'exécution des opérations de sauvegarde et de restauration vCloud :
+
+* Les processus de sauvegarde et de restauration pour VMware et vCloud sont très similaires, sauf pour le processus de détection. Dans lequel les sauvegardes vCloud requièrent une détection supplémentaire des métadonnées vCloud Director à l'aide d'API REST (Representational State Transfer).
+* Vous devez fournir des détails sur le vCloud avec les organisations, les VDC et les vApps à sauvegarder.
+* Si un VDC est répertorié, tous les vApps du VDC sont sauvegardées.
+* Le module vCloud détecte les machines virtuelles associées à toute vApp qui doit être sauvegardée et les place dans une liste de sauvegardes.
+* Si une vApp sélectionnée pour la sauvegarde est contenue dans une organisation ou dans un VDC également sélectionné pour la sauvegarde, la vApp n'est sauvegardée qu'une seule fois.
+
+
+
+NOTE: Pour les opérations de restauration VMFS (Virtual machine File System) à l'aide du plug-in VMware, l'espace du volume doit être suffisant pour créer un clone de LUN égal à la taille de la LUN.

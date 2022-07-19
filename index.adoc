@@ -1,0 +1,9 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+---
+= Snap Creator Framework 4.3.3
+:allow-uri-read: 
+
+
+Bienvenue dans la bibliothèque d'informations Snap Creator Framework. Vous trouverez ici de la documentation relative au logiciel Snap Creator Framework 4.3.3, notamment comment installer et configurer Snap Creator, comment gérer Snap Creator Server et Agent, et comment configurer et utiliser le plug-in IBM Domino.

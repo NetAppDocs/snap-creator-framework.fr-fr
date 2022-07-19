@@ -1,0 +1,73 @@
+---
+permalink: domino-ops/reference_storage_layout_requirements.html 
+sidebar: sidebar 
+keywords: domino, ibm, storage, layout, requirements, 
+summary: 'Un environnement IBM Domino type comporte au moins trois volumes Domino, un pour les données Domino, des journaux de transactions Domino et le répertoire changeinfo du plug-in. De nombreux sites disposent également de volumes pour Domino DAOS et pour les reconstructions d"affichage.' 
+---
+= Exigences en matière d'organisation du stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un environnement IBM Domino type comporte au moins trois volumes Domino, un pour les données Domino, des journaux de transactions Domino et le répertoire changeinfo du plug-in. De nombreux sites disposent également de volumes pour Domino DAOS et pour les reconstructions d'affichage.
+
+Le plug-in IBM Domino utilise le répertoire changeinfo pour les modifications enregistrées pendant les opérations de sauvegarde et pour les copies des journaux de transactions utilisés dans les opérations de restauration à la minute. Il est recommandé de stocker le répertoire changeinfo sur un volume distinct, afin d'éviter d'écraser les informations par inadvertance et de faciliter la sauvegarde.
+
+Il peut également être utile d'avoir des volumes distincts pour Domino DAOS (si cette option est activée) et pour les reconstructions de vues. Lorsque Domino reconstruit une vue (par exemple, lorsqu'un utilisateur ouvre une vue dont l'index a été supprimé ou lors de l'exécution de updall --R), il peut générer des fichiers temporaires pour trier les données en vue d'une reconstruction rapide.
+
+Par défaut, ces fichiers temporaires sont situés dans le dossier temporaire du système ou dans le dossier de données Domino. IBM recommande de modifier l'emplacement des fichiers temporaires sur un autre lecteur afin de distribuer les E/S du disque et de garantir un espace suffisant pour reconstruire les vues. Pour modifier le dossier temporaire utilisé pour les reconstructions de vues, ajoutez le paramètre View_Rebuild_Dir au fichier notes.ini.
+
+Le tableau suivant présente la disposition des volumes préférés :
+
+|===
+| Volumétrie | Le contenu | Remarques 
+
+
+ a| 
+Volume 1
+ a| 
+Données Domino
+ a| 
+Préférés des disques FC, SAS ou SSD.
+
+
+
+ a| 
+Volume 2
+ a| 
+Journaux de transactions Domino
+ a| 
+Préférés des disques FC, SAS ou SSD.
+
+
+
+ a| 
+Volume 3
+ a| 
+info change
+ a| 
+Stocke les modifications enregistrées pendant les opérations de sauvegarde et les copies des journaux de transactions à utiliser dans les opérations de restauration à chaud.
+
+
+
+ a| 
+Volume 4
+ a| 
+Reconstruction de vue
+ a| 
+Facultatif. Stocke les fichiers temporaires créés lors des mises à jour de l'index. Peut utiliser le disque RAM. Ajoutez le paramètre View_Rebuild_Dir au fichier notes.ini.
+
+
+
+ a| 
+Volume 5
+ a| 
+Référentiel DAOS
+ a| 
+Facultatif. Contient des fichiers .dlo de DAOS. Ses faibles besoins en E/S en font la solution de stockage adaptée aux disques SATA.
+
+|===
+
+NOTE: Dans les environnements virtuels, les disques montés sur invité sont privilégiés.

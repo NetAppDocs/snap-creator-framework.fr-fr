@@ -1,0 +1,33 @@
+---
+permalink: administration/reference_cli_command_results_in_404_not_found_error.html 
+sidebar: sidebar 
+keywords: unix, cli, command, port, 404, error 
+summary: 'Dans un environnement UNIX, vous pouvez rencontrer l"erreur 404 introuvable lors de l"exécution d"une commande CLI.' 
+---
+= La commande CLI entraîne une erreur 404 introuvable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans un environnement UNIX, vous pouvez rencontrer l'erreur 404 introuvable lors de l'exécution d'une commande CLI.
+
+* *Numéro*
++
+Dans un environnement UNIX, vous essayez d'exécuter une commande CLI ; cependant, l'erreur 404 est introuvable. Par exemple :
+
++
+[listing]
+----
+404 Not Found at //local/scServer4.1.0c/snapcreator>SnapCreator/Service/Engine.pm line 152
+----
+* *Cause*
++
+Cette erreur se produit généralement lorsqu'une autre chose que Snap Creator utilise le port sélectionné.
+
+* * Action corrective*
++
+Vérifiez que Snap Creator fonctionne sur le port sélectionné et que rien d'autre n'utilise le port.
+
+

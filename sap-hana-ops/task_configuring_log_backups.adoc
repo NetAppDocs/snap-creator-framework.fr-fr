@@ -1,0 +1,31 @@
+---
+permalink: sap-hana-ops/task_configuring_log_backups.html 
+sidebar: sidebar 
+keywords: configuring, log, backups 
+summary: Les sauvegardes des journaux doivent être stockées sur un système de stockage différent de celui du stockage primaire. Le système de stockage utilisé pour la sauvegarde des données peut également être utilisé pour la sauvegarde des journaux. 
+---
+= Configuration des sauvegardes des journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les sauvegardes des journaux doivent être stockées sur un système de stockage différent de celui du stockage primaire. Le système de stockage utilisé pour la sauvegarde des données peut également être utilisé pour la sauvegarde des journaux.
+
+Sur le stockage secondaire, un volume doit être configuré pour conserver les sauvegardes des journaux. Assurez-vous que les copies Snapshot automatiques sont désactivées pour ce volume.
+
+. Montez le volume sur chaque noeud de la base de données, soit en exécutant la commande mount, soit en modifiant le fichier fstab (file system table).
++
+[listing]
+----
+hana2b:/vol/backup_log_ANA /mnt/backup_log_ANA nfs
+rw,bg,vers=3,hard,timeo=600,rsize=65536,wsize=65536,actimeo=0,noatime   0  0
+----
++
+Dans SAP HANA Studio, la destination de sauvegarde des journaux est configurée comme indiqué dans la figure suivante.
+
++
+image::../media/sap_hana_studio_log_backup_destination_gui.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+

@@ -1,0 +1,53 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, service, start, verify, stop, windows 
+summary: Vous pouvez démarrer et arrêter le service Snap Creator Agent et vérifier si le service Snap Creator Agent est exécuté sur votre système Windows. 
+---
+= Démarrage, vérification et arrêt de Snap Creator Agent sous Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez démarrer et arrêter le service Snap Creator Agent et vérifier si le service Snap Creator Agent est exécuté sur votre système Windows.
+
+. À partir de l'invite de commande, démarrez ou arrêtez le service Snap Creator Agent ou vérifiez si le service Snap Creator Agent est en cours d'exécution, le cas échéant :
++
+|===
+| Les fonctions que vous recherchez... | Entrez les informations suivantes... 
+
+
+ a| 
+Démarrez le service Snap Creator Agent
+ a| 
+sc start snapcreatoragentservice
+
+
+
+ a| 
+Vérifiez si le service Snap Creator Agent est en cours d'exécution
+ a| 
+sc query snapcreatoragentservice
+
+
+
+ a| 
+Arrêtez le service Snap Creator Agent
+ a| 
+sc stop snapcreatoragentservice
+
+|===
++
+Si vous souhaitez exécuter Snap Creator au premier plan, au lieu d'utiliser la commande sc start, effectuez les opérations suivantes :
+
++
+.. Ouvrez une invite de commande sur l'hôte où Snap Creator Agent est installé, puis accédez au cd Snap Creator AgentDirectory: `\install_path\scAgent4.3.0\bin\`
+.. Pour démarrer le service Snap Creator Agent, exécutez le script de batch : scAgent.bat
++
+La fermeture de l'invite de commande arrête le service Snap Creator Agent. Étant donné que le script de batch (scAgent.bat) exécute Snap Creator au premier plan, Snap Creator Agent ne s'exécute que tant que l'invite de commande est ouverte. Pour exécuter Snap Creator en arrière-plan, vous devez utiliser le service Snap Creator Agent.
+
+
+
+

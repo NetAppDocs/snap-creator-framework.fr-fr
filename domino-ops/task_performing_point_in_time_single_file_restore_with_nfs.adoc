@@ -1,0 +1,146 @@
+---
+permalink: domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html 
+sidebar: sidebar 
+keywords: snap creator, ibm, domino, plug-in, perfomring, single-file, single, file restore 
+summary: 'Le plug-in IBM Domino vous permet d"effectuer des restaurations de fichiers uniques à un point dans le temps, en moins d"une minute ou de sélectionner une minute pour vos bases de données dans des environnements NFS.' 
+---
+= Exécution d'une restauration de fichier unique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in IBM Domino vous permet d'effectuer des restaurations de fichiers uniques à un point dans le temps, en moins d'une minute ou de sélectionner une minute pour vos bases de données dans des environnements NFS.
+
+Vous devez définir le paramètre Data Restore Directorydans le fichier de configuration dans le sous-répertoire correct du volume de données Domino.
+
+
+NOTE: Vous n'avez pas besoin d'arrêter le serveur Domino pour une restauration de fichier unique.
+
+Les options de restauration de fichiers uniques sont les suivantes :
+
+|===
+| Type de restauration | Description 
+
+
+ a| 
+Restauration de fichiers uniques (à un point dans le temps)
+ a| 
+Restaure un seul fichier à son état au moment de la copie Snapshot (NFS uniquement).
+
+
+
+ a| 
+Restauration de fichiers uniques (en moins d'une minute)
+ a| 
+Restauration d'un seul fichier à son état au moment de la copie Snapshot, puis lecture des journaux de transactions Domino à la copie la plus récente (NFS uniquement).
+
+
+
+ a| 
+Restauration de fichiers uniques (à sélectionner en moins d'une minute)
+ a| 
+Restauration d'un seul fichier à son état au moment de la copie Snapshot, puis lecture des journaux de transactions Domino à un moment donné (NFS uniquement).
+
+|===
+
+NOTE: Pour des restaurations ponctuelles et à partir d'une minute, la journalisation des transactions Domino doit être activée.
+
+Les journaux de transactions ne peuvent être lus que vers le transfert. La sélection d'une heure avant la création de la copie Snapshot entraîne une erreur de restauration.
+
+. Dans le volet profils et configurations, sélectionnez le fichier de configuration, puis cliquez sur *actions* > *Restaurer*.
++
+La sélection de *Restore* lance automatiquement l'assistant Snap Creator Framework Restore. Dans l'assistant de restauration, cliquez sur *Suivant* pour passer à la page suivante et cliquez sur *Retour* pour revenir à la page précédente.
+
++
+
+NOTE: Si vous restaurez à partir d'une copie SnapVault, vous êtes invité à effectuer une restauration à partir d'un stockage primaire ou secondaire. Votre sélection dépend de la manière dont vous gérez la limitation décrite dans link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["Concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"].
+
+. Sur la page Détails de la restauration, spécifiez les détails de la restauration :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom du contrôleur/Vserver
+ a| 
+Sélectionnez la SVM sur le système de stockage à partir de lequel vous souhaitez restaurer.
+
+
+
+ a| 
+Restaurer le nom du volume
+ a| 
+Sélectionnez le volume à restaurer.
+
+
+
+ a| 
+Politique
+ a| 
+Sélectionnez la stratégie à partir de laquelle vous souhaitez restaurer la sauvegarde.
+
+
+
+ a| 
+Copies Snapshot Snap Creator/toutes copies Snapshot
+ a| 
+Ne conservez pas la valeur par défaut.
+
+
+
+ a| 
+Restaurez le nom de la copie Snapshot
+ a| 
+Sélectionnez la copie Snapshot à partir de laquelle vous souhaitez restaurer.
+
+
+
+ a| 
+Type de restauration
+ a| 
+Sélectionnez *Restauration de fichiers unique*.
+
+|===
+. Sur la page suivante, sélectionnez le fichier à restaurer.
++
+Le fichier s'affiche avec son chemin d'accès complet dans le champ *chemin source*.
+
++
+
+TIP: Copiez le nom du chemin d'accès dans le presse-papiers pour une utilisation ultérieure.
+
+. Sur la page suivante, sélectionnez le répertoire dans lequel vous souhaitez restaurer le fichier.
++
+Le nom du sous-répertoire parent du fichier doit être identique au nom du sous-répertoire parent dans le chemin source. Si, par exemple, le chemin source est /domino/data/mail/user1.nsf, le chemin de restauration est /domino/data/restore/mail/user1.nsf.
+
++
+Le répertoire est affiché avec son nom de chemin complet dans le champ *chemin de destination*.
+
+. Sur la page suivante, spécifiez le type de restauration de fichier unique :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Type de restauration
+ a| 
+Cliquez sur le type de restauration de fichier unique. Si vous choisissez *sélectionnable en haut de la minute*, de nouveaux champs sont affichés où vous pouvez spécifier la date et l'heure auxquelles vous souhaitez lire les journaux de transactions Domino. Cliquez sur *Ignorer la validation* si l'heure sur le serveur Snap Creator ne correspond pas à celle sur le contrôleur de stockage.
+
+
+
+ a| 
+Désactiver la réplication
+ a| 
+Cochez cette case pour définir un nouvel ID de réplica Domino pour le fichier de base de données restauré.
+
+|===
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+. Dans la boîte de dialogue Restauration d'un seul fichier, cliquez sur *OK*.
++
+Snap Creator lance la tâche de restauration. Les informations sur le travail s'affichent dans le volet Console.
+
+

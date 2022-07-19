@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_performing_restore_operations.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, snapdrive, windows 
+summary: 'À l"aide de l"interface graphique Snap Creator, vous pouvez effectuer des restaurations de volumes, des restaurations de fichiers uniques et des restaurations définies par les applications.' 
+---
+= Exécution des opérations de restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+À l'aide de l'interface graphique Snap Creator, vous pouvez effectuer des restaurations de volumes, des restaurations de fichiers uniques et des restaurations définies par les applications.
+
+Si vous utilisez SnapDrive pour Windows, vous devez utiliser SnapDrive pour effectuer des opérations de restauration, qui doivent être effectuées en dehors de Snap Creator.

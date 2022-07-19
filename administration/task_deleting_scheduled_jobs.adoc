@@ -1,0 +1,22 @@
+---
+permalink: administration/task_deleting_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: delete, schedule, job, management 
+summary: Vous pouvez supprimer un travail planifié. 
+---
+= Suppression de travaux planifiés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un travail planifié.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *Schedules*.
+. Dans l'onglet programmes, sélectionnez un travail dans la liste des travaux planifiés, puis cliquez sur *Supprimer*.
+. Cliquez sur *Oui* dans la fenêtre de confirmation.
++
+Le travail planifié est supprimé de la liste.
+
+

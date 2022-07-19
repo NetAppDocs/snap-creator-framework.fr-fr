@@ -1,0 +1,20 @@
+---
+permalink: domino-ops/concept_preparing_for_ibm_domino_backup_and_restore_operations.html 
+sidebar: sidebar 
+keywords: domino, ibm, preparing, prepare, ibm, domino, backup, restore 
+summary: Avant de déployer le plug-in IBM Domino, assurez-vous que votre système de stockage et vos hôtes répondent à la configuration minimale requise en termes de ressources. Vous devez également configurer des dispositions de système de stockage pour les bases de données et, éventuellement, configurer les relations SnapMirror et SnapVault. 
+---
+= Préparation de la sauvegarde et de la restauration d'IBM Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de déployer le plug-in IBM Domino, assurez-vous que votre système de stockage et vos hôtes répondent à la configuration minimale requise en termes de ressources. Vous devez également configurer des dispositions de système de stockage pour les bases de données et, éventuellement, configurer les relations SnapMirror et SnapVault.
+
+Pour connaître les exigences d'installation requises pour Snap Creator Server et Agent, consultez le https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["Guide d'installation de Snap Creator Framework 4.1.2"]. Faites particulièrement attention aux exigences de préinstallation d'IBM Domino pour l'hôte Agent :
+
+* Sur les hôtes UNIX, vous devez créer des liens symboliques vers les fichiers d'objets partagés IBM Domino.
+* Sur les hôtes Windows, vous devez ajouter le chemin d'installation d'IBM Domino à la variable d'environnement PATH.
+

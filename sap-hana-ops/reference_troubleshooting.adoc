@@ -1,0 +1,179 @@
+---
+permalink: sap-hana-ops/reference_troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshooting 
+summary: 'La section Dépannage fournit des informations sur les codes d"erreur, les messages d"erreur et comprend la description ou la résolution du problème.' 
+---
+= Dépannage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La section Dépannage fournit des informations sur les codes d'erreur, les messages d'erreur et comprend la description ou la résolution du problème.
+
+Le tableau suivant répertorie les messages d'erreur du plug-in SAP HANA.
+
+|===
+| Code d'erreur | Message d'erreur | Description/résolution 
+
+
+ a| 
+hdb-00001
+ a| 
+Impossible de trouver un nœud HANA accessible pour l'exécution des commandes hdbsql à l'aide des paramètres de configuration fournis. Vérifiez et mettez à jour les paramètres HANA dans la configuration, puis réessayez.
+ a| 
+Vérifiez que les nœuds HANA sont exécutés et accessibles, et que le numéro d'instance fourni est correct.
+
+
+
+ a| 
+hdb-00002
+ a| 
+Échec de la création du snapshot de base de données pour [$sid].
+ a| 
+Vérifiez si un snapshot de base de données HANA est déjà créé sur la base de données. Si vous avez déjà créé, supprimez le snapshot de la base de données HANA ou exécutez une opération de mise au repos. Si ce n'est pas déjà fait, vérifiez dans les journaux la présence d'autres messages d'erreur et détails.
+
+
+
+ a| 
+hdb-00003
+ a| 
+Échec de la suppression du snapshot de la base de données pour [$sid].
+ a| 
+Vérifiez si un snapshot de base de données HANA est déjà supprimé. Si oui, cette erreur peut être ignorée. Si non, vérifiez les paramètres du plug-in SAP HANA et assurez-vous que les nœuds sont accessibles et le numéro d'instance fourni est correct.
+
+
+
+ a| 
+hdb-00004
+ a| 
+La connexion au nœud [$hana_node] avec l'instance [$instance] a échoué car la connexion a été refusée.
+ a| 
+Le nœud HANA avec l'instance affichée dans le message est inaccessible. Ce peut être juste un avertissement car le plug-in tentera d'exécuter les commandes hdbsql sur d'autres nœuds. Vérifiez les journaux pour voir si l'opération a réussi.
+
+
+
+ a| 
+hdb-00005
+ a| 
+La base de données [$sid] a déjà un snapshot !
+ a| 
+Le snapshot de la base de données HANA existe déjà sur la base de données. Supprimez le snapshot de la base de données HANA ou exécutez une opération d'annulation de mise au repos pour résoudre ce problème.
+
+
+
+ a| 
+hdb-00006
+ a| 
+Impossible de résoudre le nom d'hôte [$hana_node].
+ a| 
+Le nom d'hôte du nœud HANA ne peut pas être résolu. Vérifiez les entrées de votre serveur DNS ou de vos hôtes etc.
+
+
+
+ a| 
+hdb-00007
+ a| 
+Nom d'utilisateur ou mot de passe non valide. Vérifiez les informations d'identification et réessayez.
+ a| 
+Le nom d'utilisateur et le mot de passe fournis pour la base de données HANA sont incorrects. Corrigez les entrées dans le fichier de configuration et réessayez.
+
+
+
+ a| 
+hdb-00008
+ a| 
+L'exécution de la commande [$hdbsql_cmd] sur [$hana_node] a échoué.
+ a| 
+Le plug-in n'a pas pu exécuter la commande hdbsql sur tous les nœuds HANA fournis dans la configuration. Vérifiez les nœuds HANA et les paramètres d'instance, et assurez-vous qu'au moins un nœud HANA est fonctionnel et accessible.
+
+
+
+ a| 
+hdb-00009
+ a| 
+Impossible de trouver HANA [$info].
+ a| 
+L'opération SCDUMP du plug-in SAP HANA n'a pas pu récupérer d'informations particulières à partir des bases de données HANA. Vérifiez les nœuds HANA et les paramètres d'instance, et assurez-vous qu'au moins un nœud HANA est fonctionnel et accessible.
+
+
+
+ a| 
+hdb-00010
+ a| 
+La collecte des informations du système d'exploitation a échoué.
+ a| 
+La collecte des informations sur le système d'exploitation a échoué dans l'environnement Windows. Le plug-in SAP HANA n'est pas pris en charge par Windows. Utilisez plutôt un système d'exploitation SLES.
+
+
+
+ a| 
+hdb-00011
+ a| 
+La collecte des informations du système d'exploitation a échoué.
+ a| 
+Snap Creator n'a pas pu collecter les informations OS pour l'opération SCDUMP. Vérifiez le fichier de configuration de votre agent et corrigez les paramètres.
+
+
+
+ a| 
+hdb-00012
+ a| 
+La collecte des informations de SnapDrive a échoué.
+ a| 
+Le plug-in SAP HANA n'est pris en charge que dans un environnement NFS. Votre configuration pour la base de données HANA est activée sur SnapDrive ; définissez SNAPDRIVE=Nin dans le fichier de configuration.
+
+
+
+ a| 
+hdb-00013
+ a| 
+Le paramètre HANA_NODES n'est pas défini. Vérifiez les paramètres HANA dans le fichier de configuration.
+ a| 
+Le paramètre HANA nodes (HANA_NODES) est requis pour le plug-in SAP HANA. Définissez le paramètre et réessayez.
+
+
+
+ a| 
+hdb-00014
+ a| 
+Impossible de trouver un nœud HANA accessible pour exécuter les commandes hdbsqlshs à l'aide des paramètres de configuration fournis. Vérifiez et mettez à jour les paramètres HANA dans la configuration, puis réessayez.
+ a| 
+Vérifiez que les nœuds HANA sont exécutés et accessibles, et que le numéro d'instance fourni est correct.
+
+
+
+ a| 
+hdb-00015
+ a| 
+Le paramètre HANA_INSTANCE n'est pas défini. Vérifiez les paramètres HANA dans le fichier de configuration.
+ a| 
+Le paramètre HANA instance (HANA_INSTANCE) est requis pour le plug-in SAP HANA. Définissez le paramètre et réessayez.
+
+
+
+ a| 
+hdb-00016
+ a| 
+Le paramètre HANA_PASSWORD n'est pas défini. Vérifiez les paramètres HANA dans le fichier de configuration.
+ a| 
+Le paramètre HANA password (HANA_PASSWORD) est requis pour le plug-in SAP HANA. Définissez le paramètre et réessayez.
+
+
+
+ a| 
+hdb-00017
+ a| 
+Chemin d'accès à hdbsql, la valeur du paramètre HANA_HDBSQL_CMD n'est pas valide !
+ a| 
+L'un des événements suivants s'est produit :
+
+* Vous n'avez pas fourni le chemin hdbsql
+* Le chemin hdbsql fourni est incorrect.
+
+
+Assurez-vous que le client HANA hdbsql est installé sur l'hôte de gestion sur lequel Snap Creator Agent est installé, et fournissez le chemin d'accès correct au binaire hdbsql dans les paramètres HANA, puis réessayez.
+
+|===

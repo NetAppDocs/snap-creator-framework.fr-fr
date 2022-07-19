@@ -1,0 +1,31 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, logs, report pane 
+summary: 'Vous pouvez afficher les journaux dans le volet Snap de rapports, dans le même format que celui utilisé pour les afficher dans le volet Console. Vous pouvez afficher les journaux d"erreurs ainsi que les journaux standard dans le volet Rapports.' 
+---
+= Affichage des journaux dans le volet Rapports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les journaux dans le volet Snap de rapports, dans le même format que celui utilisé pour les afficher dans le volet Console. Vous pouvez afficher les journaux d'erreurs ainsi que les journaux standard dans le volet Rapports.
+
+. En haut de la fenêtre Snap Creator Framework, cliquez sur *Reports* > *Logs*.
+. Dans le volet Rapports, sélectionnez le profil, le fichier de configuration, le type de journal et le fichier journal. où les types de journaux sont les suivants :
++
+** *Out Logs* fournit des informations détaillées pour un travail.
+** *Journaux de débogage* fournit des informations détaillées ainsi que des informations utiles pour le débogage.
+** *Stderr Logs* fournit des informations sur les erreurs écrites à l'erreur standard.
+** *Journaux d'erreurs* fournit toutes les informations d'erreur. *Remarque :* en fonction de la taille du travail, la sélection de *Journal de débogage* peut ralentir ou ne pas répondre au navigateur.
+
+
+. Cliquez sur :
++
+** *Télécharger le journal sélectionné* pour télécharger le journal sélectionné.
+** *Télécharger les journaux GUI* pour télécharger les journaux GUI. Dans la boîte de dialogue de téléchargement, cliquez sur *Ouvrir* ou *Enregistrer*, selon les besoins.
+
+
+

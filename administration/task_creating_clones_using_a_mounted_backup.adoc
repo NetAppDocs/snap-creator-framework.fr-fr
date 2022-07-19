@@ -1,0 +1,34 @@
+---
+permalink: administration/task_creating_clones_using_a_mounted_backup.html 
+sidebar: sidebar 
+keywords: clone, volume, lun, existing, backup, server, snap, creator, configuration 
+summary: 'Vous pouvez cloner des volumes ou des LUN à partir d"une sauvegarde existante en tant que source.' 
+---
+= Créer des clones à partir d'une sauvegarde existante
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez cloner des volumes ou des LUN à partir d'une sauvegarde existante en tant que source.
+
+* Snap Creator Server doit communiquer avec le système de stockage.
+* Vous devez être connecté à Snap Creator avec l'autorisation appropriée pour effectuer l'opération de clonage.
+
+
+Cette opération de clonage consiste à monter une copie Snapshot existante, puis à cloner la sauvegarde existante.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *configurations*.
+. Dans l'onglet *configurations*, dans le volet *profils et Configuration*, sélectionnez un fichier de configuration.
+. Sélectionnez *actions* > *Mount*.
+. Dans la boîte de dialogue Paramètres supplémentaires, sélectionnez le contrôleur, le volume et la règle contenant la sauvegarde à monter, puis sélectionnez la copie Snapshot à monter (clonée), puis cliquez sur *OK* pour lancer le processus de clonage.
++
+image::../media/additional_parameters_clone_existing.png[les paramètres supplémentaires clonez les paramètres existants]
+
++
+
+NOTE: Notez le nom de la copie Snapshot sélectionnée. Lors du démontage de la sauvegarde, vous devez sélectionner le même nom de copie Snapshot.
+
+. Dans le volet *Console*, vérifiez que le processus de clonage a réussi.
+

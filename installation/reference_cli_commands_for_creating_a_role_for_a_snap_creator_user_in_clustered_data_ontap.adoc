@@ -1,0 +1,14 @@
+---
+permalink: installation/reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: cli, commands, create, creating, role 
+summary: 'Lors de la création d"un utilisateur Snap Creator dans clustered Data ONTAP, vous devez créer un rôle pour un nouvel utilisateur de cluster ou un nouvel utilisateur de SVM en exécutant diverses commandes.' 
+---
+= Commandes CLI permettant de créer un rôle pour un utilisateur Snap Creator dans clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors de la création d'un utilisateur Snap Creator dans clustered Data ONTAP, vous devez créer un rôle pour un nouvel utilisateur de cluster ou un nouvel utilisateur de SVM en exécutant diverses commandes.

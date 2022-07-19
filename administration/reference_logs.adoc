@@ -1,0 +1,68 @@
+---
+permalink: administration/reference_logs.html 
+sidebar: sidebar 
+keywords: snap, creator, error, troubleshoot, cmd, output, debug, warn, error, out, debug, stderr 
+summary: 'Snap Creator fournit des messages d"erreur utiles et des journaux de dépannage.' 
+---
+= Types de messages d'erreur et journaux de dépannage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator fournit des messages d'erreur utiles et des journaux de dépannage.
+
+Les types de messages d'erreur suivants sont fournis par Snap Creator :
+
+* *INFO*
++
+Pour les opérations standard, normalement effectuées.
+
+* *CMD*
++
+La commande externe ou le script exécuté par Snap Creator (en fonction de la configuration) et le code de retour de la commande ou du script sont consignés. Généralement, il s'agit de commandes AVANT, POST, OU de mise en veille DE L'APPLICATION ou d'annulation de la mise en attente.
+
+* *SORTIE*
++
+Pour les appels de bibliothèque Data ONTAPI.
+
+* *DEBUG*
++
+Pour des informations de débogage.
+
+* *AVERTISSEMENT*
++
+Pour attirer votre attention, mais elle est considérée comme une activité normale en général et ne nécessite aucune action (par exemple, lorsque vous supprimez des copies Snapshot)
+
+* *ERREUR*
++
+Indique un problème et nécessite probablement une action manuelle pour corriger l'erreur. Snap Creator se ferme sur tout message D'ERREUR. Il est important de corriger tout problème qui s'est produit avant qu'il ne s'exécute à nouveau. Snap Creator ne résout pas automatiquement les problèmes, mais vous pouvez spécifier ce qui doit être fait avant de quitter Snap Creator à l'aide DE PRE_EXIT_CMD défini dans le fichier de configuration.
+
+
+
+Les journaux de dépannage contiennent les valeurs de sortie de toute commande ou tout script externe exécuté par Snap Creator (par exemple, SnapDrive). Si vous appelez d'autres scripts via Snap Creator, il est important de configurer correctement les codes de sortie et les résultats de ces scripts. En cas de problème, vous ne devez jamais quitter avec l'état 0.
+
+Les journaux suivants sont disponibles pour chaque profil et configuration Snap Creator :
+
+* *Sortie*
++
+Contient uniquement des informations de journalisation détaillées.
+
+* *Déboguer*
++
+Contient des informations de journalisation détaillées et de débogage. Si les messages de trace sont activés dans le fichier de configuration, qui est le paramètre par défaut, les informations de trace s'affichent dans ce journal. Le paramètre qui active les messages de trace est LOG_TRACE_ENABLE - (y|N).
+
+* *Erreur*
++
+Contient un historique de tous les événements d'erreur pour une configuration donnée. Le journal des erreurs permet d'afficher des informations sur les erreurs passées afin que les utilisateurs puissent mettre en corrélation les événements et obtenir une perspective historique. Il peut être surveillé et utilisé pour intégrer Snap Creator à une application de surveillance.
+
+* *Stderr*
++
+Contenir des informations en cas de problème avec le code Snap Creator ; cependant, le journal des flux d'erreurs standard est généralement vide.
+
+
+
+Les journaux OUT, Debug et stderr sont conservés comme défini par la valeur LOG_NUM dans le fichier de configuration alors que le journal des erreurs est toujours ajouté. Tous les journaux sont écrits dans le répertoire /scServer_install_path/Engine/logs/profile.
+
+L'agent Snap Creator crée, en option, les journaux out, Debug et stderr, et est activé par défaut avec le paramètre suivant : SC_AGENT_LOG_ENABLE=Y.

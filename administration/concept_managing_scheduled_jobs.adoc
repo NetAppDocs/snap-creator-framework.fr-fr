@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_managing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: manage, scheduled, jobs, listing, running, deleting, managing 
+summary: 'Vous pouvez gérer les tâches planifiées en les créant \(pour automatiser les opérations de sauvegarde\), ainsi que la liste en modifiant, listant, en cours d"exécution et en supprimant ces tâches planifiées.' 
+---
+= Gestion des tâches planifiées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer les tâches planifiées en les créant (pour automatiser les opérations de sauvegarde), ainsi que la liste en modifiant, listant, en cours d'exécution et en supprimant ces tâches planifiées.
+
+Snap Creator Server contient un planificateur centralisé permettant de planifier des tâches Snap Creator via un programme de règles (intégré à des objets de stratégie) ou en les créant directement via le planificateur. Le planificateur peut exécuter jusqu'à 10 tâches simultanément et peut mettre en file d'attente des tâches supplémentaires jusqu'à la fin d'une tâche en cours d'exécution.

@@ -1,0 +1,1459 @@
+---
+permalink: administration/reference_snap_creator_cli_commands_for_workflow_actions.html 
+sidebar: sidebar 
+keywords: command-line, interface, cli, snap, creator, workflow, command, backup, copy 
+summary: 'Vous pouvez utiliser des commandes de l"interface de ligne de commande pour effectuer diverses actions de flux de travail Snap Creator basées sur l"interface utilisateur graphique.' 
+---
+= Commandes CLI Snap Creator pour les actions de workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser des commandes de l'interface de ligne de commande pour effectuer diverses actions de flux de travail Snap Creator basées sur l'interface utilisateur graphique.
+
+Le tableau suivant fournit les commandes CLI pour effectuer des actions de flux de travail basées sur l'interface graphique Snap Creator :
+
+|===
+| Zone de flux de travail | Action/description | Commande et paramètres associés 
+
+
+ a| 
+Sauvegardes
+ a| 
+Créer une copie de sauvegarde. Effectue une sauvegarde en fonction du fichier de configuration associé au profil.
+ a| 
+[listing]
+----
+
+                  snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action backup
+--policy Policy
+--verbose
+----
+
+
+ a| 
+Créer une sauvegarde Open Systems SnapVault.effectue une sauvegarde à l'aide d'Open Systems SnapVault. Cela nécessite Snap Creator Agent. Snap Creator Server communique avec Snap Creator Agent et effectue une mise à jour de SnapVault. Aucune copie de sauvegarde primaire n'est effectuée.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action ossv
+--policy Policy
+--verbose
+---- a| 
+Sauvegardes (suite...)
+
+
+
+ a| 
+Supprimer une copie de sauvegarde (manuellement).supprime manuellement une sauvegarde existante. Cette opération est pilotée par un menu.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action backupDel
+--policy Policy
+--verbose
+---- a| 
+Supprimer une copie de sauvegarde (automatiquement).
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action backupDel
+--policy Policy
+--verbose
+--nonInteractive
+--cntName controller
+--volName volume
+--backupName name
+---- a| 
+Lister les copies de sauvegarde.répertorie les copies de sauvegarde Snap Creator sur les systèmes de stockage principal et secondaire.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action backupList
+--policy Policy
+--verbose
+----
+
+
+ a| 
+Monter une copie de sauvegarde. Effectue l'opération de montage sur une sauvegarde existante. Crée un clone de volume basé sur la sauvegarde et permet le montage du clone via Snap Creator Agent à l'aide de la commande MOUNT_CMD.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action mount
+--backupName name
+--verbose
+---- a| 
+Sauvegardes (suite...)
+
+
+
+ a| 
+Démonter une copie de sauvegarde.effectue l'opération de démontage sur une sauvegarde existante. Supprime un clone de volume basé sur la sauvegarde et permet le démontage du clone via Snap Creator Agent à l'aide de la commande UMOUNT_CMDs.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action umount
+--backupName name
+--verbose
+---- a| 
+Types de sauvegarde
+
+
+
+ a| 
+Créez un nouveau type de sauvegarde.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action backupTypeAdd
+--backupTypeName name
+--verbose
+---- a| 
+Mettre à jour un type de sauvegarde existant.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action backupTypeUpdate
+--backupTypeId 1
+--backupTypeName name
+--verbose
+---- a| 
+Supprimez un type de sauvegarde existant.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action backupTypeDelete
+--backupTypeId 1
+
+--verbose
+----
+
+
+ a| 
+Indiquez les types de sauvegarde.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action backupTypeList
+--verbose
+---- a| 
+Clones
+
+
+
+ a| 
+Cloner une LUN.sauvegarde le système de stockage principal, puis cloner la sauvegarde à l'aide d'un clone de LUN. Le mappage de volumes des igroups est également géré. Cela nécessite un environnement SAN ou ISAN.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action cloneLun
+--policy Policy
+--verbose
+---- a| 
+Cloner un volume.sauvegarde le système de stockage primaire, puis cloner la sauvegarde à l'aide d'un clone de volume. Le mappage de volumes des igroups, NFS ou CIFS est également géré. Cela nécessite un environnement SAN, ISAN ou NAS.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action cloneVol
+--policy Policy
+--verbose
+---- a| 
+Supprimer un clone.exécute une opération de suppression de clone basée sur la règle de conservation spécifiée. Une seule copie du clone de LUN est conservée. Les clones de volumes ont une utilisation associée à la stratégie.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action cloneDel
+--policy Policy
+--verbose
+----
+
+
+ a| 
+List Snap Creator clones.répertorie les clones de volumes Snap Creator pour la configuration donnée.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action cloneList
+--verbose
+---- a| 
+List Snap Creator volumes.répertorie les volumes Snap Creator pour la configuration spécifiée sur le système de stockage principal.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action volumeList
+--verbose
+---- a| 
+Fichiers de configuration
+ a| 
+Importer une configuration.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action configImport
+--importFile file_path
+--verbose
+---- a| 
+Exporter une configuration.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action configExport
+--exportFile file_path
+--verbose
+----
+
+
+ a| 
+Importer un fichier de configuration global.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action globalImport
+--importFile file_path
+--verbose
+---- a| 
+Exporter un fichier de configuration globale.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action globalExport
+--ExportFile file_path
+--verbose
+---- a| 
+Supprimer un fichier de configuration globale du référentiel.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action globalDelete
+--verbose
+----
+
+
+ a| 
+Fichiers de configuration (suite...)
+ a| 
+Importez un fichier de configuration global pour un profil particulier dans le référentiel.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action profileglobalImport
+--importFile file_path
+--verbose
+----
+
+
+ a| 
+Exportez un fichier de configuration global pour un profil particulier depuis le référentiel.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action profileglobalExport
+--exportFile file_path
+--verbose
+---- a| 
+Supprimer une configuration globale pour un profil particulier du référentiel.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action profileglobalDelete
+--verbose
+---- a| 
+Mettre à niveau d'anciens fichiers de configuration dans un profil. Ajoute des paramètres récemment introduits aux anciens fichiers de configuration. Avant d'exécuter cette commande, tous les anciens fichiers de configuration doivent être copiés dans le dossier serveur/moteur/configurations avec le dossier profil.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port port
+--user userid
+--passwd password
+--upgradeConfigs
+--profile profile_name
+--verbose
+----
+
+
+ a| 
+Emplois
+ a| 
+Répertorier tous les travaux et leur état.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action jobStatus
+--verbose
+----
+
+
+ a| 
+Politique
+ a| 
+Ajouter une nouvelle stratégie locale.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyAdd
+--schedId 1
+--backupTypeId 1
+--policyType local
+--policyName testPolicy
+--primaryCount 7
+--primaryAge 0
+--verbose
+----
+
+
+ a| 
+Politique (suite...)
+ a| 
+Ajoutez une nouvelle règle SnapMirror.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyAdd
+--schedId 1
+--backupTypeId 1
+--policyType snapmirror
+--policyName testPolicy
+--primaryCount 7
+--primaryAge 0
+--verbose
+----
+
+
+ a| 
+Ajoutez une nouvelle règle SnapVault.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyAdd
+--schedId 1
+--backupTypeId 1
+--policyType snapvault
+--policyName testPolicy
+--primaryCount 7
+--primaryAge 0
+--secondaryCount 30
+--secondaryAge 0
+--verbose
+---- a| 
+Mettre à jour une règle SnapMirror.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyUpdate
+--policyId 1
+--schedId 1
+--backupTypeId 1
+--policyType snapmirror
+--policyName testPolicy
+--primaryCount 7
+--primaryAge 0
+--verbose
+---- a| 
+Politique (suite...)
+ a| 
+Mettre à jour une règle SnapVault.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyUpdate
+--policyId 1
+--schedId 1
+--backupTypeId 1
+--policyType snapvault
+--policyName testPolicy
+--primaryCount 7
+--primaryAge 0
+--secondaryCount 30
+--secondaryAge 0
+--verbose
+---- a| 
+Suppression d'une stratégie.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyDelete
+--policyId 1
+--verbose
+----
+
+
+ a| 
+Répertorier toutes les stratégies.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyList
+--verbose
+---- a| 
+Afficher des détails supplémentaires pour une stratégie particulière.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policyDetails
+--policyId 1
+--verbose
+---- a| 
+Affecter des stratégies à un profil.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action policyAssignToProfile
+--policies testPolicy
+--verbose
+----
+
+
+ a| 
+Politique (suite...)
+ a| 
+Annuler l'affectation de stratégies pour un profil.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action policyUnassignFromProfile
+--verbose
+----
+
+
+ a| 
+Répertorier toutes les stratégies affectées à un profil.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action policyListForProfile
+--verbose
+---- a| 
+Planifications de règles
+
+
+
+ a| 
+Créer un planning de règles horaire.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedAdd
+--schedName HourlyBackup
+--schedFreqId 2
+--schedActionId 1
+--schedMin minute
+--schedActive true
+--verbose
+---- a| 
+Créer un programme de stratégies quotidien.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedAdd
+--schedName DailyBackup
+--schedFreqId 3
+--schedActionId 1
+--schedHour hour
+--schedMin minute
+--schedActive true
+--verbose
+---- a| 
+Planifications de stratégies (suite...)
+ a| 
+Créer un programme de règles hebdomadaire.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedAdd
+--schedName WeeklyBackup
+--schedFreqId 4
+--schedActionId 1
+--schedDayOfWeek day_of_week
+--schedHour hour
+--schedMin minute
+--schedActive true
+--verbose
+---- a| 
+Créer une planification de règle cron
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedAdd
+--schedName CronBackup
+--schedFreqId 5
+--schedActionId 1
+--schedCron '0 0/5 14,18 * * ?'
+--schedActive true
+--verbose
+----
+
+
+ a| 
+Mettre à jour un planning de stratégie horaire.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedUpdate
+--schedId 1
+--schedName HourlyBackup
+--schedFreqId 2
+--schedActionId 1
+--schedMin minute
+--schedActive true
+--verbose
+---- a| 
+Planifications de stratégies (suite...)
+
+
+
+ a| 
+Mettre à jour un programme de stratégies quotidien.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedUpdate
+--schedId 1
+--schedName DailyBackup
+--schedFreqId 3
+--schedActionId 1
+--schedHour hour
+--schedMin minute
+--schedActive true
+--verbose
+---- a| 
+Mettre à jour un programme de police hebdomadaire.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedUpdate
+--schedId 1
+--schedName WeeklyBackup
+--schedFreqId 4
+--schedActionId 1
+--schedDayOfWeek day_of_week
+--schedHour hour
+--schedMin minute
+--schedActive true
+--verbose
+---- a| 
+Mettre à jour une planification de règle cron
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedUpdate
+--schedId 1
+--schedName CronBackup
+--schedFreqId 5
+--schedActionId 1
+--schedCron '0 0/5 14,18 * * ?'
+--schedActive true
+--verbose
+----
+
+
+ a| 
+Planifications de stratégies (suite...)
+ a| 
+Supprimer une planification de règles.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedDelete
+--schedId 1
+--verbose
+----
+
+
+ a| 
+Lister les planifications des stratégies.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedList
+--verbose
+---- a| 
+Afficher des informations supplémentaires sur un programme de police.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action policySchedDetails
+--schedId 1
+--verbose
+---- a| 
+Profils
+ a| 
+Créer un nouveau profil.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action profileCreate
+--verbose
+---- a| 
+Supprimer un profil.*Remarque :* les fichiers de configuration du profil sont également supprimés.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--action profileDelete
+--verbose
+----
+
+
+ a| 
+Restaurer
+ a| 
+Effectuer une restauration interactive.exécute une opération de restauration de fichier interactive ou une opération de restauration de volume interactive pour une règle donnée.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action restore
+--policy Policy
+--verbose
+----
+
+
+ a| 
+Effectuer une restauration de volume non interactive.effectue une restauration de volume non interactive.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action restore
+--policy Policy
+--verbose
+--nonInteractive
+--cntName controller
+--volName volume
+--backupName name
+---- a| 
+Effectuez une restauration de fichier non interactive.effectue une restauration de fichier non interactive.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action restore
+--policy Policy
+--verbose
+--nonInteractive
+--cntName controller
+--volName volume
+--backupName name
+--files file_path1,file_path2,etc.
+---- a| 
+Planifications
+ a| 
+Créer un horaire horaire.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedCreate
+--policy Policy
+--schedName HourlyBackup
+--schedFreqId 2
+--schedActionId 1
+--schedMin minute
+--schedActive true
+--schedStartDate date
+--verbose
+---- a| 
+Créez un planning quotidien.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedCreate
+--policy Policy
+--schedName DailyBackup
+--schedFreqId 3
+--schedActionId 1
+--schedHour hour
+--schedMin minute
+--schedActive true
+--schedStartDate date
+--verbose
+----
+
+
+ a| 
+Créer une nouvelle planification hebdomadaire.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedCreate
+--policy Policy
+--schedName WeeklyBackup
+--schedFreqId 4
+--schedActionId 1
+--schedDayOfWeek day_of_week
+--schedHour hour
+--schedMin minute
+--schedActive true
+--schedStartDate date
+--verbose
+---- a| 
+Horaires (suite...)
+
+
+
+ a| 
+Créer une nouvelle planification cron
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedCreate
+--policy Policy
+--schedName CronBackup
+--schedFreqId 5
+--schedActionId 1
+--schedCron "0 0/5 14,18 * * ?"
+--schedActive true
+--schedStartDate date
+--verbose
+---- a| 
+Exécuter un planning.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action schedRun
+--schedId 1
+--verbose
+---- a| 
+Supprimer un planning.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action schedDelete
+--schedId 10
+--verbose
+----
+
+
+ a| 
+Mettre à jour un horaire.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedUpdate
+--policy Policy
+--schedName HourlyBackup
+--schedFreqId 2
+--schedId 1
+--schedActionId 1
+--schedMin minute
+--schedActive true
+--schedStartDate date
+--verbose
+---- a| 
+Horaires (suite...)
+
+
+
+ a| 
+Mettre à jour un planning quotidien.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedUpdate
+--policy Policy
+--schedName DailyBackup
+--schedFreqId 3
+--schedId 1
+--schedActionId 1
+--schedHour hour
+--schedMin minute
+--schedActive true
+--schedStartDate date
+--verbose
+---- a| 
+Mettre à jour un planning hebdomadaire.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedUpdate
+--policy Policy
+--schedName WeeklyBackup
+--schedFreqId 4
+--schedId 1
+--schedActionId 1
+--schedDayOfWeek day_of_week
+--schedHour hour
+--schedMin minute
+--schedActive true
+--schedStartDate date
+--verbose
+---- a| 
+Mettre à jour une planification cron
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action schedUpdate
+--policy Policy
+--schedName CronBackup
+--schedFreqId 5
+--schedId 1
+--schedActionId 1
+--schedCron "0 0/5 14,18 * * ?"
+--schedActive true
+--schedStartDate date
+--verbose
+----
+
+
+ a| 
+Horaires (suite...)
+ a| 
+Répertorier tous les agendas.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action schedList
+--verbose
+----
+
+
+ a| 
+Liste des actions du planificateur prises en charge.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action schedActionList
+--verbose
+---- a| 
+Liste des fréquences du planificateur prises en charge.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action schedFreqList
+--verbose
+---- a| 
+Afficher des détails supplémentaires pour un ID d'horaire.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action schedDetails
+--schedId 1
+--verbose
+----
+
+
+ a| 
+vidage
+ a| 
+Créez un fichier scdump.Dumps logs, fichiers de configuration et informations de support sur un profil particulier dans un fichier .zip appelé scdump situé sous le répertoire racine Snap Creator.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+-- profile Profile
+--config Config
+--action scdump
+--policy Policy
+--verbose
+----
+
+
+ a| 
+Snap Creator Server et Agent
+ a| 
+Indiquez le statut de tous les agents connus du Snap Creator Server.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action agentStatus
+--verbose
+----
+
+
+ a| 
+Snap Creator Server et Agent (suite...)
+ a| 
+Envoyez une requête ping à Snap Creator Server.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action pingServer
+--verbose
+----
+
+
+ a| 
+Envoyez une requête ping à un agent Snap Creator.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--action pingAgent
+--agentName host_name
+--agentPort port
+--verbose
+---- a| 
+Archivage
+
+
+
+ a| 
+Effectuez la gestion du journal d'archivage en fonction des paramètres du fichier de configuration. Cette opération nécessite Snap Creator Agent.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action arch
+--verbose
+---- a| 
+Fonctionnalité de protection des données
+
+
+
+ a| 
+Configurez le jeu de données de fonctionnalité de protection des données de la console de gestion NetApp pour une configuration donnée.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action pmsetup
+--verbose
+---- a| 
+Afficher l'état de protection des données de la relation SnapVault/SnapMirror d'un contrôleur. Si SnapVault ou SnapMirror n'est pas configuré, les résultats ne sont pas affichés.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action dpstatus
+--verbose
+---- a| 
+Mise au repos/mise au repos
+ a| 
+Exécutez l'opération de mise en attente pour une application donnée. Cette opération nécessite Snap Creator Agent.
+
+
+
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action quiesce
+--verbose
+---- a| 
+Exécutez l'opération de mise en attente pour une application donnée. Cette opération nécessite Snap Creator Agent.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action unquiesce
+--verbose
+----
+
+
+ a| 
+Découverte
+ a| 
+Effectuer la détection d'une application donnée. Cette opération nécessite Snap Creator Agent.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action discover
+--verbose
+----
+|===

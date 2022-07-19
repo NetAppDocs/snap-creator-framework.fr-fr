@@ -1,0 +1,96 @@
+---
+permalink: administration/reference_troubleshooting_network_issues.html 
+sidebar: sidebar 
+keywords: network, issues, snap, creator, authorization, failure, troubleshoot, nat 
+summary: 'Il se peut que vous rencontriez des problèmes réseau avec Snap Creator, par exemple des échecs d"autorisation. Vous devez être conscient de ces problèmes et savoir comment les résoudre.' 
+---
+= Résolution des problèmes réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il se peut que vous rencontriez des problèmes réseau avec Snap Creator, par exemple des échecs d'autorisation. Vous devez être conscient de ces problèmes et savoir comment les résoudre.
+
+* *Numéro*
++
+Dans Snap Creator, vous rencontrez un problème d'échec d'autorisation.
+
+* *Cause*
++
+Un échec d'autorisation peut être dû à la configuration, aux autorisations de pare-feu ou à la traduction d'adresses réseau (NAT).
+
+* * Action corrective*
++
+Vérifiez les points suivants :
+
++
+** Nom d'hôte/IP
++
+Sauf si vous utilisez l'équiv hôte, le nom du système de stockage de la commande hostname sur le contrôleur doit être identique à celui saisi dans le fichier de configuration Snap Creator.
+
++
+N'utilisez pas de nom de domaine complet (FQDN) lorsque le nom d'hôte d'un système de stockage est abrégé.
+
++
+Assurez-vous que la résolution IP correspond au nom que vous avez spécifié. En cas de non-concordance, corrigez-le en utilisant l'équiv hôte sur le système de stockage.
+
++
+Pour activer l'équiv hôte, effectuez les opérations suivantes :
+
++
+... Entrez la commande suivante : options https.admin.hostsequiv.enable
+... Modifiez le fichier /etc/hostsequiv et ajoutez ce qui suit : IP/Host_name_in_Snap_Creator config_fileSnap_Creator_user
+
+
+** La fonctionnalité de protection des données de la console de gestion NetApp
++
+Le nom du contrôleur de stockage défini dans les VOLUMES de paramètre de configuration Snap Creator doit correspondre au nom du contrôleur de stockage dans la fonctionnalité de protection des données de NetApp Management Console. Si les noms de contrôleur de stockage ne correspondent pas, vous pouvez utiliser le fichier hôte du système d'exploitation pour forcer les noms de contrôleur de stockage à correspondre.
+
+** Pare-feu
++
+Si un pare-feu existe entre l'hôte exécutant Snap Creator et le système de stockage, assurez-vous que les listes de contrôle d'accès bidirectionnelles (ACL) sont ouvertes pour 80, 443 ou les deux.
+
++
+*** 80 : utilisé pour communiquer avec le système de stockage si HTTP est sélectionné
+*** 443 : utilisé pour communiquer avec le système de stockage si HTTPS est sélectionné pour utiliser HTTPS (443) pour Linux, Solaris ou AIX, installez les bibliothèques openssl requises pour utiliser SSL.
+
+
+
+
++
+Si Snap Creator Agent est en cours d'exécution, le port sur lequel l'agent s'exécute doit être ouvert. Assurez-vous que le trafic de retour du système de stockage peut accéder au système qui exécute Snap Creator, du moins sur les ports non privilégiés.
+
++
+** Snap Creator Framework peut communiquer avec clustered Data ONTAP et Data ONTAP fonctionnant en 7-mode à l'aide de TLS si le protocole SSL est désactivé.
++
+Dans Snap Creator Framework, vous pouvez désactiver SSLV3 dans l'hôte et le système de stockage :
+
++
+*** Pour désactiver SSLV3 sous AIX, Unix ou Windows, vous devez mettre à jour le paramètre jdk.tls.disabedAlgorithms dans le fichier java.security comme suit :
++
+jdk.tls.disabedAlgorithms=sslv3
+
++
+Le fichier java.security se trouve sous le chemin d'accès : /Java/jre/lib/Security/
+
+*** Pour désactiver SSLV3 sur le système de stockage, exécutez la commande System service web modify et configurez les paramètres suivants :
++
+TLSv1 activé : vrai
+
++
+SSLv3 activé : FALSE
+
++
+SSLv2 activé : FALSE
+
+
+
+** NAT
++
+Si vous utilisez NAT, assurez-vous que les adresses IP source/destination ne sont pas modifiées dans le paquet TCP (transmission Control Protocol). Les hôtes et les systèmes de stockage doivent savoir avec qui ils communiquent. La présentation d'une IP de pare-feu à la place de l'adresse IP réelle de l'hôte ou du contrôleur peut entraîner des problèmes.
+
+
+
+

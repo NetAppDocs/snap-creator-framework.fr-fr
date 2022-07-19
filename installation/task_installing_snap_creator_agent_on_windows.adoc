@@ -1,0 +1,85 @@
+---
+permalink: installation/task_installing_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, agent, windows 
+summary: 'Vous pouvez installer Snap Creator Agent sur des hôtes Windows à l"aide du programme d"installation de Windows.' 
+---
+= Installation de Snap Creator Agent sous Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer Snap Creator Agent sur des hôtes Windows à l'aide du programme d'installation de Windows.
+
+* JRE 1.8 la mise à jour 72 ou ultérieure doit être installée.
+* Vous devez disposer de privilèges de niveau administrateur.
+* Le port par défaut (9090) ou un autre port réseau doit être disponible.
+* Snap Creator doit être téléchargé.
++
+.. Lancez le programme d'installation Snap Creator en double-cliquant sur l'icône du fichier Snap_Creator_Frameworkrelease-Windowsversion.exe (par exemple, Snap_Creator_Framework4.1.0-Windows64.exe).
+.. Sur la page Bienvenue, cliquez sur *Suivant* pour lancer l'installation.
+.. Revoir et accepter les conditions du contrat de licence.
+.. Sur la page choisir le type d'installation, configurez les paramètres suivants en fonction des différents types d'installation :
++
+*** *Sélectionnez le type d'installation*
++
+Sélectionnez *Agent*.
+
+*** *Démarrer agent en tant que service*
++
+Sélectionnez cette option pour installer et démarrer le *snapcreatoragentservice* immédiatement après la fin du processus d'installation.
+
++
+Si cette option n'est pas sélectionnée, le champ Port de l'agent est désactivé.
+
++
+
+NOTE: Si vous ne sélectionnez pas cette option, le service n'est pas installé et vous devez démarrer manuellement Snap Creator Agent en exécutant un script de traitement par lots à partir d'une invite de commande.
+
+*** *Saisissez l'adresse IP de votre système*
++
+Sélectionnez cette option pour indiquer l'adresse IP du système sur lequel Snap Creator Server ou Snap Creator Agent est installé. Cette option est utilisée pour générer le certificat SSL pendant le processus d'installation de Snap Creator.
+
+*** *Entrer chemin bin JAVA*
++
+Sélectionnez cette option pour indiquer le chemin du bac Java afin de localiser l'utilitaire keytool. L'utilitaire keytool permet de générer un certificat SSL pendant le processus d'installation de Snap Creator.
+
+*** *Port Agent*
++
+Acceptez le port par défaut (9090) ou spécifiez un numéro de port.
+
+
+
+
+
++
+image::../media/choose_install_type_page.gif[choisissez la page type d'installation]
+
++
+.. Cliquez sur *Suivant*.
+.. Sur la page choisir un emplacement d'installation, entrez un chemin d'installation Snap Creator ou acceptez le chemin par défaut (C:\Program Files\NetApp\Snap_Creator_Framework), puis cliquez sur *Suivant*.
++
+
+NOTE: Si vous envisagez d'utiliser le plug-in IBM Domino, vous devez sélectionner un emplacement autre que le dossier de données Domino.
+
+.. Sur la page choisir le dossier du menu Démarrer, personnalisez le dossier dans lequel Snap Creator doit apparaître dans le menu Démarrer de Windows ou acceptez l'option de dossier par défaut, puis cliquez sur *installer*.
+.. Une fois l'installation terminée, cliquez sur *Suivant*.
++
+Lors de l'installation du service Snap Creator Agent, une invite de commande s'affiche si un service a été sélectionné dans le cadre des options d'installation. Ce processus tente de démarrer les services existants. Par conséquent, il est courant de voir les messages d'échec répertoriés dans le cadre de cette étape, que vous devez ignorer.
+
+.. Cliquez sur *Terminer* pour fermer le programme d'installation de Windows.
+
+
+
+
+Si vous n'avez pas sélectionné l'option *Start agent as service* pendant le processus d'installation, vous devez démarrer manuellement Snap Creator Agent.
+
+*Informations connexes*
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[Installation de Java sur les hôtes Snap Creator]
+
+xref:task_downloading_the_snap_creator_software.adoc[Téléchargement du logiciel Snap Creator]
+
+xref:task_starting_the_agent_from_a_command_prompt.adoc[Démarrage de l'agent à partir d'une invite de commande]

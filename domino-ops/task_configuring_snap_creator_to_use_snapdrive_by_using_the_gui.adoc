@@ -1,0 +1,87 @@
+---
+permalink: domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, supplemental, commands 
+summary: Vous pouvez ajouter des commandes supplémentaires à votre configuration après avoir créé le fichier de configuration. Vous pouvez exécuter les commandes sur Snap Creator Server ou Agent. 
+---
+= Ajout de commandes supplémentaires à la configuration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter des commandes supplémentaires à votre configuration après avoir créé le fichier de configuration. Vous pouvez exécuter les commandes sur Snap Creator Server ou Agent.
+
+Pour exécuter une commande supplémentaire sur l'agent, vous devriez déjà avoir ajouté la commande au fichier allowed_commands.config de l'agent.
+
+Par défaut, des commandes supplémentaires s'exécutent sur l'agent. Vous pouvez exécuter une commande supplémentaire sur le serveur en préattendant la commande avec le SERVEUR de texte, suivie de deux points (:). Par exemple, SERVER:C:\myscript.bat. Il n'est pas nécessaire d'autoriser la commande sur le serveur.
+
+Vous pouvez utiliser l'interface graphique Snap Creator ou l'interface de ligne de commande Snap Creator pour ajouter des commandes à votre configuration de sauvegarde et de restauration.
+
+
+NOTE: Ce guide explique comment utiliser l'interface graphique pour ajouter des commandes. Pour plus d'informations sur l'utilisation de l'interface de ligne de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+. Dans le volet profils et configurations, sélectionnez le fichier de configuration et cliquez sur l'onglet *commandes*.
++
+Les types de commande suivants sont disponibles :
+
++
+|===
+| Type de commande | Description 
+
+
+ a| 
+Requête
+ a| 
+Pour une utilisation sans plug-in uniquement. Ignorer ce type de commande.
+
+
+
+ a| 
+Un détesc. De l'application
+ a| 
+Pour une utilisation sans plug-in uniquement. Ignorer ce type de commande.
+
+
+
+ a| 
+Pré-sortie
+ a| 
+Utilisez ce type pour exécuter des commandes qui indiquent à Snap Creator quoi faire après une erreur fatale.
+
+
+
+ a| 
+Créer une copie Snapshot
+ a| 
+Utilisez ce type pour exécuter vos propres commandes de création de copie Snapshot.
+
+|===
++
+
+NOTE: Seul un sous-ensemble des commandes prises en charge est disponible dans l'interface utilisateur graphique. Pour plus d'informations sur l'APPLICATION, L'ARCHIVE, LE MONTAGE/DÉMONTAGE et LES commandes POST, reportez-vous à la section link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+. Dans l'onglet *commandes*, faites défiler jusqu'à la section du type de commande que vous souhaitez utiliser et cliquez sur *Ajouter*.
+. Tapez sur le texte *Ajouter commande ici* pour entrer la commande.
++
+Pour utiliser SnapDrive pour Windows afin de créer une sauvegarde, vous pouvez entrer les informations suivantes dans la section pour le type de commande Créer une copie Snapshot :
+
++
+[listing]
+----
+"C:\Program Files\NetApp\SnapDrive\sdcli.exe" snap create -s %SNAME-%SNAP_TYPE_%SNAP_TIME -D F G H
+----
++
+où ?
+
++
+** « C:\Program Files\NetApp\SnapDrive\sdcli.exe » correspond au chemin d'installation par défaut de l'interface de ligne de commande SnapDrive.
+** %SNAME-%SNAP_TYPE_%SNAP_TIME indique que le nom de la copie Snapshot doit être formé à partir du nom du fichier de configuration, de la stratégie Snapshot (horaire, quotidien ou mensuel), ainsi que de l'heure et de la date de création de la copie Snapshot.
+** D est le commutateur et F G H sont les points de montage des données à sauvegarder. CONSEIL : pour exécuter la commande sur le serveur, placez la commande en préfixe avec LE SERVEUR de texte, suivi de deux points (:).
+
+
+. Lorsque vous êtes satisfait de votre entrée, appuyez sur *entrée*.
+. Répéter les étapes ,#STEP_3F9C83DD05D84075AD0277213FD67C56 à ,#STEP_FBEDD7AE105F42138EB35315EA9FA7CC pour ajouter une autre commande.
+. Cliquez sur *Enregistrer* dans le volet contenu de configuration pour enregistrer vos modifications.
+

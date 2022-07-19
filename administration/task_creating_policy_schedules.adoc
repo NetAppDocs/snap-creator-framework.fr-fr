@@ -1,0 +1,25 @@
+---
+permalink: administration/task_creating_policy_schedules.html 
+sidebar: sidebar 
+keywords: policy, schedule, snap, creator, gui 
+summary: 'Vous pouvez choisir de créer des planifications de règles à l"aide de l"interface graphique Snap Creator.' 
+---
+= Création de planifications de règles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez choisir de créer des planifications de règles à l'aide de l'interface graphique Snap Creator.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Policy* > *Policy Schedules*.
+. Dans l'onglet *Policy Schedules*, cliquez sur *Create*.
+. Entrez le nom du programme, sélectionnez l'action et la fréquence, puis cliquez sur *Enregistrer*.
++
+En fonction de la fréquence sélectionnée, vous devez sélectionner les champs horaires appropriés pour l'exécution du travail planifié.
+
++
+image::../media/add_policy_schedule.gif[ajouter une planification de règles]
+
+

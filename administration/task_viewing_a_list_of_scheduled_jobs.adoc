@@ -1,0 +1,21 @@
+---
+permalink: administration/task_viewing_a_list_of_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: schedule, job, view, list, snap, creator, gui 
+summary: Vous pouvez afficher la liste des travaux planifiés. 
+---
+= Affichage d'une liste de travaux planifiés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher la liste des travaux planifiés.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *Schedules*.
+. Dans l'onglet programmes, consultez la liste des travaux planifiés.
++
+Le champ résultat de la dernière exécution affiche l'état du dernier travail planifié. Une coche verte dans le champ indique que le travail a été exécuté avec succès, et un « X » rouge indique qu'il y a eu une panne.
+
+

@@ -1,0 +1,28 @@
+---
+permalink: installation/concept_upgrading_snap_creator.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator 
+summary: Vous pouvez effectuer la mise à niveau vers la dernière version de Snap Creator à partir de plusieurs versions prises en charge. 
+---
+= Mise à niveau de Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer la mise à niveau vers la dernière version de Snap Creator à partir de plusieurs versions prises en charge.
+
+
+NOTE: Pour toute question concernant la mise à niveau à partir des versions publiées sur le site Communautés, envoyez des questions d'ordre général au forum NetApp Communities. Le forum des communautés NetApp est en ligne à l'adresse suivante : https://communities.netapp.com/community/products_and_solutions/databases_and_enterprise_apps/snapcreator[]
+
+Avant de passer à la dernière version de Snap Creator, vérifiez la taille du moniteur de tâches pour la version actuellement installée de Snap Creator. Lorsque vous mettez à niveau Snap Creator, vous devez définir une taille de moniteur de tâches égale ou supérieure au paramètre précédent pour éviter la perte de données dans la base de données du moniteur de tâches.
+
+De plus, lors de la mise à niveau de Snap Creator, vous devez vous assurer que la mise à niveau a lieu sur un hôte qui utilise le même environnement de système d'exploitation. Par exemple, si vous effectuez une mise à niveau dans un environnement Windows, veillez à ce que lorsque vous copiez les données sauvegardées, vous copiez également les données dans un environnement Windows et non un système basé sur UNIX.
+
+
+IMPORTANT: Snap Creator ne dispose pas d'une option de rétrogradation. Lors d'une mise à niveau, vous sauvegardez plusieurs fichiers. Il est important de conserver les fichiers sauvegardés tant que vous n'êtes pas certain d'avoir à restaurer une version antérieure de Snap Creator.
+
+*Informations connexes*
+
+xref:task_checking_job_monitor_size.adoc[Vérification de la taille du moniteur des travaux]

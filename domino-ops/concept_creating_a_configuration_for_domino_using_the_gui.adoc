@@ -1,0 +1,33 @@
+---
+permalink: domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, creating, create, backup, restore, configuration 
+summary: 'Vous spécifiez la plupart des informations nécessaires aux opérations de sauvegarde et de restauration dans un fichier de configuration. Le fichier de configuration est l"entrée des opérations de sauvegarde et de restauration Snap Creator.' 
+---
+= Création d'une configuration de sauvegarde et de restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous spécifiez la plupart des informations nécessaires aux opérations de sauvegarde et de restauration dans un fichier de configuration. Le fichier de configuration est l'entrée des opérations de sauvegarde et de restauration Snap Creator.
+
+Vous pouvez créer autant de fichiers de configuration que vous le souhaitez, mais vous ne pouvez spécifier qu'un seul fichier de configuration comme entrée pour une opération. Vous pouvez utiliser l'interface graphique Snap Creator ou l'interface de ligne de commande Snap Creator pour créer des fichiers de configuration.
+
+
+NOTE: Ce guide explique comment utiliser l'interface graphique pour créer des fichiers de configuration. Pour plus d'informations sur l'utilisation de l'interface de ligne de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+Vous organisez les fichiers de configuration dans les profils Snap organisées. Les profils et les fichiers de configuration résident dans le sous-répertoire \Engine\configs du répertoire d'installation de Snap Creator :
+
+* Sur les hôtes UNIX, le répertoire dans lequel le fichier d'installation a été extrait
+* Sur les hôtes Windows, C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x, par défaut
+
+
+*Informations connexes*
+
+link:concept_general_configuration_file_information.adoc["Connectez-vous à l'interface graphique Snap Creator"]
+link:task_using_the_gui_to_create_a_configuration_file.adoc["Création d'un fichier de configuration"]
+link:concept_adding_commands_to_the_backup_and_restore_configuration.adoc["Ajout de commandes à la configuration de sauvegarde et de restauration"]
+link:task_setting_the_snap_creator_archive_log_management_settings.adoc["Nettoyage des copies archivées des journaux de transactions Domino"]
+link:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc["Sauvegarde du répertoire changeinfo"]

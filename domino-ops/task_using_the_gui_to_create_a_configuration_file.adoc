@@ -1,0 +1,326 @@
+---
+permalink: domino-ops/task_using_the_gui_to_create_a_configuration_file.html 
+sidebar: sidebar 
+keywords: domino, ibm,creating, create, configuraiton, file 
+summary: 'Avant de pouvoir sauvegarder des bases de données IBM Domino, vous devez créer un fichier de configuration. Le fichier de configuration est l"entrée des opérations de sauvegarde et de restauration Snap Creator.' 
+---
+= Création d'un fichier de configuration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de pouvoir sauvegarder des bases de données IBM Domino, vous devez créer un fichier de configuration. Le fichier de configuration est l'entrée des opérations de sauvegarde et de restauration Snap Creator.
+
+Seuls les caractères alphanumériques et les traits de soulignement sont autorisés dans les noms de configuration et de profil. Les noms ne peuvent pas commencer par un numéro.
+
+
+TIP: De nombreux sites utilisent un fichier de configuration globale à l'échelle du profil ou du site pour appliquer les informations d'identification VMware ou du système de stockage à la sauvegarde et à la restauration des configurations. Pour plus d'informations sur la création d'un fichier de configuration global, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+. Dans le volet profils et configurations, cliquez sur *Ajouter un profil*.
+. Dans la boîte de dialogue Nouveau profil, entrez le nom du profil, puis cliquez sur *OK*.
++
+La création d'un nouveau profil lance automatiquement l'assistant Snap Creator Framework Configuration. Pour ajouter une nouvelle configuration à un profil existant, cliquez avec le bouton droit de la souris sur le profil, puis sélectionnez *Nouvelle configuration*.
+
++
+Dans l'assistant de configuration, cliquez sur *Suivant* pour passer à la page suivante et cliquez sur *Retour* pour revenir à la page précédente.
+
+. Sur la page Configuration, entrez le nom de la configuration, puis indiquez si vous souhaitez activer le cryptage par mot de passe.
++
+Le chiffrement par défaut du mot de passe est activé pour empêcher l'affichage des mots de passe en clair dans le fichier de configuration.
+
++
+
+TIP: Placez le pointeur de la souris sur un champ de l'assistant pour afficher une infobulle.
+
+. Sur la page Type de plug-in, sélectionnez *Plug-in d'application*.
+. Sur la page des plug-ins d'application, sélectionnez *IBM Domino*.
+. Sur la page des paramètres du plug-in, spécifiez les détails de la configuration de sauvegarde IBM Domino :
++
+
+NOTE: Les exemples présentés dans le tableau suivant concernent les environnements UNIX. Vous pouvez afficher des exemples de paramètres pour Windows dans la capture d'écran qui suit le tableau.
+
++
+|===
+| Paramètre de l'interface utilisateur graphique | Paramètre CLI | Description 
+
+
+ a| 
+Annuaire des données Domino
+ a| 
+CHEMIN DOMINO_DATA_
+ a| 
+Chemin d'accès au répertoire de données Domino. Par exemple, /Domino/data.
+
+
+
+ a| 
+notes.ini chemin
+ a| 
+CHEMIN_DOMINO_INI_PATH
+ a| 
+Chemin d'accès au fichier notes.ini. Par exemple, /Domino/data/notes.ini.
+
+
+
+ a| 
+Modifier le répertoire d'infos
+ a| 
+DOMINO_CHANGE_ CHEMIN_INFO
+ a| 
+Le chemin d'accès aux fichiers changeinfo. Par exemple, /changeinfo. *Important:* Assurez-vous que vous stockez des fichiers changeinfo sur un volume autre que le volume de données Domino.
+
+
+
+ a| 
+Type de sauvegarde
+ a| 
+DOMINO_DATABASE_TYPE
+ a| 
+Les fichiers de base de données à sauvegarder. Sélectionnez une valeur dans la liste déroulante GUI ou spécifiez le numéro correspondant dans la commande CLI :
+
+** Tout (recommandé) (interface de ligne de commande = 0)
+** *.box fichiers (CLI= 1)
+** Fichiers *.nsf, *.nsg et *.nsh (CLI = 2)
+** *.ntf fichiers (CLI = 3)
+
+
+
+
+ a| 
+Répertoire d'installation d'IBM Domino
+ a| 
+LOTUS
+ a| 
+Chemin d'accès au répertoire dans lequel les fichiers binaires Domino sont installés. Dans Linux, par exemple, /opt/ibm/domino (en supposant le chemin d'installation par défaut). Sous Windows, parent du répertoire Domino Shared Objects. *Remarque :* ce n'est pas le chemin vers IBM Notes, anciennement Lotus Notes.
+
+
+
+ a| 
+Chemin d'accès aux objets partagés Domino
+ a| 
+Répertoire Notes_ExecDirectory
+ a| 
+Chemin d'accès qui contient les fichiers d'objets partagés Domino (.so ou .dll). Par exemple, /opt/ibm/domino/notes/latest/linux.
+
+
+
+ a| 
+Répertoire de restauration de données
+ a| 
+DOMINO_ RESTORE_DATA_ PATH
+ a| 
+Pour les restaurations de volumes (en supposant que vous restaurez vers le même emplacement depuis lequel vous avez pris la sauvegarde), le chemin du répertoire des données Domino. Pour les restaurations de fichiers uniques (NFS uniquement), un emplacement sur le même volume que Domino Data Directory. Par exemple, /Domino/data/restore.
+
+
+
+ a| 
+Valider l'annuaire des données Domino
+ a| 
+VALIDEZ_ DOMINO_DATA_ PATH
+ a| 
+Si l'environnement Domino comporte plusieurs points de montage, certains d'entre eux peuvent se trouver sur le stockage NetApp, ce qui n'est pas le cas. Sélectionnez une valeur dans la liste déroulante GUI ou spécifiez la valeur correspondante dans la commande CLI :
+
+** Oui sauvegarde uniquement les fichiers sur le chemin du répertoire de données Domino.
+** Aucune sauvegarde de tous les fichiers de l'environnement Domino, quel que soit leur emplacement sur le disque.
+
+
+|===
++
+L'exemple suivant montre comment compléter les champs dans un environnement Windows :
+
++
+image::../media/scfs_domino_param_filled_in_windows.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+. Sur la page Configuration de l'agent, spécifiez les informations de connexion à Snap Creator Agent :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+IP/DNS
+ a| 
+Entrez l'adresse IP ou le nom d'hôte DNS de l'hôte Snap Creator Agent.
+
+
+
+ a| 
+Port
+ a| 
+Si vous n'utilisez pas le port par défaut de l'agent Snap Creator (9090), entrez le numéro de port.
+
+
+
+ a| 
+Délai (s)
+ a| 
+Ne conservez pas la valeur par défaut.
+
+|===
+. Lorsque vous êtes satisfait de vos entrées, cliquez sur *Tester la connexion de l'agent* pour vérifier la connexion à l'agent.
++
+
+NOTE: Si l'agent ne répond pas, vérifiez les détails de l'agent et vérifiez que la résolution du nom d'hôte fonctionne correctement.
+
+. Sur la page des paramètres de connexion du stockage, spécifiez les informations de connexion pour la machine virtuelle de stockage (SVM, anciennement appelée Vserver) sur le système de stockage principal :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Transport
+ a| 
+Sélectionner le protocole de transport pour les communications avec le SVM : HTTP ou HTTPS
+
+
+
+ a| 
+Port contrôleur/Vserver
+ a| 
+Si vous n'utilisez pas le port par défaut pour le SVM (80 pour HTTP, 443 pour HTTPS), saisissez le numéro de port.
+
+|===
++
+*Remarque :* pour plus d'informations sur l'utilisation d'un proxy OnCommand, reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+. Sur la page Controller/Vserver Credentials, spécifier les identifiants de la SVM sur le système de stockage primaire :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+IP ou Nom du contrôleur/Vserver
+ a| 
+Entrez l'adresse IP ou le nom d'hôte DNS de l'hôte SVM.
+
+
+
+ a| 
+Utilisateur Controller/Vserver
+ a| 
+Entrez le nom d'utilisateur de l'hôte SVM.
+
+
+
+ a| 
+Mot de passe contrôleur/Vserver
+ a| 
+Saisir le mot de passe de l'hôte SVM.
+
+|===
++
+*Important:* si vous prévoyez de répliquer des copies Snapshot sur une destination SnapVault ou SnapMirror, le nom du SVM que vous entrez dans cette étape doit correspondre exactement au nom du SVM que vous avez utilisé lorsque vous avez créé la relation SnapMirror ror ou SnapVault. Si vous avez spécifié un nom de domaine complet lors de la création de la relation, vous devez spécifier un nom de domaine complet dans cette étape, que SnapCreator puisse ou non trouver la SVM avec les informations que vous fournissez. Le cas est important.
+
++
+Vous pouvez utiliser la commande snapmirror show pour vérifier le nom de la SVM sur le système de stockage primaire :snapmirror show -destination-path destination_SVM:destination_volume où destination_SVM_name est le nom de la SVM sur le système de destination et destination_volume le volume. Pour plus d'informations sur la création de relations SnapVault et SnapMirror, consultez xref:concept_snapmirror_and_snapvault_setup.adoc[Configuration SnapMirror et SnapVault].
+
++
+Lorsque vous cliquez sur *Next*, la fenêtre Controller/Vserver volumes s'affiche.
+
+. Dans la fenêtre Controller/Vserver volumes, spécifiez les volumes à sauvegarder en faisant glisser et en déposant la liste des volumes disponibles dans le volet gauche dans la liste des volumes à sauvegarder dans le volet droit, puis cliquez sur *Save*.
++
+Les volumes spécifiés sont affichés sur la page Controller/Vserver Credentials.
+
++
+
+IMPORTANT: Si vous avez l'intention de sauvegarder le répertoire changeinfo, vous devez configurer le volume contenant le répertoire en tant que volume de métadonnées, comme indiqué dans la section xref:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc[Sauvegarde du répertoire changeinfo]. Cette option indique au plug-in IBM Domino de créer une copie Snapshot du volume changeinfo _après_ création de la copie Snapshot pour les fichiers de base de données.
+
+. Sur la page Controller/Vserver Credentials, cliquez sur *Add* pour spécifier les détails des SVM et les volumes à sauvegarder pour un autre système de stockage primaire.
+. Sur la page de détails des snapshots, spécifiez les informations de configuration des snapshots :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom de la copie Snapshot
+ a| 
+Indiquez le nom de la copie Snapshot. *Conseil :* cliquez sur *Autoriser le duplication du nom de copie snapshot* si vous souhaitez réutiliser les noms de copie snapshot dans les fichiers de configuration.
+
+
+
+ a| 
+Étiquette de copie Snapshot
+ a| 
+Entrez un texte descriptif pour la copie Snapshot.
+
+
+
+ a| 
+Type de stratégie
+ a| 
+Cliquez sur *utiliser la stratégie*, puis sélectionnez les stratégies de sauvegarde intégrées que vous souhaitez rendre disponibles pour cette configuration. Après avoir sélectionné une stratégie, cliquez sur la cellule *Retention* pour spécifier le nombre de copies Snapshot dont vous souhaitez conserver ce type de stratégie. *Remarque :* pour plus d'informations sur l'utilisation des objets de stratégie, reportez-vous à la https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+
+
+ a| 
+Empêcher la suppression des copies Snapshot
+ a| 
+Indiquez Oui uniquement si Snap Creator ne souhaite pas supprimer automatiquement des copies Snapshot qui dépassent le nombre de copies à conserver. *Remarque :* si vous indiquez Oui, vous risquez de dépasser le nombre de copies Snapshot prises en charge par volume.
+
+
+
+ a| 
+Durée de conservation des politiques
+ a| 
+Spécifiez le nombre de jours pendant lesquels vous souhaitez conserver des copies Snapshot dépassant le nombre de copies à conserver. Vous pouvez spécifier un âge de rétention par type de police en saisissant le type de police:age, par exemple Daily:15.
+
+
+
+ a| 
+Convention d'appellation
+ a| 
+Ne conservez pas la valeur par défaut.
+
+|===
++
+La configuration spécifiée dans l'exemple suivant effectue une sauvegarde quotidienne et conserve quatre copies Snapshot :
+
++
+image::../media/scfw_domino_snapshot_details_pane.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+. Sur la page Suite des détails de l'instantané, définissez *Ignorer les erreurs d'application* sur Oui si vous souhaitez forcer l'opération de sauvegarde à continuer, même si une ou plusieurs bases de données sont dans un état incohérent ou corrompu.
++
+Vous devez ignorer les champs restants.
+
++
+
+TIP: Un environnement Domino peut être composé de centaines, voire de milliers de bases de données. Si même une base de données unique est dans un état incohérent ou corrompu, la sauvegarde échoue. L'activation de *Ignorer les erreurs d'application* permet la poursuite de la sauvegarde.
+
+. Sur la page protection des données, spécifiez si vous souhaitez effectuer la réplication de copie Snapshot facultative vers un stockage secondaire :
++
+.. Cliquez sur *SnapMirror* pour mettre en miroir les copies Snapshot.
++
+La règle applicable aux copies Snapshot en miroir est identique à la règle applicable aux copies Snapshot primaires.
+
+.. Cliquez sur *SnapVault* pour archiver les copies Snapshot.
+.. Spécifiez la règle pour les copies Snapshot archivées.
+.. Les instructions sont présentées à l'étape suivante,13.
+.. Dans *SnapVault Wait Time*, entrez le nombre de minutes pendant lesquelles Snap Creator doit attendre la fin de l'opération SnapVault.
+.. Vous devez avoir configuré les relations SnapMirror et SnapVault avant de réaliser la réplication sur le stockage secondaire. Pour plus d'informations, voir xref:concept_snapmirror_and_snapvault_setup.adoc[Configuration SnapMirror et SnapVault].
+
+
+. Sur la page protection des volumes de données, cliquez sur *Add*, puis sélectionnez le SVM pour le système de stockage primaire.
++
+Lorsque vous cliquez sur *Suivant*, la fenêtre sélection du volume de protection des données s'affiche.
+
+. Dans la fenêtre Data protection Volume Selection (sélection du volume de protection des données), spécifiez les volumes source à répliquer en faisant glisser et en déposant dans la liste des volumes disponibles du volet gauche la liste des volumes des zones SnapMirror et/ou SnapVault du volet droit, puis cliquez sur *Save* (Enregistrer).
++
+Les volumes spécifiés s'affichent sur la page Data protection volumes.
+
+. Sur la page protection des données volumes, cliquez sur *Add* pour spécifier les détails des SVM et les volumes à répliquer pour un autre système de stockage primaire.
+. Sur la page relations de protection des données, spécifiez les identifiants du SVM sur les systèmes de destination SnapMirror et/ou SnapVault.
+. Si vous préférez utiliser les API NetAppOnCommand Unified Manager plutôt que les API Data ONTAP pour les copies Snapshot et les mises à jour SnapMirror/SnapVault, renseignez les champs de la page DFM/OnCommand Settings :
++
+.. Cliquez sur *Operations Manager Console Alert* si vous souhaitez recevoir des alertes Unified Manager, puis entrez les informations de connexion requises pour la machine virtuelle Unified Manager.
+.. Cliquez sur *fonctionnalité de protection des données de la console de gestion NetApp* si vous utilisez la fonction de protection des données de la console de gestion NetApp pour la réplication SnapVault 7-mode, puis entrez les informations de connexion requises pour la machine virtuelle Unified Manager.
+
+
+. Vérifiez le résumé, puis cliquez sur *Terminer*.
+
+
+Snap Creator répertorie le fichier de configuration sous le profil spécifié dans le volet profils et configurations. Vous pouvez modifier la configuration en sélectionnant le fichier de configuration et en cliquant sur l'onglet approprié dans le volet contenu de configuration. Vous pouvez renommer la configuration en cliquant sur *Renommer* dans le menu contextuel. Vous pouvez supprimer la configuration en cliquant sur *Supprimer* dans le menu contextuel.

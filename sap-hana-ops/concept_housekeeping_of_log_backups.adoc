@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: housekeeping, log, backups 
+summary: La gestion des sauvegardes de journaux dans SAP HANA repose sur une fonction de HANA Studio ou sur une instruction SQL qui permet de supprimer toutes les sauvegardes antérieures à une sauvegarde sélectionnée. 
+---
+= Nettoyage des sauvegardes des journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La gestion des sauvegardes de journaux dans SAP HANA repose sur une fonction de HANA Studio ou sur une instruction SQL qui permet de supprimer toutes les sauvegardes antérieures à une sauvegarde sélectionnée.
+
+Snap Creator gère le nettoyage des sauvegardes de données (copies Snapshot) en supprimant les copies Snapshot sur le stockage primaire ou secondaire et en supprimant les entrées correspondantes dans le catalogue HANA, en fonction d'une règle de conservation définie.
+
+Les sauvegardes de journaux antérieures à la dernière sauvegarde de données sont supprimées car elles ne sont pas nécessaires.
+
+Snap Creator gère la gestion des sauvegardes de fichiers de journaux au niveau du système de fichiers ainsi que dans le catalogue de sauvegardes SAP HANA. Dans le cadre de chaque sauvegarde Snapshot avec Snap Creator, les étapes suivantes sont exécutées :
+
+* Consultez le catalogue de sauvegardes et obtenez l'ID de sauvegarde des données ou des sauvegardes Snapshot les plus anciennes.
+* Supprimez toutes les sauvegardes antérieures à la sauvegarde la plus ancienne.
+
+
+
+NOTE: Snap Creator gère uniquement les sauvegardes qui s'appuient sur des copies Snapshot, Si des sauvegardes supplémentaires basées sur des fichiers sont créées, vous devez vous assurer que les sauvegardes basées sur des fichiers sont supprimées du catalogue de sauvegardes et du système de fichiers. Si une telle sauvegarde de données n'est pas supprimée manuellement du catalogue de sauvegardes, elle peut devenir la sauvegarde de données la plus ancienne et l'opération de nettoyage de la sauvegarde des journaux échouera.

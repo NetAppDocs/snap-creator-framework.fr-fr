@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/concept_setup_assumptions_in_this_guide.html 
+sidebar: sidebar 
+keywords: setup, assumptions 
+summary: 'Bien qu"une installation Snap Creator type suppose que le serveur est installé sur un hôte et que l"agent est installé sur un hôte différent, la configuration utilisée dans ce guide est basée sur une appliance SAP HANA multi-nœuds.' 
+---
+= Configurer les hypothèses dans ce guide
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bien qu'une installation Snap Creator type suppose que le serveur est installé sur un hôte et que l'agent est installé sur un hôte différent, la configuration utilisée dans ce guide est basée sur une appliance SAP HANA multi-nœuds.
+
+Dans cette configuration, la base de données SAP HANA s'exécute sur une configuration de nœud de base de données 3+1 et tous les composants logiciels Snap Creator (serveur, agent et plug-in) sont installés sur le même hôte.
+
+Les systèmes de stockage NetApp utilisés dans cette configuration exécutent Data ONTAP sous 7-mode. Une paire de contrôleurs haute disponibilité est utilisée sur la couche de stockage. Les volumes de données et de journaux des trois nœuds de base de données SAP HANA sont répartis sur les deux contrôleurs de stockage. Dans l'exemple de configuration, un contrôleur de stockage d'une autre paire de contrôleurs haute disponibilité est utilisé comme stockage secondaire. Chaque volume de données est répliqué sur un volume de sauvegarde dédié sur le système de stockage secondaire. La taille des volumes de sauvegarde dépend du nombre de sauvegardes qui seront conservées sur le stockage secondaire.
+
+Toutes les opérations Snap Creator et SAP HANA Studio décrites ici sont les mêmes pour les systèmes de stockage qui exécutent clustered Data ONTAP. Cependant, la configuration SnapVault initiale sur les systèmes de stockage et toutes les commandes SnapVault qui doivent être exécutées directement sur le stockage sont différentes avec clustered Data ONTAP. Les différences sont mises en évidence et décrites dans ce guide.
+
+La figure suivante montre les volumes de données dans le stockage primaire et le chemin de réplication vers le stockage secondaire :
+
+image::../media/sap_hana_multimode_setup.gif[Affiche les volumes de données du stockage primaire et le chemin de réplication vers le stockage secondaire.]
+
+
+NOTE: Tous les volumes à sauvegarder doivent être créés sur le contrôleur de stockage secondaire. Dans cet exemple, les volumes backup_data_00001, backup_Data_00002 et backup_Data_00003 sont créés sur le contrôleur de stockage secondaire.

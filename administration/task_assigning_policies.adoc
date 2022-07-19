@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_policies.html 
+sidebar: sidebar 
+keywords: assign, retention, policy, configuration, snap, creator, gui, assignment 
+summary: 'Vous pouvez affecter des stratégies de conservation aux fichiers de configuration à l"aide de l"interface graphique Snap Creator.' 
+---
+= Assignation de stratégies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez affecter des stratégies de conservation aux fichiers de configuration à l'aide de l'interface graphique Snap Creator.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Policy* > *Policy affectations*.
+. Sélectionnez un profil dans le volet profil.
+. Sélectionnez une ou plusieurs stratégies à affecter au profil en cochant la case appropriée dans le volet de droite, puis cliquez sur *Enregistrer*.
++
+Si des fichiers de configuration existent déjà dans le profil, un message s'affiche pour vous informer que la stratégie affectée va outrepasser les paramètres du fichier de configuration.
+
+. Cliquez sur *Oui* pour affecter la stratégie.
+

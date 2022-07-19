@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_creating_retention_policies.html 
+sidebar: sidebar 
+keywords: creating, retention, policies, local, configuration 
+summary: 'Si vous envisagez d"utiliser des objets de stratégie au lieu d"une stratégie de conservation locale (contenue dans le fichier de configuration), vous pouvez créer une stratégie de rétention.' 
+---
+= Création de règles de conservation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous envisagez d'utiliser des objets de stratégie au lieu d'une stratégie de conservation locale (contenue dans le fichier de configuration), vous pouvez créer une stratégie de rétention.
+
+Dans le cadre de la création d'une stratégie de rétention des médias, vous pouvez créer un type de sauvegarde et une planification de stratégies.

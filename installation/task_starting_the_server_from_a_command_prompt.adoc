@@ -1,0 +1,35 @@
+---
+permalink: installation/task_starting_the_server_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, server, command, prompt 
+summary: 'Vous pouvez démarrer manuellement Snap Creator Server à partir d"une invite de commande en exécutant un script de batch (scServer.bat).' 
+---
+= Démarrage du serveur à partir d'une invite de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez démarrer manuellement Snap Creator Server à partir d'une invite de commande en exécutant un script de batch (scServer.bat).
+
+Généralement, vous devez suivre cette procédure uniquement si vous n'avez pas sélectionné l'option *Start Server as service* pendant l'installation.
+
+Vous pouvez également planifier l'exécution du script de batch (scServer.bat) au démarrage à l'aide du planificateur de tâches Windows. Pour plus d'informations sur l'utilisation du Planificateur de tâches Windows, reportez-vous à la documentation de votre système d'exploitation Windows.
+
+Étant donné que le script de batch (scServer.bat) exécute Snap Creator au premier plan, Snap Creator Server continue à s'exécuter tant que l'invite de commande est ouverte. La fermeture de l'invite de commande ferme le Snap Creator Server. Pour être exécuté en arrière-plan, le service Snap Creator Server doit être utilisé.
+
+. Ouvrez une invite de commande et entrez les commandes suivantes :
++
+[listing]
+----
+cd \install_path\scServerrelease-version\bin\
+scServer.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scServer4.1.0\bin\
+scServer.bat start
+----
+

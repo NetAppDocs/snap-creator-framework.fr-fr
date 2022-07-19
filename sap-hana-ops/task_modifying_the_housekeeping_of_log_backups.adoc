@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_modifying_the_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: sap, hana, modifying, modify, housekeeping, log, backups 
+summary: 'Vous pouvez modifier les paramètres configurés pour le nettoyage des sauvegardes des journaux si vous souhaitez désactiver l"opération de nettoyage des journaux.' 
+---
+= Modification du nettoyage des sauvegardes des journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les paramètres configurés pour le nettoyage des sauvegardes des journaux si vous souhaitez désactiver l'opération de nettoyage des journaux.
+
+. Sélectionnez le profil SAP HANA à modifier.
+. Sélectionnez la configuration à modifier et cliquez sur *Paramètres SAP HANA*.
+. Modifiez le paramètre Activer le nettoyage DU JOURNAL, puis cliquez sur *Enregistrer*.
++
+image::../media/modifying_housekeeping_of_logs.gif[Modification du nettoyage de la sauvegarde du journal]
+
+

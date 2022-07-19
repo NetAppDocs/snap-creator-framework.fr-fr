@@ -1,0 +1,39 @@
+---
+permalink: administration/concept_guidelines_to_define_snap_creator_policies.html 
+sidebar: sidebar 
+keywords: snap, creator, policies, guidelines, retendtion, snapshot 
+summary: 'Les règles Snap Creator sont des copies Snapshot définies par l"utilisateur qui s"appliquent aux copies Snapshot sur le stockage primaire et les copies SnapVault et SnapMirror sur le stockage secondaire. Vous pouvez utiliser une règle pour définir le nombre de copies Snapshot à conserver et l"âge de la copie Snapshot.' 
+---
+= Directives pour définir les règles Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les règles Snap Creator sont des copies Snapshot définies par l'utilisateur qui s'appliquent aux copies Snapshot sur le stockage primaire et les copies SnapVault et SnapMirror sur le stockage secondaire. Vous pouvez utiliser une règle pour définir le nombre de copies Snapshot à conserver et l'âge de la copie Snapshot.
+
+Vous devez définir au moins une stratégie dans le champ *nombre de rétention des snapshots*. Pour SnapVault, vous pouvez associer la même règle à des périodes de conservation SnapVault différentes. Par exemple, pour créer des copies Snapshot quotidiennes et les conserver pendant sept jours sur le stockage primaire et un mois sur le stockage secondaire, vous devez utiliser les options et paramètres de règle suivants :
+
+* *Nombre de rétention des instantanés*: Quotidien:7
+* *SnapVault Retention Count*: Quotidien:28
+
+
+Vous pouvez également indiquer le nombre minimal de jours après lequel une copie Snapshot a été supprimée. Dans l'exemple précédent, vous devez utiliser les options et paramètres suivants :
+
+* *Âge de rétention des instantanés*: 7
+* *Âge de rétention de SnapVault* : 28
+
+
+En outre, vous pouvez spécifier la suppression de la copie Snapshot par âge en définissant le paramètre suivant dans le fichier de configuration :
+
+NTAP_SNAPSHOT_DELETE_BY_AGE_ONLY=PRIMARY|SECONDARY|LES DEUX
+
+
+NOTE: Ce paramètre n'est pas disponible via l'interface graphique Snap Creator. Pour plus d'informations sur les paramètres du fichier de configuration utilisé pour configurer des copies Snapshot, reportez-vous aux références associées.
+
+Snap Creator ne peut exécuter qu'une seule règle à la fois. La valeur d'âge maximum est un paramètre global qui s'applique à toutes les règles. Pour configurer une règle hebdomadaire supplémentaire, définissez la règle, puis appelez-la dans Snap Creator une fois par semaine à l'aide de cron ou du gestionnaire de tâches avec la variable Snap Creator %SNAP_TYPE définie sur hebdomadaire.
+
+*Informations connexes*
+
+xref:reference_parameters_to_set_up_a_snapshot_copy.adoc[Paramètres de configuration des copies Snapshot]

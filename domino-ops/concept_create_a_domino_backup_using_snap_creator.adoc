@@ -1,0 +1,22 @@
+---
+permalink: domino-ops/concept_create_a_domino_backup_using_snap_creator.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases 
+summary: 'Vous pouvez sauvegarder des bases de données à la demande ou selon un planning. Vous pouvez sauvegarder des bases de données à l"aide de l"interface graphique Snap Creator ou de l"interface de ligne de commande Snap Creator.' 
+---
+= Sauvegarde des bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder des bases de données à la demande ou selon un planning. Vous pouvez sauvegarder des bases de données à l'aide de l'interface graphique Snap Creator ou de l'interface de ligne de commande Snap Creator.
+
+
+NOTE: Ce guide vous explique comment utiliser l'interface graphique pour sauvegarder des bases de données. Pour plus d'informations sur l'utilisation de l'interface de ligne de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+*Informations connexes*
+
+link:task_creating_a_domino_backup_using_the_snap_creator_gui.adoc["Sauvegarde des bases de données à la demande"]
+link:task_scheduling_actions_using_the_snap_creator_gui.adoc["Planification des sauvegardes"]

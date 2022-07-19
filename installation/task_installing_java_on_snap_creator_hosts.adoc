@@ -1,0 +1,35 @@
+---
+permalink: installation/task_installing_java_on_snap_creator_hosts.html 
+sidebar: sidebar 
+keywords: installing, install, java, snap, creator, hosts 
+summary: 'OpenJDK et Oracle Java Runtime Environment (JRE) 1.8 la mise à jour 72 ou ultérieure doit être installée sur n"importe quel hôte Snap Creator Server et Agent. Pour éviter la vulnérabilité liée à la sécurité de la couche de transport \(TLS\), il est préférable d"installer toute version ultérieure de JRE 1.8 Update 72 sur Snap Creator Server et l"hôte Agent.' 
+---
+= Installation de Java sur les hôtes Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OpenJDK et Oracle Java Runtime Environment (JRE) 1.8 la mise à jour 72 ou ultérieure doit être installée sur n'importe quel hôte Snap Creator Server et Agent. Pour éviter la vulnérabilité TLS (transport Layer Security), il est préférable d'installer toute version ultérieure de JRE 1.8 Update 72 sur Snap Creator Server et l'hôte Agent.
+
+. Téléchargez et installez JRE sur chaque hôte Snap Creator Server ou Snap Creator Agent.
++
+Les niveaux de bits (32 bits ou 64 bits) de Java et Snap Creator doivent être identiques.
+
++
+Si nécessaire, téléchargez Java à partir du http://www.java.com/en/download/manual.jsp["Téléchargements Java pour tous les systèmes d'exploitation"] page.
+
+. Après avoir installé JRE, vérifiez la version et le niveau de bit de Java : java -version
++
+[listing]
+----
+C:\Documents and Settings\Administrator>java -version
+java version "1.7.0_04-ea"
+Java(TM) SE Runtime Environment (build 1.7.0_04-ea-b01)
+Java HotSpot(TM) Client VM (build 23.0-b03, mixed mode, sharing)
+----
++
+Le résultat de la commande affiche la version installée de Java. Si le niveau de bit n'est pas affiché (comme dans l'exemple précédent), l'installation est de 32 bits.
+
+

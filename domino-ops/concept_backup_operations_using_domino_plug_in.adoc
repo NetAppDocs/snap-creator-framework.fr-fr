@@ -1,0 +1,31 @@
+---
+permalink: domino-ops/concept_backup_operations_using_domino_plug_in.html 
+sidebar: sidebar 
+keywords: domino, ibm, backup, operations, ibm, understanding 
+summary: 'Contrairement à d"autres technologies de sauvegarde, le plug-in IBM Domino permet d"écrire les données dans la base de données au cours des opérations de sauvegarde. Il garantit la cohérence de la sauvegarde avec les données d"application en enregistrant toute modification de la base de données pendant les opérations de sauvegarde dans un répertoire temporaire appelé changeinfo. Au moment de la restauration, elle applique ces modifications à la base de données après la restauration des données à partir de la copie Snapshot.' 
+---
+= Présentation des opérations de sauvegarde du plug-in IBM Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Contrairement à d'autres technologies de sauvegarde, le plug-in IBM Domino permet d'écrire les données dans la base de données au cours des opérations de sauvegarde. Il garantit la cohérence de la sauvegarde avec les données d'application en enregistrant toute modification de la base de données pendant les opérations de sauvegarde dans un répertoire temporaire appelé changeinfo. Au moment de la restauration, elle applique ces modifications à la base de données après la restauration des données à partir de la copie Snapshot.
+
+Au cours des opérations de sauvegarde, les fichiers de base de données sont dit en mode de sauvegarde. Bien que le Snap Creator Framework désigne ces fichiers comme « suspendus », ce n'est pas le cas. Les données continuent d'être écrites sur les fichiers pendant la copie Snapshot.
+
+Voici plusieurs étapes générales :
+
+. Répertorier les bases de données, modèles et boîtes aux lettres dans les volumes à sauvegarder.
+. Mettez les fichiers en mode sauvegarde, une base de données à la fois.
+. Recherchez des bases de données incohérentes ou corrompues.
++
+
+NOTE: Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["Task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A245B7845367CB967F99"].
+
+. Créer une copie Snapshot de chaque volume.
+. Si l'enregistrement des transactions Domino est en cours d'utilisation, archivez des copies des journaux de transactions Domino afin de les utiliser dans les opérations de restauration à chaud.
+. Extraire les fichiers du mode de sauvegarde, une base de données à la fois.
+. Enregistrer les modifications apportées à la base de données depuis que les fichiers ont été mis en mode sauvegarde dans le répertoire changeinfo.
+

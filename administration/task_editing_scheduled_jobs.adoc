@@ -1,0 +1,22 @@
+---
+permalink: administration/task_editing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: edit, schedule, job, snap, creator, gui 
+summary: Vous pouvez modifier un travail planifié. 
+---
+= Modification de travaux planifiés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier un travail planifié.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *Schedules*.
+. Dans l'onglet programmes, sélectionnez un travail dans la liste des travaux planifiés, puis cliquez sur *Modifier*.
+. Modifiez les champs souhaités, puis cliquez sur *Enregistrer*.
++
+Le travail planifié est enregistré avec les modifications.
+
+

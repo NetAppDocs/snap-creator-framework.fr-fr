@@ -1,0 +1,41 @@
+---
+permalink: sap-hana-ops/task_configuring_sap_hana_for_san_environments.html 
+sidebar: sidebar 
+keywords: configuring, sap, hana, san, environments 
+summary: 'Une fois les sauvegardes de données configurées, vous devez ajouter une nouvelle commande au fichier de configuration Snap Creator dans les environnements dans lesquels un système SAP HANA est connecté à l"aide d"un réseau SAN Fibre Channel au contrôleur de stockage.' 
+---
+= Configuration de SAP HANA pour les environnements SAN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois les sauvegardes de données configurées, vous devez ajouter une nouvelle commande au fichier de configuration Snap Creator dans les environnements dans lesquels un système SAP HANA est connecté à l'aide d'un réseau SAN Fibre Channel au contrôleur de stockage.
+
+Lorsqu'un point de sauvegarde synchronisé et global est déclenché par Snap Creator dans SAP HANA, la dernière étape se produit lorsque SAP HANA écrit le fichier /hana/data/SID/mnt00001/hdb00001/snapshot_Databackup_0_1. Ce fichier fait partie du volume de données sur le stockage et fait donc partie de la copie Snapshot de stockage. Ce fichier est obligatoire lors de l'exécution d'une restauration au cas où la sauvegarde serait restaurée. En raison de la mise en cache des métadonnées avec le système de fichiers « X » (XFS) sur l'hôte Linux, le fichier n'est pas immédiatement visible au niveau de la couche de stockage. La configuration XFS standard pour la mise en cache des métadonnées est de 30 secondes.
+
+Dans Snap Creator, vous devez ajouter une commande de mise en veille post-application qui attend que le cache de métadonnées XFS soit transféré vers la couche disque.
+
+Vous pouvez vérifier la configuration du cache des métadonnées à l'aide de la commande suivante :
+
+[listing]
+----
+stlrx300s8-2:/ # sysctl -A | grep xfssyncd_centisecs
+fs.xfs.xfssyncd_centisecs = 3000
+----
+. Dans le fichier de configuration (chemin_installation/numéro_service/moteur/configurations), ajoutez la commande /bin/Sleep à la section commandes post, comme indiqué dans l'exemple suivant :
++
+[listing]
+----
+############################################################
+#     Post Commands      ############################################
+POST_NTAP_DATA_TRANSFER_CMD01=
+POST_APP_QUIESCE_CMD01=/bin/sleep 60
+POST_CLONE_CREATE_CMD01=
+----
++
+
+NOTE: Vous devez autoriser un temps d'attente qui est deux fois la valeur du paramètre fs.xfs.xfssyncd_centisec. Par exemple, avec la valeur par défaut 30 secondes, la commande Sleep doit être configurée avec 60 secondes.
+
+

@@ -1,0 +1,76 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_4_0_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.0.x, unix, unix-based 
+summary: Vous pouvez effectuer la mise à niveau directement depuis Snap Creator Server 4.0.x sur des systèmes UNIX. 
+---
+= Mise à niveau de Snap Creator Server 4.0.x sur des systèmes UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer la mise à niveau directement depuis Snap Creator Server 4.0.x sur des systèmes UNIX.
+
+* Si vous avez des noms d'utilisateur contenant des caractères spéciaux dans Snap Creator, vous devez avoir renommé ces utilisateurs en utilisant uniquement des caractères alphabétiques (a à z ou A à Z).
+* Vous avez arrêté les processus Snap Creator avant de sauvegarder les répertoires Snap Creator pour vous assurer que les données sauvegardées sont bien terminées.
++
+Par exemple, entrez les commandes suivantes :
+
++
+[listing]
+----
+/install_path/scServer4.0.x/bin/scServer stop
+/install_path/scAgent4.0.x/bin/scAgent stop
+----
+* Vous avez sauvegardé les répertoires suivants, ainsi que tous les sous-répertoires et fichiers associés, dans le sous-répertoire Snap Creator 4.0.x Server Engine (/install_path/sServer4.0.x/Engine) :
++
+** Base de données Snap Creator (../snapcreator)
+** Propriétés du serveur Snap Creator (../etc.)
+** Profils et configuration (../configurations)
+** Journaux (../logs) *Remarque :* vous ne devez pas avoir supprimé les copies de sauvegarde Snap Creator 4.0.x que vous avez créées.
+
+
+
+
+Les chemins fournis dans les étapes suivantes font référence au chemin d'installation par défaut. Les chemins d'accès dans les commandes ci-dessous peuvent différer de votre chemin d'installation.
+
+Une fois le processus de mise à niveau terminé, vous devez prendre en compte les problèmes suivants :
+
+* Si la base de données Snap Creator mise à niveau contient des tâches marquées comme « en cours », l'état reste le même, même une fois le processus de mise à niveau terminé.
+* L'administrateur par défaut du dernier Snap Creator doit être un administrateur dans Snap Creator 4.0.x. Si l'utilisateur 4.0.x n'est pas un administrateur, la mise à niveau affecte un rôle d'opérateur à l'utilisateur 4.0.x.
++
+.. Arrêtez les processus Snap Creator si ce n'est pas déjà fait.
++
+Pour plus d'informations sur l'arrêt des processus, reportez-vous aux détails fournis plus haut dans cette rubrique.
+
+.. Installez la dernière version de Snap Creator, mais ne démarrez pas le service Snap Creator Server.
++
+Pour plus de détails, reportez-vous aux informations sur l'installation de Snap Creator Server sous UNIX.
+
+.. Copiez le répertoire de base de données Snap Creator 4.0.x sauvegardé à l'emplacement le plus récent (/install_path/scServer4.1.x/Engine/snapcreator).
+.. Copiez les profils 4.0.x sauvegardés et le répertoire de configuration à l'emplacement le plus récent (/install_path/scServer4.1.x/Engine/configurations).
+.. Copiez le répertoire des journaux 4.0.x sauvegardé à l'emplacement le plus récent (/install_path/scServer4.1.x/Engine/logs).
+.. Accédez au sous-répertoire du moteur dans le chemin d'installation de Snap Creator (/install_path/sServer4.1.x/Engine).
+.. Mettez à niveau Snap Creator en entrant la commande suivante : java -jar snapcreator.jar -upgrade
+
+
+
+
+Une fois le processus de mise à niveau terminé, démarrez le service Snap Creator Server en entrant la commande suivante :
+
+/Chemin_installation/serveur_SCServer4.1.x/bin/serveur_scServer démarrer
+
+Supprimez également le répertoire d'installation de Snap Creator 4.0.
+
+
+IMPORTANT: Ne supprimez pas vos copies de sauvegarde tant que vous n'avez pas besoin de revenir à une version antérieure.
+
+Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié (https://IP_address:gui_port)[].
+
+Vous devez vous connecter via HTTPS ; sinon, la connexion n'est pas redirigée automatiquement vers une connexion HTTPS et l'interface utilisateur ne fonctionnera pas.
+
+*Informations connexes*
+
+xref:task_installing_the_snap_creator_server_on_unix.adoc[Installation de Snap Creator Server sur des systèmes UNIX]

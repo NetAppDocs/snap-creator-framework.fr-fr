@@ -1,0 +1,68 @@
+---
+permalink: administration/reference_archive_log_plug_in.html 
+sidebar: sidebar 
+keywords: archive, log, plug-in, snap, creator, archive 
+summary: 'Le plug-in de journalisation des archives fonctionne avec les journaux Snap Creator Archive et non avec les journaux d"une application ou d"une base de données.' 
+---
+= Plug-in de journal d'archivage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in de journalisation des archives fonctionne avec les journaux Snap Creator Archive et non avec les journaux d'une application ou d'une base de données.
+
+Le tableau suivant répertorie les paramètres du plug-in du journal d'archivage, fournit leurs paramètres et les décrit :
+
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+ARCHIVE_LOG_ENABLE
+ a| 
+(Y
+| N 
+
+
+| police:âge)  a| 
+Permet de gérer les journaux d'archivage (suppression des anciens journaux d'archivage).
+ a| 
+ARCHIVAGE_LOG_RÉTENTION
+
+
+
+ a| 
+nombre_de_jours
+ a| 
+Indique le nombre de jours pendant lesquels les journaux d'archive sont conservés. Ce paramètre doit être supérieur ou égal à NTAP_SNAPSHOT_ RETENTIONS.
+ a| 
+ARCHIVE_LOG_DIR
+
+
+
+ a| 
+change_info_répertoire/logs
+ a| 
+Indique le chemin d'accès au répertoire contenant les journaux d'archive.
+ a| 
+ARCHIVE_LOG_EXT
+
+
+
+ a| 
+extension_fichier
+ a| 
+Spécifie l'extension de fichier des journaux d'archive. Par exemple, si les journaux d'archivage sont 10192091019.log, spécifiez ce paramètre pour ENREGISTRER.
+ a| 
+ARCHIVE_LOG_RÉCURSIVE_SEARCH
+
+
+
+ a| 
+(Y
+| N)  a| 
+Permet la gestion des journaux d'archivage dans les sous-répertoires. Si les journaux d'archivage sont situés sous des sous-répertoires, vous devez utiliser ce paramètre.
+
+|===

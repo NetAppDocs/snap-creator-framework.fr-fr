@@ -1,0 +1,14 @@
+---
+permalink: sap-hana-ops/concept_starting_the_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: starting, start, snapvault, relationships 
+summary: Vous devez démarrer la relation SnapVault avec Data ONTAP sous 7-mode et clustered Data ONTAP. 
+---
+= Démarrage des relations SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez démarrer la relation SnapVault avec Data ONTAP sous 7-mode et clustered Data ONTAP.

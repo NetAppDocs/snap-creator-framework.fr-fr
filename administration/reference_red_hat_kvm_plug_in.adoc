@@ -1,0 +1,111 @@
+---
+permalink: administration/reference_red_hat_kvm_plug_in.html 
+sidebar: sidebar 
+keywords: kernel, kvm, virtualization, linux, snap, creator, virsh, command, plug-in, red, hat, guideline 
+summary: 'KVM (Kernel-based Virtual machine) est une solution de virtualisation pour le noyau Linux. Snap Creator utilise le plug-in KVM pour sauvegarder et restaurer les machines virtuelles invitées.' 
+---
+= Instructions relatives au plug-in Red Hat KVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+KVM (Kernel-based Virtual machine) est une solution de virtualisation pour le noyau Linux. Snap Creator utilise le plug-in KVM pour sauvegarder et restaurer les machines virtuelles invitées.
+
+
+NOTE: Pour obtenir les informations les plus récentes sur le support technique ou sur les matrices de compatibilité, consultez la matrice d'interopérabilité.
+
+Le plug-in KVM prend en charge les systèmes d'exploitation invités tels que Linux, Windows et Solaris.
+
+Le plug-in utilise en interne des commandes virsh.
+
+Lorsque vous utilisez le plug-in KVM, vous devez tenir compte des éléments suivants :
+
+* Le serveur Active IQ Unified Manager en tant que proxy n'est pas pris en charge.
+* Les opérations de montage, de démontage et de sauvegarde effectuées à l'aide d'Open Systems SnapVault et de gestion des journaux d'archivage ne sont pas prises en charge.
+* Dans un environnement SAN (Storage Area Network), le kit LHU (Linux Host Utilities) est requis pour recueillir des informations sur les LUN et volumes du contrôleur de stockage.
++
+Le kit LHU doit être installé sur un hyperviseur KVM, qui est le même emplacement que l'agent Snap Creator.
+
++
+
+NOTE: Si le kit LHU n'est pas installé et que la configuration est un mélange d'environnements de stockage et de zone de stockage connectés au réseau, les opérations de sauvegarde et de restauration fonctionnent uniquement sur un système de fichiers réseau (NFS).
+
+* Le plug-in KVM ne prend en charge que la version Linux de Snap Creator 4.0 et 4.1 Agent.
+* La restauration de volumes n'est pas prise en charge ; seules les opérations de restauration définies par l'application sont prises en charge.
+* Les machines virtuelles supprimées ne peuvent pas être restaurées.
+* L'hôte et les adresses IP du contrôleur de stockage doivent se trouver dans /etc/hosts sur l'hôte KVM ou dans un système de noms de domaine (DNS).
+* Un seul hôte KVM par configuration est pris en charge.
+* Si une machine virtuelle est créée à l'aide d'un référentiel ISO, puis pour effectuer une action quelconque, vous devez déconnecter ce référentiel de la machine virtuelle via la console Virt Manager dans les options du CD-ROM.
+* La valeur SC_AGENT_TIMEOUT doit être supérieure à la valeur par défaut : 600 ou supérieure.
+* Les volumes sont automatiquement détectés à l'aide de la détection automatique.
++
+Vous ne pouvez pas voir les volumes de destination découverts si la destination ne fait pas partie d'une relation SnapMirror. Vous devez utiliser dpstatus pour vérifier l'état de la relation SnapMirror. Si aucune relation SnapMirror n'existe, vous devez d'abord créer la relation SnapMirror.
+
+* Si la valeur DE APP_DEFINED_RESTORE est y, l'opération de restauration SnapVault à l'aide de l'interface utilisateur n'est pas prise en charge.
+* Lors de la création d'une configuration SnapMirror et SnapVault à l'aide de l'interface graphique, les détails du volume doivent être saisis manuellement, car la relation SnapMirror et SnapVault n'est pas détectée automatiquement.
+* Les disques de données mappés aux VM ne sont pas sauvegardés.
+* Les opérations de redémarrage de la machine virtuelle sont exécutées en série.
++
+Pour plusieurs machines virtuelles, la durée de la machine virtuelle en état d'interruption pendant l'opération de sauvegarde dépend du nombre de machines virtuelles.
+
+
+
+
+
+== Configurations KVM prises en charge
+
+* SAN : prend en charge les machines virtuelles invitées installées sur un périphérique multivoie brut (LUN avec plusieurs chemins).
+* NAS : prend en charge les machines virtuelles invitées installées sur les volumes NFS.
+
+
+
+NOTE: Les configurations avec plusieurs machines virtuelles installées sur un seul périphérique à chemins d'accès multiples ne sont pas prises en charge.
+
+Les machines virtuelles invitées installées sur LVM ou sur un fichier image dans l'environnement SAN ne sont pas prises en charge.
+
+Le tableau suivant décrit les paramètres du plug-in KVM :
+
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+KVM_RESTORE_VM_LIST
+ a| 
+Exemple : `VM1,VM2`
+ a| 
+Spécifie la liste des VM à restaurer. Ce paramètre n'est requis que lors de la restauration.
+
+
+
+ a| 
+MAPPAGE KVM_VM_
+ a| 
+Exemple : `VM1:s_c1:/vol/vol1/lun1;VM2:s_c2:/vol/vol2/lun2;`
+ a| 
+(Obligatoire) Spécifie le mappage entre la machine virtuelle et son contrôleur de stockage, LUN ou chemin de fichier associé. Ce paramètre est mis à jour de manière dynamique pendant le processus de détection.
+
+
+
+ a| 
+KVM_VM_CONFIG_DIR
+ a| 
+Par défaut : /etc/libvirt/qemu
+ a| 
+(Facultatif) indique le chemin d'accès au répertoire dans lequel tous les fichiers de configuration XML de la machine virtuelle sont stockés.
+
+
+
+ a| 
+KVM_CMD_RETRY_COUNT
+ a| 
+Valeur par défaut : `3`
+ a| 
+(Facultatif) Spécifie le nombre de fois où vous relancez la commande lors de son exécution échoue dans le plug-in KVM.
+
+|===
+*Informations connexes*
+
+http://mysupport.netapp.com/matrix["Matrice d'interopérabilité : mysupport.netapp.com/matrix"]

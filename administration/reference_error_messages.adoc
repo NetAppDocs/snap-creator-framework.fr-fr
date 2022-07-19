@@ -1,0 +1,23 @@
+---
+permalink: administration/reference_error_messages.html 
+sidebar: sidebar 
+keywords: error, messages, scf, repo, storage, agt, gui 
+summary: 'Vous devez connaître les messages d"erreur associés aux différentes opérations Snap Creator.' 
+---
+= Messages d'erreur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les messages d'erreur associés aux différentes opérations Snap Creator.
+
+Chaque message d'erreur comprend un indicatif régional et un identifiant unique à 5 chiffres----par exemple, L'ERREUR : [<indicatif régional>-<identifiant unique d'erreur de zone>] <message d'erreur>. Le code régional identifie l'endroit où l'erreur s'est produite. Les différents codes de zone sont les suivants :
+
+* `scf`: Snap Creator Framework
+* `REPO`: Référentiel
+* `STORAGE`: Stockage
+* `agt`: Agent Snap Creator
+* `gui`: Interface utilisateur graphique Snap Creator
+

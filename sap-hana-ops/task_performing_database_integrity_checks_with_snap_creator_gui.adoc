@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/task_performing_database_integrity_checks_with_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: sap, hana, peforming, database, integrity, checks, snap, creator, gui, graphical, user, interface 
+summary: 'Vous pouvez effectuer des vérifications de l"intégrité de la base de données à partir de l"interface utilisateur graphique Snap Creator.' 
+---
+= Exécution de vérifications de l'intégrité des bases de données à partir de l'interface graphique Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer des vérifications de l'intégrité de la base de données à partir de l'interface utilisateur graphique Snap Creator.
+
+Vous devez avoir activé le paramètre de vérification de l'intégrité de la base de données dans l'onglet Paramètres de vérification de l'intégrité HANA.
+
+. Sélectionner la configuration HANA_database_Integrity_check.
+. Sélectionnez *actions* > *contrôle d'intégrité*.
++
+image::../media/performing_file_based_backup_with_gui.gif[Effectuer des sauvegardes basées sur des fichiers avec l'interface graphique]
+
+. Définissez l'option Stratégie sur *aucun*, puis cliquez sur *OK*.
++
+image::../media/performing_file_based_backup_with_gui_2.gif[Effectuer des sauvegardes basées sur des fichiers avec l'interface graphique]
+
+

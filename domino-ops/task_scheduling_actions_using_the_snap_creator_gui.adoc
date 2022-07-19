@@ -1,0 +1,91 @@
+---
+permalink: domino-ops/task_scheduling_actions_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, scheduling, schedule, backups 
+summary: Vous pouvez planifier des tâches de sauvegarde récurrentes après avoir effectué la sauvegarde initiale. 
+---
+= Planification des sauvegardes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez planifier des tâches de sauvegarde récurrentes après avoir effectué la sauvegarde initiale.
+
+Vous devez avoir créé le fichier de configuration de la sauvegarde, comme décrit dans xref:task_using_the_gui_to_create_a_configuration_file.adoc[Création d'un fichier de configuration].
+
+. Dans le volet profils et configurations, sélectionnez le fichier de configuration et cliquez sur *Management* > *Schedules* en haut de la fenêtre Snap Creator Framework.
+. Dans le volet travaux, cliquez sur *Créer*
+. Dans la boîte de dialogue Nouveau travail, spécifiez les informations sur le travail :
++
+|===
+| Pour ce champ... | Procédez comme ça... 
+
+
+ a| 
+Nom de la tâche
+ a| 
+Entrez le nom du travail.
+
+
+
+ a| 
+Date de début
+ a| 
+Utilisez le contrôle du calendrier pour sélectionner la date à laquelle l'horaire doit commencer.
+
+
+
+ a| 
+Actif
+ a| 
+Cochez cette case pour activer la planification. Désélectionnez la case pour désactiver la programmation.
+
+
+
+ a| 
+Profil
+ a| 
+Sélectionnez le profil du fichier de configuration.
+
+
+
+ a| 
+Configuration
+ a| 
+Sélectionnez le fichier de configuration.
+
+
+
+ a| 
+Action
+ a| 
+Sélectionnez sauvegarde.
+
+
+
+ a| 
+Politique
+ a| 
+Sélectionnez la stratégie pour la tâche de sauvegarde. *Remarque :* vous devez avoir configuré la stratégie dans le fichier de configuration.
+
+
+
+ a| 
+Fréquence
+ a| 
+Sélectionnez la fréquence à laquelle le travail doit être exécuté. Selon votre choix, de nouveaux champs s'affichent dans lesquels vous pouvez spécifier les minutes, les heures et le jour d'exécution du travail. Si vous souhaitez utiliser une tâche cron, sélectionnez cron et entrez la commande cron.
+
+|===
++
+L'exemple suivant montre comment planifier une tâche de sauvegarde à exécuter tous les jours à minuit :
+
++
+image::../media/scfw_domino_new_job.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+. Cliquez sur *Enregistrer*.
++
+Le travail planifié est répertorié dans l'onglet programmes du volet travaux. Sélectionnez le travail à exécuter, modifier ou supprimer.
+
+

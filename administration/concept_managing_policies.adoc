@@ -1,0 +1,18 @@
+---
+permalink: administration/concept_managing_policies.html 
+sidebar: sidebar 
+keywords: managing, retention, policies, list, delete, policies, snapshot, snapvault 
+summary: Vous pouvez créer des stratégies de conservation, répertorier et supprimer les règles. 
+---
+= La gestion des stratégies de conservation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des stratégies de conservation, répertorier et supprimer les règles.
+
+Une règle de conservation définit généralement les paramètres de conservation des copies Snapshot, comme le nombre de copies Snapshot qui doivent être conservées et pendant combien de temps. Par exemple, une règle quotidienne peut conserver 30 jours de copies Snapshot qui doivent avoir au moins 30 jours. (Le paramètre âge de conservation empêche l'utilisation de plusieurs copies Snapshot créées le même jour de contourner les accords de niveau de service pouvant spécifier qu'une copie Snapshot doit être antérieure à 30 jours.)
+
+Si SnapVault est utilisé, la règle définit également les paramètres de conservation de la copie SnapVault.

@@ -1,0 +1,21 @@
+---
+permalink: administration/task_monitoring_jobs_using_the_gui.html 
+sidebar: sidebar 
+keywords: monitor, job, snap, creator, gui 
+summary: 'Vous pouvez surveiller l"état des tâches exécutées par Snap Creator à l"aide de l"interface graphique Snap Creator.' 
+---
+= Surveillance des tâches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller l'état des tâches exécutées par Snap Creator à l'aide de l'interface graphique Snap Creator.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *Job Monitor*.
++
+La liste des travaux en cours s'affiche.
+
+. Pour arrêter un travail en cours d'exécution, sélectionnez-le et cliquez sur *Annuler*.
+

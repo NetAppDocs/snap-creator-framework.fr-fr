@@ -1,0 +1,67 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: creating, create, snap, creator, user, ontap, 7-mode 
+summary: 'Snap Creator utilise les API Data ONTAP pour communiquer avec le système de stockage. Pour s"assurer que le compte utilisateur dispose de l"accès uniquement à Snap Creator, créez un nouveau rôle, un groupe et un utilisateur sur chaque contrôleur de stockage. Le rôle est affecté au groupe et le groupe contient l"utilisateur. Cela permet de contrôler l"accès et de limiter l"étendue du compte Snap Creator.' 
+---
+= Création d'un utilisateur Snap Creator pour Data ONTAP fonctionnant en 7-mode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator utilise les API Data ONTAP pour communiquer avec le système de stockage. Pour s'assurer que le compte utilisateur dispose de l'accès uniquement à Snap Creator, créez un nouveau rôle, un groupe et un utilisateur sur chaque contrôleur de stockage. Le rôle est affecté au groupe et le groupe contient l'utilisateur. Cela permet de contrôler l'accès et de limiter l'étendue du compte Snap Creator.
+
+Vous devez effectuer cette procédure une seule fois pour chaque contrôleur de stockage sur lequel Snap Creator est installé.
+
+Pour créer un utilisateur Snap Creator pour Data ONTAP fonctionnant en 7-mode à l'aide de l'interface de ligne de commande Data ONTAP (SSH, connexion console ou Telnet), effectuez les opérations suivantes.
+
+
+NOTE: Vous ne devez pas copier et coller des commandes directement à partir de ce document ; des erreurs peuvent se produire, par exemple, des caractères mal transférés provoqués par des sauts de ligne et des retours papier. Copiez et collez les commandes de cette procédure dans un éditeur de texte, vérifiez les commandes, puis saisissez-les dans l'interface de ligne de commande.
+
+. Créer un rôle définissant les droits requis pour Snap Creator sur le système de stockage en exécutant la commande suivante :
++
+[listing]
+----
+useradmin role add rolename -a login-\*,api-snapshot-\*,api-system-\*,
+api-ems-\*,api-snapvault-\*,api-snapmirror-\*,api-volume-\*,
+api-lun-\*,api-cg-\*,api-nfs-\*,api-file-\*,api-license-\*,
+api-net-\*api-clone-\*, api-options-get, api-wafl-sync
+----
++
+
+NOTE: La commande présentée dans cette étape inclut tous les rôles d'API utilisés par Snap Creator. Cependant, vous pouvez limiter l'accès utilisateur en incluant uniquement les rôles requis (par exemple, si SnapMirror ne sera pas utilisé, alors api-snapmirror-* n'est pas nécessaire).
+
++
+[listing]
+----
+useradmin role add sc_role -a login-*,api-snapshot-*,api-system-*,api-ems-*,api-snapvault-*,api-snapmirror-*,api-volume-*,
+api-lun-*,api-cg-*,api-nfs-*,api-file-*,api-license-*, api-net-*, api-clone-*, api-options-get, api-wafl-sync
+----
+. Créer un nouveau groupe sur le système de stockage et attribuer le rôle nouveau groupe au groupe en exécutant la commande suivante :
++
+[listing]
+----
+useradmin group add groupname -r rolename
+----
++
+[listing]
+----
+useradmin group add snap_creator_group -r snap_creator_role
+----
+. Créez un compte utilisateur en exécutant la commande suivante :
++
+[listing]
+----
+useradmin user add username -g groupname
+----
++
+[listing]
+----
+useradmin user add snap_creator_user -g snap_creator_group
+----
+. Entrez le mot de passe du compte.
+
+
+Utilisez ce compte restreint lors de la création de fichiers de configuration pour Snap Creator.

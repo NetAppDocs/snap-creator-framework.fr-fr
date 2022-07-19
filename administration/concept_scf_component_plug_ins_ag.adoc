@@ -1,0 +1,54 @@
+---
+permalink: administration/concept_scf_component_plug_ins_ag.html 
+sidebar: sidebar 
+keywords: plug-in, applications, databases, snap, creator, plug-ins, binary, installation, integration, db2, ibm, domino, maxdb, mysql 
+summary: Les plug-ins sont utilisés pour placer les applications ou les bases de données dans un état cohérent. Snap Creator contient plusieurs plug-ins qui font partie du fichier binaire et ne nécessitent aucune installation supplémentaire. 
+---
+= Plug-ins pour l'intégration d'applications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les plug-ins sont utilisés pour placer les applications ou les bases de données dans un état cohérent. Snap Creator contient plusieurs plug-ins qui font partie du fichier binaire et ne nécessitent aucune installation supplémentaire.
+
+Les types d'applications pris en charge sont les bases de données, la messagerie électronique, l'hyperviseur et les applications personnalisées. Les plug-ins suivants sont pris en charge pour une utilisation avec Snap Creator :
+
+* Plug-ins d'applications et de bases de données :
++
+** DB2
+** IBM Domino (Domino)
+** Max db
+** MySQL
++
+
+NOTE: Le plug-in MySQL ne prend pas en charge les opérations de sauvegarde et de restauration pour plusieurs bases de données.
+
+** Oracle
+** Dispositif d'analytique haute performance SAP (HANA)
+** Sybase Adaptive Server Enterprise (ASE)
+
+
+* Plug-ins SnapManager :
++
+** SnapManager pour Microsoft Exchange
+** SnapManager pour Microsoft SQL Server
+
+
+* Plug-ins d'hyperviseur :
++
+** Citrix XenServer
+** Machine virtuelle basée sur kernel Red Hat (KVM)
+** VMware (vSphere pour une sauvegarde de machines virtuelles individuelles et vCloud Director pour la sauvegarde vApp)
+
+
+
+
+Pour plus d'informations, consultez les informations de plug-ins requis pour configurer Snap Creator.les plug-ins personnalisés (également appelés « plug-ins de la communauté ») sont créés par la communauté de développeurs et peuvent être activés par Snap Creator. Cependant, les plug-ins personnalisés ne sont pas pris en charge. Ces plug-ins s'appuient sur l'interface fournie par Snap Creator.
+
+Pour plus d'informations, voir http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Forum de la communauté sur Snap Creator Framework"].
+
+*Informations connexes*
+
+xref:reference_information_required_to_configure_snap_creator.adoc[Informations relatives aux plug-ins requises pour configurer Snap Creator]

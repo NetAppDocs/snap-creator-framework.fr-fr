@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/task_overview_of_database_backups.html 
+sidebar: sidebar 
+keywords: snap, creator, backing, up, database, 
+summary: Lorsque Snap Creator sauvegarde la base de données, les étapes suivantes sont exécutées. 
+---
+= Présentation des sauvegardes de bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque Snap Creator sauvegarde la base de données, les étapes suivantes sont exécutées.
+
+. Créez un point de sauvegarde de sauvegarde synchronisée global (copie Snapshot SAP HANA) pour obtenir une image cohérente sur la couche de persistance.
+. Créez des copies Snapshot de stockage pour tous volumes de données.
++
+Dans l'exemple, trois volumes de données sont distribués sur les deux contrôleurs de stockage, hana1a et hana1b.
+
+. Enregistrez la sauvegarde Snapshot de stockage dans le catalogue des sauvegardes SAP HANA.
+. Supprimez la copie Snapshot SAP HANA.
+. Démarrez la mise à jour SnapVault pour tous les volumes de données.
+. Vérifiez l'état de la SnapVault et attendez que le délai soit terminé ou que le délai ne soit pas configuré.
+. Supprimez les copies Snapshot de stockage et supprimez les sauvegardes dans le catalogue des sauvegardes SAP HANA en fonction de la règle de conservation définie pour les sauvegardes sur les systèmes de stockage primaire et secondaire.
+. Supprimez toutes les sauvegardes de journaux, qui sont plus anciennes que la sauvegarde de données la plus ancienne sur le système de fichiers et dans le catalogue de sauvegardes SAP HANA.
+

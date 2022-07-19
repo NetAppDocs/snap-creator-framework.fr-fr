@@ -1,0 +1,24 @@
+---
+permalink: administration/task_deleting_backups.html 
+sidebar: sidebar 
+keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui, data 
+summary: 'Vous pouvez supprimer des copies de sauvegarde d"un fichier de configuration.' 
+---
+= Suppression de sauvegardes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer des copies de sauvegarde d'un fichier de configuration.
+
+. Dans le menu principal de l'interface utilisateur graphique Snap Creator, sélectionnez *Data* > *backups*
+. Dans le volet profils et configurations de l'onglet sauvegardes, développez un profil et sélectionnez un fichier de configuration.
+. Sélectionnez la sauvegarde à supprimer et cliquez sur *Supprimer*.
++
+
+NOTE: Si le fichier de configuration contient plusieurs volumes Data ONTAP, vous devez sélectionner la copie Snapshot que vous souhaitez supprimer sur chacun des volumes Data ONTAP.
+
+. Cliquez sur *Oui* dans la fenêtre de confirmation.
+

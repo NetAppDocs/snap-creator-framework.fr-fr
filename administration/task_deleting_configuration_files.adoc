@@ -1,0 +1,29 @@
+---
+permalink: administration/task_deleting_configuration_files.html 
+sidebar: sidebar 
+keywords: delete, configuration, file, profile, management 
+summary: 'Vous pouvez supprimer des fichiers de configuration d"un profil.' 
+---
+= Suppression des fichiers de configuration d'un profil
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer des fichiers de configuration d'un profil.
+
+
+IMPORTANT: Lors de la suppression de fichiers de configuration, les planifications associées à la configuration sont également supprimées dans le cadre du processus.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *configurations*.
+. Dans le volet profils et configurations, développez le contenu du profil.
++
+Les fichiers de configuration affectés au profil sont répertoriés sous le nom du profil.
+
+. Cliquez avec le bouton droit de la souris sur le fichier de configuration et sélectionnez *Supprimer*.
+. Cliquez sur *Oui* dans la fenêtre de confirmation.
++
+Le fichier de configuration est supprimé de la liste sous le nom de profil et est supprimé définitivement du Snap Creator Server.
+
+

@@ -1,0 +1,95 @@
+---
+permalink: administration/reference_snap_creator_agent_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, error, message, aft, sc_agentconfiguration, parameter, remote, port 
+summary: 'Le tableau suivant répertorie les messages d"erreur de Snap Creator Agent.' 
+---
+= Messages d'erreur de Snap Creator Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le tableau suivant répertorie les messages d'erreur de Snap Creator Agent.
+
+|===
+| Code d'erreur | Description/résolution 
+
+
+ a| 
+agt-00001
+ a| 
+L'agent Snap Creator ou tout autre processus s'exécute sur le port spécifié. Essayez un autre port.
+
+
+
+ a| 
+agt-00003
+ a| 
+Les paramètres indiqués n'étaient pas corrects pour démarrer l'agent Snap Creator. Vérifiez les paramètres requis.
+
+
+
+ a| 
+agt-00004
+ a| 
+Le paramètre SC_AGENTconfiguration doit être défini lors de l'utilisation d'un agent distant.
+
+
+
+ a| 
+agt-00005
+ a| 
+Vous n'êtes pas autorisé à effectuer des opérations de mise en veille arrière et une opération est déjà en cours d'exécution. Attendre ou exécuter la mise en attente.
+
+
+
+ a| 
+agt-00006
+ a| 
+Le processus de surveillance ne peut pas générer. Le système a probablement atteint le nombre maximal de processus. Désactivez la surveillance dans la configuration ou vérifiez les paramètres du système d'exploitation.
+
+
+
+ a| 
+agt-00008
+ a| 
+L'opération de mise en veille et de mise en attente ne s'est pas terminée et la sauvegarde ne peut être effectuée qu'en cas de panne. Vérifiez les journaux. Cela peut se produire si l'opération de mise en veille prend trop de temps et que vous utilisez un chien de garde. Le processus de surveillance effectue une mise en veille forcée après x secondes, comme défini dans la configuration.
+
+
+
+ a| 
+agt-00009
+ a| 
+Les commandes pré et post doivent être autorisées dans le fichier agent.conf côté agent. Mettez à jour agent.conf et autorisez les commandes nécessaires.
+
+
+
+ a| 
+agt-00010
+ a| 
+L'agent n'a pas pu lire son fichier de configuration. Vérifiez les autorisations sur le fichier agent.conf.
+
+
+
+ a| 
+agt-00011
+ a| 
+Une commande a été envoyée à l'agent mais n'est pas autorisée. Mettez à jour l'agent.conf pour autoriser la commande.
+
+
+
+ a| 
+agt-00012
+ a| 
+Cette erreur se produit lors du chargement d'un plug-in. Vérifiez le paramètre Plug-in et APP_NAME.
+
+
+
+ a| 
+agt-00013
+ a| 
+Cette erreur se produit lors de l'exécution de la méthode setenv dans le plug-in. Vérifiez le plug-in et assurez-vous que la syntaxe est correcte.
+
+|===

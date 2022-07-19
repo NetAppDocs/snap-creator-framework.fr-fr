@@ -1,0 +1,641 @@
+---
+permalink: administration/reference_storage_error_messages.html 
+sidebar: sidebar 
+keywords: storage troubleshoot, error, message 
+summary: 'Les messages d"erreur liés au stockage peuvent vous aider à résoudre tous les problèmes.' 
+---
+= Messages d'erreur de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les messages d'erreur liés au stockage peuvent vous aider à résoudre tous les problèmes.
+
+Le tableau suivant répertorie les codes d'erreur et les messages ainsi qu'une brève description de l'erreur et de la résolution suggérée.
+
+|===
+| Code d'erreur | Message d'erreur | Description/résolution 
+
+
+ a| 
+STOCKAGE-00001
+ a| 
+Le format de date [%s] n'est pas valide: [%s]
+ a| 
+Le clone du volume n'a pas été créé par Snap Creator, ou l'horodatage ajouté au nom du clone n'est pas valide.
+
+
+
+ a| 
+STOCKAGE-00002
+ a| 
+Impossible de récupérer l'exécuteur
+ a| 
+Un exécuteur n'a pas été créé pour le stockage. Consultez les journaux des erreurs de gestion NetApp, qui peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-00003
+ a| 
+Impossible de se connecter à l'hôte
+ a| 
+L'hôte est inaccessible. Assurez-vous que les paramètres de pare-feu locaux sont corrects et que l'hôte peut envoyer une requête ping à partir du système sur lequel Snap Creator Server est installé.
+
+
+
+ a| 
+STOCKAGE-01003
+ a| 
+La création d'un message AutoSupport avec l'ID d'événement [%s], la catégorie [%s], la description [%s], le niveau [%s], le nom d'hôte [%s] a échoué avec l'erreur [%s].
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-01004
+ a| 
+Pour la restauration de fichiers, les volumes source et de destination doivent être identiques.
+ a| 
+Les volumes source et de destination sont différents.fournissez le même volume que le volume source et le volume de destination.
+
+
+
+ a| 
+STOCKAGE-02003
+ a| 
+La création de la copie snapshot du groupe de cohérence [%s] sur des volumes [%s] a échoué avec l'erreur [%s] ;
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02006
+ a| 
+Échec de la validation de la copie Snapshot du groupe de cohérence sur [%s] avec l'ID de groupe de cohérence [%s], erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02009
+ a| 
+La création de la copie snapshot [%s] sur le volume [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02015
+ a| 
+Échec de la suppression de la copie snapshot [%s] sur le volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02021
+ a| 
+Échec de la restauration de la copie snapshot [%s] du volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02025
+ a| 
+La restauration du fichier [%s] de la copie snapshot [%s] vers [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02028
+ a| 
+Échec de la création de la planification de copie snapshot SnapVault primaire [%s] sur le volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02034
+ a| 
+Échec de la suppression des planifications de copie snapshot SnapVault primaire du volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02038
+ a| 
+La création du clone [%s] du volume [%s] sur la base de la copie snapshot [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02041
+ a| 
+Le clonage du fichier [%s] sur le volume [%s] vers [%s] basé sur la copie snapshot [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02043
+ a| 
+Echec de l'affichage des fichiers sur le chemin [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02046
+ a| 
+Le clonage de la LUN [%s] vers [%s] basé sur la copie snapshot [%s] avec la réservation d'espace [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02049
+ a| 
+Échec de la suppression de la LUN [%s] du volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02052
+ a| 
+Échec de la liste des LUN avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02062
+ a| 
+Échec de l'ajout de l'exportation NFS [%s] pour le nom d'hôte [%s] avec l'accès [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02072
+ a| 
+Échec de la récupération de l'état de SnapMirror sur le contrôleur [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02075
+ a| 
+Échec de la récupération des relations SnapMirror sur le contrôleur [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02082
+ a| 
+La mise à jour de la relation SnapMirror [%s] basée sur une copie snapshot [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02092
+ a| 
+Échec de l'affichage des copies snapshot sur le volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02102
+ a| 
+Échec du changement de nom de la copie snapshot [%s] sur le volume [%s] à [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02112
+ a| 
+Échec de la récupération de l'état SnapVault sur le contrôleur [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02115
+ a| 
+Echec de la récupération des relations SnapVault sur le contrôleur [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02122
+ a| 
+La mise à jour de la relation SnapVault [%s] basée sur la copie snapshot [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02132
+ a| 
+Échec de la liste des volumes clonés basés sur le volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02142
+ a| 
+Échec de la suppression du volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02152
+ a| 
+Échec de la liste des volumes avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02155
+ a| 
+Échec de l'affichage du volume [%s] avec le message d'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-02162
+ a| 
+Échec de la restauration de la copie snapshot [%s] du volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03001
+ a| 
+Récupération des vServers depuis le nœud clustered ONTAP [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-05003
+ a| 
+Échec de la création du jeu de données de la console de gestion NetApp [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-05006
+ a| 
+Échec de la création de la sauvegarde du jeu de données [%s] sur le contrôleur de stockage [%s] effectuée avec l'erreur [%s] de la console de gestion NetApp
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-05009
+ a| 
+Échec de la récupération de l'état du jeu de données de la console de gestion NetApp pour le jeu de données [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-05012
+ a| 
+La validation du jeu de données [%s] de la console de gestion NetApp a échoué avec l'erreur [%s].
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-05018
+ a| 
+Création d'un événement OM [%s] sur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03002
+ a| 
+Le mappage du groupe initiateur [%s] sur la LUN [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03005
+ a| 
+Echec de la création de la LUN [%s] sur le volume [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03008
+ a| 
+La création de la copie snapshot SnapVault primaire [%s] sur le volume [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03011
+ a| 
+L'affichage des copies de sauvegarde de la console de gestion NetApp pour le dataset [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03014
+ a| 
+Échec de la suppression de l'ID de version de sauvegarde [%s] de la console de gestion NetApp avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03019
+ a| 
+Échec du démarrage de sauvegarde de la console de gestion NetApp pour [%s] ([%s]), sortie !
+ a| 
+Vérifiez les journaux à la recherche d'erreurs.vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03022
+ a| 
+Échec du démarrage de la progression de la sauvegarde de la console de gestion NetApp pour l'ID-travail [%s], sortie !
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03025
+ a| 
+Échec de la suppression du fichier sur le chemin [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03030
+ a| 
+La découverte des nœuds clustered Data ONTAP sur [%s] a échoué
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03033
+ a| 
+Échec de l'obtention des détails de la version du système de [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03036
+ a| 
+La création du répertoire sur le chemin [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03039
+ a| 
+Échec de la suppression du répertoire sur le chemin [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03043
+ a| 
+La création du fichier sur le chemin [%s] a échoué avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03046
+ a| 
+Échec de la modification du jeu de données de la console de gestion NetApp pour [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03049
+ a| 
+Impossible de lire le contenu du fichier [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03052
+ a| 
+Échec de l'obtention des options pour l'option [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03055
+ a| 
+Échec de l'obtention des compteurs de performances pour l'objet [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03058
+ a| 
+Échec de l'obtention des instances de performance pour l'objet [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03061
+ a| 
+Échec des informations du jeu de données de la console de gestion NetApp pour [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03064
+ a| 
+Échec de la commande d'interface de ligne de commande du système [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03067
+ a| 
+Échec de la suppression du jeu de données de la console de gestion NetApp [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03070
+ a| 
+Échec de la restauration de la relation SnapVault [%s] basée sur la copie snapshot [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03073
+ a| 
+L'exportation CIFS pour [%s]:[%s] a échoué !
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03076
+ a| 
+Echec de l'obtention du volume racine sur le contrôleur [%s] avec l'erreur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03079
+ a| 
+Échec de l'obtention du chemin de jonction pour le volume [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03082
+ a| 
+Échec de l'obtention du nom du système
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03085
+ a| 
+Échec de l'obtention du service NFS sur le contrôleur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03088
+ a| 
+Échec de la vérification des autorisations NFS pour le chemin d'accès [%s] de l'hôte [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03091
+ a| 
+Échec de l'obtention de l'interface réseau sur le contrôleur [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-03094
+ a| 
+Échec de la liste qtree du volume [%s]
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+|===

@@ -1,0 +1,26 @@
+---
+permalink: administration/task_deleting_retention_policies.html 
+sidebar: sidebar 
+keywords: delete, retention, policy, snap, creator, gui 
+summary: Vous pouvez supprimer des règles de conservation. 
+---
+= Suppression de stratégies de rétention
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer des règles de conservation.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Policy* > *Policy Management*.
+. Dans l'onglet *Policy Manager*, sélectionnez une stratégie et cliquez sur *Delete*.
++
+
+NOTE: Si vous essayez de supprimer une stratégie attribuée à un fichier de configuration, l'interface graphique affiche le message d'erreur suivant : la stratégie ne peut pas être supprimée car le nom de la stratégie est appliqué à la configuration.utilisez la stratégie Detach, puis supprimez la stratégie.
+
+. Cliquez sur *Oui* dans la fenêtre de confirmation.
++
+La stratégie est supprimée de l'onglet Policy Manager.
+
+

@@ -1,0 +1,49 @@
+---
+permalink: domino-ops/concept_domino_database_restore_overview.html 
+sidebar: sidebar 
+keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror, snapvault, destination, directories 
+summary: 'Le plug-in IBM Domino restaure les fichiers de base de données à partir de la copie Snapshot du volume sur lequel la base de données est stockée. Une fois la restauration de l"instantané terminée, le plug-in applique toutes les modifications enregistrées dans le répertoire changeinfo.' 
+---
+= Restauration des bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in IBM Domino restaure les fichiers de base de données à partir de la copie Snapshot du volume sur lequel la base de données est stockée. Une fois la restauration de l'instantané terminée, le plug-in applique toutes les modifications enregistrées dans le répertoire changeinfo.
+
+
+
+== Présentation des opérations de restauration SnapMirror et SnapVault
+
+Vous ne pouvez pas utiliser Snap Creator pour restaurer une copie SnapMirror des données. Si vous souhaitez restaurer une copie miroir, vous devez d'abord interrompre le miroir, puis restaurer manuellement les données. Pour plus d'informations, reportez-vous à la section link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guide rapide de reprise après incident de volumes ONTAP 9"].
+
+Seules les restaurations de volume ponctuelles sont disponibles lorsque vous restaurez une copie SnapVault à partir d'un stockage secondaire. Vous ne pouvez pas effectuer une restauration de volume en moins d'une minute ou une restauration de fichier unique. Cette limitation peut être contourner en restaurant d'abord le stockage secondaire vers le stockage primaire. À partir du stockage primaire, vous pouvez ensuite effectuer une restauration de volume en moins d'une minute ou une restauration de fichier unique, si nécessaire.
+
+
+
+== Présentation des répertoires de destination
+
+Les restaurations de volumes et les restaurations de fichiers uniques utilisent en général des répertoires de destination différents. Vous spécifiez le répertoire de destination dans le paramètre Data Restore Directory du fichier de configuration de sauvegarde et de restauration (voir l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["Task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B"]) :
+
+* Pour une restauration de volume, vous devez définir Data Restore Directory sur le répertoire de données Domino.
+* Pour une restauration de fichier unique, vous devez définir Data Restore Directory sur un sous-répertoire du volume de données Domino.
+
+
+Cela signifie que si vous utilisez d'autres types de restauration, vous devez modifier le répertoire de restauration des données pour qu'il pointe vers le paramètre correct pour chaque type de restauration. Sinon, les informations de modification ne seront pas appliquées correctement et les données seront incohérentes avec l'état de la base de données à restaurer. Bien sûr, vous pouvez créer différentes configurations pour les restaurations de volumes et de fichiers individuels si vous préférez.
+
+
+
+== Où exécuter une restauration
+
+Exception faite, vous pouvez utiliser l'interface graphique Snap Creator ou l'interface de ligne de commande Snap Creator pour restaurer des bases de données. Pour les restaurations de fichiers uniques dans un environnement SAN, vous devez utiliser l'interface de ligne de commandes, comme indiqué dans le xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[Restauration de fichiers uniques dans un environnement SAN].
+
+
+NOTE: Ce guide explique comment utiliser l'interface de ligne de commandes uniquement pour les restaurations de fichiers uniques dans un environnement SAN. Dans le cas contraire, elle indique comment restaurer des bases de données à l'aide de l'interface graphique. Pour plus d'informations sur l'utilisation de l'interface de ligne de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+*Informations connexes*
+
+link:task_performing_point_in_time_volume_restore.adoc["Exécution d'une restauration de volume"]
+link:task_performing_point_in_time_single_file_restore_with_nfs.adoc["Exécution d'une restauration de fichier unique"]
+link:concept_single_file_restore_in_fc_iscsi_environments.adoc["Restauration de fichiers uniques dans un environnement SAN"]

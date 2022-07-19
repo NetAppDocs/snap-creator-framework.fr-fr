@@ -1,0 +1,46 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_plug_in_overview.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, overview 
+summary: 'Le plug-in SAP HANA fonctionne conjointement avec Snap Creator Framework pour fournir une solution de sauvegarde pour les bases de données SAP HANA qui s"appuient sur un système de stockage back-end NetApp Les sauvegardes Snapshot créées par Snap Creator sont enregistrées dans le catalogue HANA et visibles dans HANA Studio.' 
+---
+= Présentation du plug-in SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in SAP HANA fonctionne conjointement avec Snap Creator Framework pour fournir une solution de sauvegarde pour les bases de données SAP HANA qui s'appuient sur un système de stockage back-end NetApp Les sauvegardes Snapshot créées par Snap Creator sont enregistrées dans le catalogue HANA et visibles dans HANA Studio.
+
+Snap Creator Framework prend en charge deux types de bases de données SAP HANA : des conteneurs uniques et une base de données mutualisée (MDC) à un seul locataire.
+
+Snap Creator et le plug-in SAP HANA sont pris en charge avec Data ONTAP en 7-mode et clustered Data ONTAP, avec les nœuds de base de données SAP HANA connectés aux contrôleurs de stockage via des protocoles NFS ou Fibre Channel. Les interfaces requises pour la base de données SAP HANA sont disponibles pour Service Pack Stack (SPS) 7 et versions ultérieures.
+
+Snap Creator Framework communique avec les systèmes de stockage pour créer des copies Snapshot et répliquer les données sur un stockage secondaire à l'aide de SnapVault. Snap Creator permet également de restaurer les données avec SnapRestore sur le stockage primaire ou avec une restauration SnapVault à partir du stockage secondaire.
+
+Le plug-in Snap Creator pour SAP HANA utilise le client SAP HANA hdbsql pour exécuter des commandes SQL afin d'assurer la cohérence de la base de données et de gérer le catalogue de sauvegardes SAP HANA. Le plug-in SAP HANA est pris en charge pour les appliances matérielles certifiées SAP et les programmes Tailored Datacenter Integration (TDI).
+
+Le plug-in Snap Creator pour SAP HANA utilise le client SAP HANA hdbsql pour exécuter des commandes SQL pour les tâches suivantes :
+
+* Assurer la cohérence de la base de données pour préparer une sauvegarde Snapshot basée sur le stockage
+* Gérez la conservation des sauvegardes de fichiers journaux au niveau du système de fichiers
+* Gérez le catalogue de sauvegardes SAP HANA pour les sauvegardes de fichiers de données et de fichiers journaux
+* Exécutez une sauvegarde basée sur des fichiers pour vérifier l'intégrité des blocs
+
+
+L'illustration suivante présente les chemins de communication de Snap Creator avec le stockage et la base de données SAP HANA.
+
+image::../media/sap_hana_overview_of_communication_path.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+Snap Creator effectue les étapes suivantes pour sauvegarder la base de données :
+
+. Crée une copie Snapshot de la base de données SAP HANA pour obtenir une image cohérente sur la couche de persistance.
+. Crée une copie Snapshot de stockage du ou des volumes de données.
+. Enregistre la sauvegarde Snapshot de stockage dans le catalogue des sauvegardes SAP HANA.
+. Supprime la copie Snapshot SAP HANA.
+. Exécute une mise à jour SnapVault pour le volume de données.
+. Les copies Snapshot de stockage sont supprimées du stockage primaire et/ou secondaire, en fonction de règles de conservation définies pour les sauvegardes sur les systèmes de stockage primaire et secondaire.
+. Supprime les entrées du catalogue de sauvegardes SAP HANA si les sauvegardes n'existent plus sur le stockage primaire et secondaire.
+. Supprime toutes les sauvegardes de journaux antérieures à la sauvegarde de données la plus ancienne sur le système de fichiers et dans le catalogue de sauvegardes SAP HANA.
+

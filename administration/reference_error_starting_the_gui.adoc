@@ -1,0 +1,30 @@
+---
+permalink: administration/reference_error_starting_the_gui.html 
+sidebar: sidebar 
+keywords: unix, environment, snap, creator, gui, linux 
+summary: 'Dans un environnement UNIX, une erreur peut se produire au démarrage de l"interface graphique Snap Creator.' 
+---
+= Erreur lors du démarrage de l'interface graphique Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans un environnement UNIX, une erreur peut se produire au démarrage de l'interface graphique Snap Creator.
+
+* *Numéro*
++
+Dans un environnement UNIX, vous obtenez une ERREUR HTTP 503 lors du démarrage de l'interface graphique Snap Creator ; par exemple : ERREUR HTTP 503Problem accès /. Motif : SERVICE_INDISPONIBLE
+
+* *Cause*
++
+Ce message d'erreur peut s'afficher lorsqu'il n'y a pas suffisamment d'espace pour le fichier temporaire.
+
+* * Action corrective*
++
+Vérifiez que vous disposez d'un espace suffisant dans le dossier temporaire dans les dossiers correspondants du système d'exploitation.
+
+
+
+Exemple : dans un environnement Linux, vérifiez /tmp.

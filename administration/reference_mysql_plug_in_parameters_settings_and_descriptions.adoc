@@ -1,0 +1,84 @@
+---
+permalink: administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html 
+sidebar: sidebar 
+keywords: mysql, plug-in, net-mysql, interoperability, matrix 
+summary: Le plug-in MySQL utilise Net-MySQL pour communiquer avec la base de données. 
+---
+= Plug-in MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in MySQL utilise Net-MySQL pour communiquer avec la base de données.
+
+Le plug-in MySQL ne prend pas en charge les opérations de sauvegarde et de restauration pour plusieurs bases de données. La matrice d'interopérabilité contient les dernières informations sur la prise en charge et la compatibilité.
+
+Pour les configurations Snap Creator, l'utilisateur de la base de données MySQL doit disposer du privilège LOCK TABLES, ainsi que d'autres privilèges, tels QUE SUPER et RELOAD.
+
+Le tableau suivant répertorie les paramètres du plug-in MySQL, fournit leurs paramètres et les décrit :
+
+|===
+| Paramètre | Réglage | Description 
+
+
+ a| 
+NOM_APPLICATION
+ a| 
+mysql
+ a| 
+Nom de l'application
+
+
+
+ a| 
+MYSQL_BASES_DE_DONNÉES
+ a| 
+db_name:nom_utilisateur/mot de passe
+ a| 
+Liste des bases de données MySQL, nom d'utilisateur et mot de passe.vous pouvez spécifier plusieurs bases de données avec des noms d'utilisateur et des mots de passe comme une liste séparée par des points-virgules, par exemple, `db1:user1/pwd1;db2:user2/pwd2`.
+
+
+
+ a| 
+HÔTE
+ a| 
+nom_hôte
+ a| 
+Nom de l'hôte où se trouvent les bases de données.*Remarque :* VALIDATE_VOLUMES fonctionne correctement uniquement si HOST=localhost. Si HOST=adresse_IP, VALIDATE_VOLUMES ne détecte pas la base de données MySQL.
+
+
+
+ a| 
+PORTS
+ a| 
+db_name:numéro_port
+ a| 
+Liste des bases de données et des ports qu'elles écoutent, par exemple `db1:3307;db2:3308`.
+
+
+
+ a| 
+MAÎTRE_ESCLAVE
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Spécifie l'environnement de la base de données de sauvegarde:si la valeur y est définie, sauvegarde la base de données maître.
+
+Si la valeur est définie sur N, la sauvegarde de la base de données esclave ou la configuration maître-esclave n'est pas utilisée.
+
+
+NOTE: La sauvegarde Snap Creator Framework supprime les fichiers journaux binaires MySQL requis sur le serveur MySQL lorsque l'option Master_Slave est activée. La sauvegarde de la base de données MySQL (master) à l'aide de Snap Creator Framework supprime tous les fichiers journaux binaires et ne laisse qu'un seul fichier journal binaire vide avec la numérotation de réinitialisation (.000001). En raison de ce problème, le serveur esclave ne démarre pas après l'opération de sauvegarde.
+ a| 
+PURGE_BINARY_LOG
+ a| 
+(Y
+
+|===
+*Informations connexes*
+
+http://mysupport.netapp.com/matrix["Matrice d'interopérabilité : mysupport.netapp.com/matrix"]

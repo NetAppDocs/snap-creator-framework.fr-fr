@@ -1,0 +1,25 @@
+---
+permalink: domino-ops/concept_general_configuration_file_information.html 
+sidebar: sidebar 
+keywords: domino, ibm, logging into, Snap Creator, GUI, login 
+summary: 'Vous utilisez un navigateur Web pour vous connecter à l"interface graphique Snap Creator. Contactez votre administrateur pour obtenir les informations d"identification pour l"adresse IP, le port et la connexion de Snap Creator Server.' 
+---
+= Connectez-vous à l'interface graphique Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous utilisez un navigateur Web pour vous connecter à l'interface graphique Snap Creator. Contactez votre administrateur pour obtenir les informations d'identification pour l'adresse IP, le port et la connexion de Snap Creator Server.
+
+. Saisissez l'URL suivante dans votre navigateur Web : `+https://server_name:port+`, où :
++
+** Nom_serveur correspond au nom ou à l'adresse IP du Snap Creator Server
+** Port est le port du Snap Creator Server (8443, par défaut)
+
+
+. Entrez les identifiants de connexion pour Snap Creator Server.
+
+
+L'interface graphique Snap Creator s'affiche dans le navigateur. Si vous lancez l'interface graphique pour la première fois, un message d'accueil s'affiche à l'écran. Cliquez sur *OK* pour fermer le message.

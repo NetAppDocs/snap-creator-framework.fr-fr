@@ -1,0 +1,36 @@
+---
+permalink: domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, commands, backup, restore, configuration, supplemental, 
+summary: 'Vous pouvez préférer utiliser les commandes SnapDrive pour les sauvegardes à la place des commandes Snap Creator natives, pour assurer la cohérence du système de fichiers au niveau du système d"exploitation.' 
+---
+= Ajout de commandes à la configuration de sauvegarde et de restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il peut arriver qu'une opération de sauvegarde ou de restauration soit nécessaire d'exécuter une commande non disponible dans Snap Creator. Sur les hôtes Windows qui utilisent FC ou iSCSI, par exemple, vous pouvez utiliser les commandes SnapDrive pour les sauvegardes à la place des commandes Snap Creator natives, pour assurer la cohérence du système de fichiers au niveau du système d'exploitation.
+
+
+
+== Où exécuter des commandes supplémentaires
+
+Par défaut, des commandes supplémentaires s'exécutent sur Snap Creator Agent. Vous pouvez exécuter une commande supplémentaire sur le serveur en préattendant la commande avec le SERVEUR de texte, suivie de deux points (:). Par exemple, SERVER:C:\myscript.bat.
+
+Si vous souhaitez exécuter une commande supplémentaire sur l'agent, vous devez autoriser explicitement l'exécution de la commande en l'incluant dans le fichier allowed_commands.config de l'agent. Il n'est pas nécessaire d'autoriser des commandes supplémentaires sur le serveur.
+
+
+
+== Où ajouter des commandes supplémentaires
+
+Vous pouvez utiliser l'interface graphique Snap Creator ou l'interface de ligne de commande Snap Creator pour ajouter des commandes à votre configuration de sauvegarde et de restauration.
+
+
+NOTE: Ce guide explique comment utiliser l'interface graphique pour ajouter des commandes. Pour plus d'informations sur l'utilisation de l'interface de ligne de commande, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+
+*Informations connexes*
+
+link:concept_allowing_additional_commands_through_the_snap_creator_agent.adoc["Autorisation de commandes supplémentaires sur Snap Creator Agent"]
+link:task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.adoc["Ajout de commandes supplémentaires à la configuration"]

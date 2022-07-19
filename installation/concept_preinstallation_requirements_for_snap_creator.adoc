@@ -1,0 +1,27 @@
+---
+permalink: installation/concept_preinstallation_requirements_for_snap_creator.html 
+sidebar: sidebar 
+keywords: preinstallation, requirements, before, install 
+summary: 'Avant d"installer Snap Creator, vous devez tenir compte des exigences en termes de licences, de logiciels et de matériel pour le système.' 
+---
+= Conditions de préinstallation pour Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer Snap Creator, vous devez tenir compte des exigences en termes de licences, de logiciels et de matériel pour le système.
+
+Avant d'installer Snap Creator, vous devez également effectuer les tâches suivantes :
+
+* Téléchargez le logiciel Snap Creator.
+* Créez un utilisateur Data ONTAP.
+* Installez Oracle Java ou OpenJDK sur les hôtes Snap Creator Server et Agent.
+* Synchronisation de l'heure sur les hôtes Snap Creator Server et Agent
+* Configurez les paramètres du plug-in IBM Domino (requis uniquement si vous utilisez le plug-in Domino).
+* Ajoutez des bibliothèques SSL (Secure Sockets Layer) pour l'environnement UNIX (uniquement nécessaire lors de l'exécution de Snap Creator à l'aide de l'interface de ligne de commande sur les plateformes UNIX).
++
+Pour plus de détails, reportez-vous à la section _Troubleshooting_ du _Snap Creator Framework Administration Guide_.
+
+

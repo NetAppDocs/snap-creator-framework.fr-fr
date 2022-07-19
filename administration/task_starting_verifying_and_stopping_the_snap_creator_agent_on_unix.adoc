@@ -1,0 +1,42 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_unix.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, service, verify, start, stop, unix 
+summary: Vous pouvez démarrer et arrêter le service Snap Creator Agent et vérifier si le service Snap Creator Agent est exécuté sur votre système UNIX. 
+---
+= Démarrage, vérification et arrêt de Snap Creator Agent sous UNIX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez démarrer et arrêter le service Snap Creator Agent et vérifier si le service Snap Creator Agent est exécuté sur votre système UNIX.
+
+. Démarrez ou arrêtez l'agent Snap Creator ou vérifiez si le service Snap Creator Server est exécuté, le cas échéant :
++
+|===
+| Les fonctions que vous recherchez... | Entrez les informations suivantes... 
+
+
+ a| 
+Démarrez le service Snap Creator Agent
+ a| 
+Chemin_installation/sAgent4.3.0/bin/sAgent démarrage
+
+
+
+ a| 
+Vérifiez si le service Snap Creator Agent est en cours d'exécution
+ a| 
+Chemin_installation/sAgent4.3.0/bin/sAgent, état
+
+
+
+ a| 
+Arrêtez le service Snap Creator Agent
+ a| 
+Chemin_installation/sAgent4.3.0/bin/Agent stop
+
+|===
+

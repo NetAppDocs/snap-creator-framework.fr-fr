@@ -1,0 +1,35 @@
+---
+permalink: installation/task_starting_the_agent_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, agent, command, prompt 
+summary: 'Vous pouvez démarrer manuellement Snap Creator Agent à partir d"une invite de commande en exécutant un script de batch (scAgent.bat).' 
+---
+= Démarrage de l'agent à partir d'une invite de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez démarrer manuellement Snap Creator Agent à partir d'une invite de commande en exécutant un script de batch (scAgent.bat).
+
+Généralement, vous devez suivre cette procédure uniquement si vous n'avez pas sélectionné l'option *Start agent as service* pendant le processus d'installation.
+
+Vous pouvez également planifier l'exécution du script de batch (scout.bat) au démarrage à l'aide du planificateur de tâches Windows. Pour plus d'informations sur l'utilisation du Planificateur de tâches Windows, reportez-vous à la documentation de votre système d'exploitation Windows.
+
+. Ouvrez une invite de commande et entrez les commandes suivantes :
++
+[listing]
+----
+cd \install_path\scAgentrelease-version\bin\
+scAgent.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scAgent4.1.0\bin\
+scAgent.bat start
+----
+
+
+Étant donné que le script de batch (scAgent.bat) exécute Snap Creator au premier plan, Snap Creator Agent continue à s'exécuter tant que l'invite de commande est ouverte. La fermeture de l'invite de commande permet de quitter Snap Creator Agent. Pour exécuter Snap Creator en arrière-plan, vous devez utiliser le service Snap Creator Agent.

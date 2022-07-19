@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_snap_creator_server.html 
+sidebar: sidebar 
+keywords: managing, snap, creator, server, start, veridy, stop, port, windows, unix 
+summary: Vous pouvez démarrer, vérifier et arrêter Snap Creator Server, ainsi que modifier le port Server, sur vos systèmes Windows et UNIX. 
+---
+= Gestion de Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez démarrer, vérifier et arrêter Snap Creator Server, ainsi que modifier le port Server, sur vos systèmes Windows et UNIX.

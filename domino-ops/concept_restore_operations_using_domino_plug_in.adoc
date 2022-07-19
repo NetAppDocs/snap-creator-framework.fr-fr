@@ -1,0 +1,78 @@
+---
+permalink: domino-ops/concept_restore_operations_using_domino_plug_in.html 
+sidebar: sidebar 
+keywords: domino, ibm, understanding, plug-in, restore 
+summary: 'Le plug-in IBM Domino restaure les fichiers de base de données à partir de la copie Snapshot du volume sur lequel la base de données est stockée. Une fois l"opération de restauration de snapshot terminée, le plug-in applique toutes les modifications enregistrées dans le répertoire changeinfo.' 
+---
+= Présentation des opérations de restauration du plug-in IBM Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in IBM Domino restaure les fichiers de base de données à partir de la copie Snapshot du volume sur lequel la base de données est stockée. Une fois l'opération de restauration de snapshot terminée, le plug-in applique toutes les modifications enregistrées dans le répertoire changeinfo.
+
+Voici plusieurs étapes générales :
+
+. Restaurer des fichiers de base de données à partir de copies Snapshot
+. Appliquer les modifications enregistrées dans le répertoire changeinfo.
+. Appliquez les informations du journal de transactions, le cas échéant.
+
+
+
+
+== Options de restauration
+
+Le plug-in offre une large gamme d'options de restauration :
+
+|===
+
+
+| Type de restauration | Description 
+
+
+ a| 
+Restauration de volumes (à un point dans le temps)
+ a| 
+Restaure l'état de la totalité du volume à son moment de la copie Snapshot.
+
+
+
+ a| 
+Restauration de volumes (en moins d'une minute)
+ a| 
+Restaure l'état du volume entier au moment de la copie Snapshot, puis lit les journaux de transactions Domino à la copie la plus récente.
+
+
+
+ a| 
+Restauration de volume (à sélectionner en moins d'une minute)
+ a| 
+Restauration de l'état du volume entier au moment de la copie Snapshot, puis lecture des journaux de transactions Domino à un moment donné.
+
+
+
+ a| 
+Restauration de fichiers uniques (à un point dans le temps)
+ a| 
+Restaure un seul fichier à son état au moment de la copie Snapshot (NFS uniquement).
+
+
+
+ a| 
+Restauration de fichiers uniques (en moins d'une minute)
+ a| 
+Restauration d'un seul fichier à son état au moment de la copie Snapshot, puis lecture des journaux de transactions Domino à la copie la plus récente (NFS uniquement).
+
+
+
+ a| 
+Restauration de fichiers uniques (à sélectionner en moins d'une minute)
+ a| 
+Restauration d'un seul fichier à son état au moment de la copie Snapshot, puis lecture des journaux de transactions Domino à un moment donné (NFS uniquement).
+
+|===
+*Remarque :* pour les restaurations en moins d'une minute et sélectionnables, l'enregistrement des transactions Domino doit être activé.
+
+Les journaux de transactions ne peuvent être lus que vers le transfert. La sélection d'une heure avant la création de la copie Snapshot entraîne une erreur de restauration.

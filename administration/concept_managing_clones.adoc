@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_clones.html 
+sidebar: sidebar 
+keywords: managing, clones, creating, backup, deleting, unmounting 
+summary: 'Vous pouvez créer des copies de sauvegarde, afficher une liste des copies de sauvegarde et supprimer ces copies lorsqu"elles ne sont plus nécessaires.' 
+---
+= Gestion des clones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer les clones en créant des clones (à l'aide du paramètre *actions* ou en installant une copie de sauvegarde comme source), en supprimant des clones ou en démontant des clones.

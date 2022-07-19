@@ -1,0 +1,592 @@
+---
+permalink: installation/reference_cli_command_for_creating_cluster_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, cluster, roles, role create 
+summary: Le tableau suivant répertorie les commandes requises pour créer un rôle pour un nouvel utilisateur sur le cluster. 
+---
+= Commandes CLI pour la création de rôles de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le tableau suivant répertorie les commandes requises pour créer un rôle pour un nouvel utilisateur sur le cluster.
+
+|===
+| Nom du répertoire de commande | Commande à exécuter 
+
+
+ a| 
+identité du cluster
+ a| 
+Role create -role CRBAC_New -cmddirname "cluster Identity show" -vserver clum3240rre
+
+
+
+ a| 
+événement
+ a| 
+Role create -role CRBAC_New -cmddirname "event" -vserver clum3240rre
+
+
+
+ a| 
+config. événement
+ a| 
+Role create -role CRBAC_New -cmddirname "Event config" -vserver clum3240rre
+
+
+
+ a| 
+destination de l'événement
+ a| 
+Role create -role CRBAC_New -cmddirname "destination de l'événement" -vserver clum3240rre
+
+
+
+ a| 
+journal des événements
+ a| 
+Role create -role CRBAC_New -cmddirname "event log" -vserver clum3240rre
+
+
+
+ a| 
+historique du courrier de l'événement
+ a| 
+Role create -role CRBAC_New -cmddirname "event mailhistory" -vserver clum3240rre
+
+
+
+ a| 
+itinéraire de l'événement
+ a| 
+Role create -role CRBAC_New -cmddirname "Event route" -vserver clum3240rre
+
+
+
+ a| 
+événement snmphistory
+ a| 
+Role create -role CRBAC_New -cmddirname "event snmphiStory" -vserver clus3240rre
+
+
+
+ a| 
+état de l'événement
+ a| 
+Role create -role CRBAC_New -cmddirname "Event status" -vserver clum3240rre
+
+
+
+ a| 
+commentaire de lun
+ a| 
+Role create -role CRBAC_New -cmddirname « lun comment » -vserver clum3240rre
+
+
+
+ a| 
+la création de lun
+ a| 
+Role create -role CRBAC_New -cmddirname « lun create » -vserver clum3240rre
+
+
+
+ a| 
+suppression de la lun
+ a| 
+Role create -role CRBAC_New -cmddirname « lun delete » -vserver clum3240rre
+
+
+
+ a| 
+géométrie de lun
+ a| 
+Role create -role CRBAC_New -cmddirname "géométrie lun" -vserver clum3240rre
+
+
+
+ a| 
+lun igroup add
+ a| 
+Role create -role CRBAC_New -cmddirname "lun igroup add" -vserver clus3240rre
+
+
+
+ a| 
+créez un groupe initiateur lun
+ a| 
+Role create -role CRBAC_New -cmddirname "lun igroup create" -vserver clus3240rre
+
+
+
+ a| 
+groupe initiateur lun défini
+ a| 
+Role create -role CRBAC_New -cmddirname "lun igroup set" -vserver clus3240rre
+
+
+
+ a| 
+affichage de la lun igroup
+ a| 
+Role create -role CRBAC_New -cmddirname « lun igroup show » -vserver clus3240rre
+
+
+
+ a| 
+mappage de lun
+ a| 
+Rôle create -role CRBAC_New -cmddirname "lun map" -vserver clum3240rre
+
+
+
+ a| 
+les mappages de lun s'affichent
+ a| 
+Role create -role CRBAC_New -cmddirname « lun mapping show » -vserver clum3240rre
+
+
+
+ a| 
+modification de lun
+ a| 
+Role create -role CRBAC_New -cmddirname "lun modify" -vserver clum3240rre
+
+
+
+ a| 
+déplacement de lun
+ a| 
+Role create -role CRBAC_New -cmddirname « lun Move » -vserver clum3240rre
+
+
+
+ a| 
+lun hors ligne
+ a| 
+Role create -role CRBAC_New -cmddirname « lun Offline » -vserver clum3240rre
+
+
+
+ a| 
+lun en ligne
+ a| 
+Rôle create -role CRBAC_New -cmddirname « lun online » -vserver clum3240rre
+
+
+
+ a| 
+redimensionner la lun
+ a| 
+Role create -role CRBAC_New -cmddirname « lun resize » -vserver clum3240rre
+
+
+
+ a| 
+affichage de la lun
+ a| 
+Role create -role CRBAC_New -cmddirname « lun show » -vserver clum3240rre
+
+
+
+ a| 
+lun unmap
+ a| 
+Rôle create -role CRBAC_New -cmddirname "lun unmap" -vserver clus3240rre
+
+
+
+ a| 
+le réseau
+ a| 
+Role create -role CRBAC_New -cmddirname "network" -vserver clum3240rre
+
+
+
+ a| 
+network fcp adapter affiche
+ a| 
+Role create -role CRBAC_New -cmddirname « network fcp adapt show » -vserver clum3240rre
+
+
+
+ a| 
+interface réseau affiche
+ a| 
+Role create -role CRBAC_New -cmddirname "network interface show" -vserver clum3240rre
+
+
+
+ a| 
+le rôle de connexion de sécurité s'affiche
+ a| 
+Role create -role CRBAC_New -cmddirname "Security login role show" -vserver clus3240rre
+
+
+
+ a| 
+security login show
+ a| 
+Role create -role CRBAC_New -cmddirname "Security login show" -vserver clus3240rre
+
+
+
+ a| 
+snapmirror
+ a| 
+Rôle create -role CRBAC_New -cmddirname « snapmirror » -vserver clu3240rre
+
+
+
+ a| 
+agrégat de stockage
+ a| 
+Rôle create -role CRBAC_New -cmddirname « Storage aggring » -vserver clu3240rre
+
+
+
+ a| 
+affichage de la licence système
+ a| 
+Role create -role CRBAC_New -cmddirname "system license show" -vserver clum3240rre
+
+
+
+ a| 
+nœud système
+ a| 
+Role create -role CRBAC_New -cmddirname "system node" -vserver clum3240rre
+
+
+
+ a| 
+AutoSupport nœud système
+ a| 
+Role create -role CRBAC_New -cmddirname "system node AutoSupport" -vserver clus3240rre
+
+
+
+ a| 
+nœud système appelé AutoSupport
+ a| 
+Role create -role CRBAC_New -cmddirname "system node AutoSupport Invoke" -vserver clus3240rre
+
+
+
+ a| 
+affiche le nœud du système
+ a| 
+Role create -role CRBAC_New -cmddirname "system node show" -vserver clum3240rre
+
+
+
+ a| 
+nœud système exécuté
+ a| 
+Role create -role CRBAC_New -cmddirname "system node run" -vserver clus3240rre
+
+
+
+ a| 
+services système ndmp
+ a| 
+Role create -role CRBAC_New -cmddirname « system services ndmp » -vserver clum3240rre
+
+
+
+ a| 
+version
+ a| 
+Role create -role CRBAC_New -cmddirname "version" -vserver clum3240rre
+
+
+
+ a| 
+version
+ a| 
+Rôle de connexion de sécurité create -role bainew1 -vserver SnapCreator -cmddirname "version" -Access readonly
+
+
+
+ a| 
+vserver export-policy create
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver export-policy rule create » -vserver clu3240rre
+
+
+
+ a| 
+vserver export-policy règle show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver export-policy rule show » -vserver clu3240rre
+
+
+
+ a| 
+vserver export-policy show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver export-policy show » -vserver clus3240rre
+
+
+
+ a| 
+vserver fcp
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver fcp » -vserver SnapCreator -vserver clum3240rre
+
+
+
+ a| 
+vserver fcp initiator affiche
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver fcp initiator show » -vserver clus3240rre
+
+
+
+ a| 
+vserver fcp show
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver fcp show » -vserver clum3240rre
+
+
+
+ a| 
+statut fcp vserver
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver fcp status » -vserver clum3240rre
+
+
+
+ a| 
+vserver iscsi connection show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi connection show » -vserver clum3240rre
+
+
+
+ a| 
+iscsi vserver
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver iscsi » -vserver SnapCreator -vserver clum3240rre
+
+
+
+ a| 
+ajout de la liste d'accès à l'interface iscsi des vservers
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi interface accesslist add » -vserver clus3240rre
+
+
+
+ a| 
+la liste d'accès à l'interface iscsi des vservers est affichée
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi interface acclist show » -vserver clus3240rre
+
+
+
+ a| 
+nom de noeud iscsi vserver
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi nodename » -vserver clus3240rre
+
+
+
+ a| 
+vserver iscsi session show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi session » show -vserver clum3240rre
+
+
+
+ a| 
+vserver iscsi show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi show » -vserver clum3240rre
+
+
+
+ a| 
+état iscsi des vservers
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver iscsi status » -vserver clum3240rre
+
+
+
+ a| 
+nfs vserver
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver nfs » -vserver SnapCreator -vserver clum3240rre
+
+
+
+ a| 
+état nfs des vservers
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver nfs status » -vserver clum3240rre
+
+
+
+ a| 
+options vserver
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver options » -vserver clum3240rre
+
+
+
+ a| 
+vserver services unix-group create
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver services name-service unix-group create » -vserver clum3240rre
+
+
+
+ a| 
+vserver services unix-user création
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver services name-service unix-user create » -vserver clum3240rre
+
+
+
+ a| 
+vserver services unix-group show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver services name-service unix-group show » -vserver clu3240rre
+
+
+
+ a| 
+vserver services unix-user show
+ a| 
+Rôle create -role CRBAC_New -cmddirname « vserver services name-service unix-user show » -vserver clu3240rre
+
+
+
+ a| 
+vserver show
+ a| 
+Role create -role CRBAC_New -cmddirname « vserver show » -vserver clum3240rre
+
+
+
+ a| 
+dimensionnement automatique du volume
+ a| 
+Role create -role CRBAC_New -cmddirname "volume autosize" -vserver clum3240rre
+
+
+
+ a| 
+création de clones de volumes
+ a| 
+Role create -role CRBAC_New -cmddirname « volume clone create » -vserver clum3240rre
+
+
+
+ a| 
+création de volumes
+ a| 
+Role create -role CRBAC_New -cmddirname "volume create" -vserver clum3240rre
+
+
+
+ a| 
+destruction des volumes
+ a| 
+Role create -role CRBAC_New -cmddirname "volume détruire" -vserver clum3240rre
+
+
+
+ a| 
+efficacité du volume désactivée
+ a| 
+Role create -role CRBAC_New -cmddirname « volume Efficiency off » -vserver clus3240rre
+
+
+
+ a| 
+efficacité du volume activée
+ a| 
+Role create -role CRBAC_New -cmddirname « volume Efficiency on » -vserver clum3240rre
+
+
+
+ a| 
+efficacité du volume
+ a| 
+Role create -role CRBAC_New -cmddirname « volume Efficiency show » -vserver clum3240rre
+
+
+
+ a| 
+démarrage de l'efficacité du volume
+ a| 
+Role create -role CRBAC_New -cmddirname « volume Efficiency start » -vserver clum3240rre
+
+
+
+ a| 
+fichier de volume
+ a| 
+Role create -role CRBAC_New -cmddirname "volume file" -vserver clum3240rre
+
+
+
+ a| 
+création d'un clone de fichiers de volumes
+ a| 
+Role create -role CRBAC_New -cmddirname « volume file clone create » -vserver clus3240rre
+
+
+
+ a| 
+volume fichier show-disk-usage
+ a| 
+Role create -role bainew1 -vserver SnapCreator -cmddirname « volume fichier show-disk-usage » -Access All
+
+
+
+ a| 
+modification de volume
+ a| 
+Role create -role CRBAC_New -cmddirname "volume modify" -vserver clum3240rre
+
+
+
+ a| 
+volume hors ligne
+ a| 
+Role create -role CRBAC_New -cmddirname « volume offline » -vserver clum3240rre
+
+
+
+ a| 
+volume affiché
+ a| 
+Role create -role CRBAC_New -cmddirname "volume show" -vserver clum3240rre
+
+
+
+ a| 
+taille du volume
+ a| 
+Role create -role CRBAC_New -cmddirname « volume size » -vserver clum3240rre
+
+
+
+ a| 
+création de copies snapshot de volume
+ a| 
+Role create -role CRBAC_New -cmddirname « volume snapshot create » -vserver clum3240rre
+
+
+
+ a| 
+démontage de volume
+ a| 
+Role create -role CRBAC_New -cmddirname "volume unmount" -vserver clum3240rre
+
+|===

@@ -1,0 +1,18 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, file-based, backup, database, integrity, checks 
+summary: 'SAP recommande de combiner des sauvegardes Snapshot basées sur le stockage et une sauvegarde hebdomadaire basée sur des fichiers pour exécuter une vérification de l"intégrité des blocs. La vérification de l"intégrité des blocs peut être exécutée depuis l"interface utilisateur graphique Snap Creator ou l"interface de ligne de commande.' 
+---
+= Sauvegarde basée sur des fichiers SAP HANA et vérifications de l'intégrité des bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP recommande de combiner des sauvegardes Snapshot basées sur le stockage et une sauvegarde hebdomadaire basée sur des fichiers pour exécuter une vérification de l'intégrité des blocs. La vérification de l'intégrité des blocs peut être exécutée depuis l'interface utilisateur graphique Snap Creator ou l'interface de ligne de commande.
+
+L'opération sauvegarde de données basée sur un fichier est utilisée lorsque les copies de sauvegarde des fichiers doivent être conservées. L'opération Vérification de l'intégrité de la base de données est utilisée lorsque les copies de sauvegarde doivent être supprimées.
+
+Vous pouvez configurer une ou les deux opérations. Pour la sauvegarde à la demande, vous pouvez choisir l'une des opérations.

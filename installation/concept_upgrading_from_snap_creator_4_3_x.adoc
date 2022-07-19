@@ -1,0 +1,19 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_3_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.3 
+summary: Vous pouvez effectuer la mise à niveau à partir de Snap Creator 4.3.x, y compris toutes les versions de correctifs actuellement disponibles. 
+---
+= Mise à niveau depuis Snap Creator 4.3.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer la mise à niveau à partir de Snap Creator 4.3.x, y compris toutes les versions de correctifs actuellement disponibles.
+
+La procédure de mise à niveau est la même pour Snap Creator Framework 4.1.x et 4.3.x.
+
+
+NOTE: Si vous mettez à niveau Snap Creator Framework 4.3.1 vers une version de correctif 4.3.1, vous devez ignorer la dernière étape de l’exécution de la commande Java -jar snapcreator.jar -upgrade.

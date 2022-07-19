@@ -1,0 +1,30 @@
+---
+permalink: sap-hana-ops/task_backing_up_the_database_with_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: backing, up, database, snap, creator, gui, user, interface, ui 
+summary: 'Vous pouvez sauvegarder une base de données à l"aide de l"interface graphique Snap Creator.' 
+---
+= Sauvegarde de la base de données à l'aide de l'interface graphique Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder une base de données à l'aide de l'interface graphique Snap Creator.
+
+. Sélectionnez la configuration *HANA_database_backup*, puis sélectionnez *actions* > *Backup*.
++
+image::../media/sap_hana_db_backup.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+. Sélectionnez la stratégie de sauvegarde et cliquez sur *OK*.
++
+image::../media/sap_hana_database_backup_scfw_gui.gif[Cette image est expliquée par le texte qui l'entoure.]
+
++
+La sauvegarde démarre. Snap Creator déclenche la mise à jour « SnapVault update » et Snap Creator attend jusqu'à ce que les données soient répliquées sur le stockage secondaire. Le temps d'attente a été configuré pendant la configuration et peut être adapté dans l'onglet SnapVault settings. Snap Creator déclenche les mises à jour SnapVault en parallèle pour chaque volume du même contrôleur de stockage, mais en séquence pour chaque contrôleur de stockage.
+
++
+image::../media/sap_hana_database_backup2_scfw_gui.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+

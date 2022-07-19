@@ -1,0 +1,105 @@
+---
+permalink: administration/task_creating_scheduled_jobs_using_sc_gui.html 
+sidebar: sidebar 
+keywords: local, retention, policy, configuration, snap, creator, gui, copy, lun, volume, clone, snapvault, ossv, job 
+summary: 'Si vous utilisez une stratégie de conservation locale (située dans le fichier de configuration), vous pouvez utiliser le planificateur de l"interface utilisateur graphique Snap Creator pour créer des plannings et exécuter des tâches. Le planificateur, contenu au sein du serveur Snap Creator, peut planifier des sauvegardes (copies Snapshot), des clones de LUN, des clones de volumes, des clones définis par application, des transferts OSSV (Open Systems SnapVault), des tâches d"archivage et des actions personnalisées.' 
+---
+= Création de travaux planifiés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez une stratégie de conservation locale (située dans le fichier de configuration), vous pouvez utiliser le planificateur de l'interface utilisateur graphique Snap Creator pour créer des plannings et exécuter des tâches. Le planificateur, contenu au sein du serveur Snap Creator, peut planifier des sauvegardes (copies Snapshot), des clones de LUN, des clones de volumes, des clones définis par application, des transferts OSSV (Open Systems SnapVault), des tâches d'archivage et des actions personnalisées.
+
+Si vous envisagez d'utiliser des objets de stratégie au lieu d'une stratégie de rétention locale, ignorez cette procédure et créez plutôt une planification de stratégie.
+
+. Dans le menu principal de l'interface graphique Snap Creator, sélectionnez *Management* > *Schedules* et cliquez sur *Create*.
+. Dans la fenêtre Nouveau travail, entrez les détails du travail.
++
+image::../media/schedule_new_job_window.gif[fenêtre planifier un nouveau travail]
+
++
+|===
+| Champ | Description 
+
+
+ a| 
+Nom de la tâche
+ a| 
+Spécifiez le nom du travail planifié.
+
+
+
+ a| 
+Date de début
+ a| 
+Sélectionnez la date du jour ou une date ultérieure.
+
+
+
+ a| 
+Actif
+ a| 
+Défini sur actif pour indiquer que le travail sera exécuté comme planifié. Active est le paramètre par défaut.
+
+
+
+ a| 
+Profil
+ a| 
+Sélectionnez le profil à associer à ce travail.
+
+
+
+ a| 
+Configuration
+ a| 
+Sélectionnez la configuration à associer à ce travail.
+
+
+
+ a| 
+Action
+ a| 
+Sélectionnez l'une des options suivantes :
+
+** *Sauvegarde* : crée une sauvegarde en utilisant la technologie de stockage NetApp.
+** *CloneLun* : crée une sauvegarde et cloner une ou plusieurs LUN à l'aide de la commande LUN clone.
+** *CloneVol* : crée une sauvegarde et clone un volume.
+** *Clone* : exécute une opération de clonage piloté par un plug-in.
+** *OSSV* : utilise Open Systems SnapVault pour effectuer la sauvegarde.
++
+Aucune sauvegarde primaire n'est créée.
+
+** *Arch* : effectue uniquement la gestion des journaux d'archives.
++
+Aucune sauvegarde n'a été créée.
+
+** *Custom* : exécute une action de clonage de plug-in-defined.
+
+
+
+
+ a| 
+Politique
+ a| 
+Sélectionnez la stratégie à associer à ce travail.
+
+
+
+ a| 
+Fréquence
+ a| 
+Sélectionnez la fréquence de ce travail. Selon votre sélection, vous devez sélectionner les champs d'heure appropriés pour exécuter le travail planifié.
+
++
+
+|===
+. Cliquez sur *Enregistrer*.
+
+
+*Informations connexes*
+
+xref:task_creating_policy_schedules.adoc[Création de planifications de règles]

@@ -1,0 +1,38 @@
+---
+permalink: sap-hana-ops/concept_considerations_for_backing_up_sap_hana_systems.html 
+sidebar: sidebar 
+keywords: considerations, backup, backing, up, sap, hana 
+summary: 'Les administrateurs SAP HANA doivent assurer un niveau de service fiable, réduisant ainsi les temps d"indisponibilité et la dégradation des performances du fait des sauvegardes.' 
+---
+= Considérations relatives à la sauvegarde des systèmes SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les administrateurs SAP HANA doivent assurer un niveau de service fiable, réduisant ainsi les temps d'indisponibilité et la dégradation des performances du fait des sauvegardes.
+
+Pour assurer ce niveau de service, les administrateurs SAP HANA sont confrontés aux défis dans les domaines suivants :
+
+* Impact sur les performances des systèmes SAP de production
++
+Les sauvegardes ont généralement un impact significatif sur les performances du système SAP de production, car la charge du serveur de base de données, du système de stockage et du réseau de stockage est lourde pendant les sauvegardes.
+
+* Diminution des fenêtres de sauvegarde
++
+Les sauvegardes ne peuvent être créées que lorsque le système SAP présente un faible nombre d'E/S ou des activités par lots. Il est très difficile de définir une fenêtre de sauvegarde lorsque le système SAP est actif en permanence.
+
+* La explosion du volume des données
++
+La croissance rapide des données associée à la réduction des fenêtres de sauvegarde entraîne des investissements constants dans l'infrastructure de sauvegarde : plus de lecteurs de bandes, nouvelle technologie de lecteurs de bandes, réseaux de stockage plus rapides. Le développement des bases de données entraîne également une augmentation du nombre de supports sur bande ou de l'espace disque pour les sauvegardes. Les sauvegardes incrémentielles peuvent résoudre ces problèmes, mais elles entraînent une durée de restauration très lente, qui est généralement inacceptable.
+
+* Augmentation des coûts liés aux temps d'indisponibilité
++
+Les temps d'indisponibilité non planifiés d'un système SAP ont toujours un impact financier sur votre activité. Une grande partie des temps d'indisponibilité non planifiés correspond au temps nécessaire à la restauration et à la restauration du système SAP en cas de défaillance. L'architecture de sauvegarde et de restauration doit être conçue en fonction d'un objectif de délai de restauration (RTO) acceptable.
+
+* Durée de sauvegarde et de restauration
++
+La durée de sauvegarde et de restauration est incluse dans les projets de mise à niveau SAP. Le plan de projet de mise à niveau SAP inclut toujours au moins trois sauvegardes de la base de données SAP. Le temps requis pour ces sauvegardes diminue la durée totale disponible du processus de mise à niveau. La décision en matière de sauvegarde et de restauration dépend généralement du temps nécessaire à la restauration et à la restauration de la base de données à partir de la sauvegarde créée précédemment. La restauration très rapide donne plus de temps à résoudre les problèmes susceptibles de se produire lors de la mise à niveau, au lieu de restaurer simplement le système à son état précédent.
+
+

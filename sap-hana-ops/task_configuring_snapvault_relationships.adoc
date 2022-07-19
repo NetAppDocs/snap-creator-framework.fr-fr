@@ -1,0 +1,54 @@
+---
+permalink: sap-hana-ops/task_configuring_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: configuring, configure snapvault, relationships, snaprestore 
+summary: Lorsque vous configurez des relations SnapVault, une licence SnapRestore et SnapVault valide doit être installée sur les contrôleurs de stockage principaux. Une licence SnapVault valide doit être installée sur le stockage secondaire. 
+---
+= Configuration des relations SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous configurez des relations SnapVault, une licence SnapRestore et SnapVault valide doit être installée sur les contrôleurs de stockage principaux. Une licence SnapVault valide doit être installée sur le stockage secondaire.
+
+. Activez SnapVault et NDMP sur les contrôleurs de stockage principal et secondaire.
++
+[listing]
+----
+hana1a> options snapvault.enable on
+hana1a> ndmp on
+hana1a>
+hana1b> options snapvault.enable on
+hana1b> ndmpd on
+hana1b
+hana2b> options snapvault.enable on
+hana2b> ndmpd on
+hana2b>
+----
+. Sur tous les contrôleurs de stockage principaux, configurez l'accès au contrôleur de stockage secondaire.
++
+[listing]
+----
+hana1a> options snapvault.access host=hana2b
+hana1a>
+hana1b> options snapvault.access host=hana2b
+hana1b>
+----
++
+
+NOTE: Il est recommandé d'utiliser un réseau dédié pour le trafic de réplication. Dans ce cas, le nom d'hôte de cette interface sur le contrôleur de stockage secondaire doit être configuré. Au lieu de hana2b, le nom d’hôte pourrait être hana2b-rep.
+
+. Sur le contrôleur de stockage secondaire, configurez l'accès pour tous les contrôleurs de stockage primaire.
++
+[listing]
+----
+hana2b> options snapvault.access host=hana1a,hana1b
+hana2b>
+----
++
+
+NOTE: Il est recommandé d'utiliser un réseau dédié pour le trafic de réplication. Dans ce cas, le nom d'hôte de cette interface sur les contrôleurs de stockage primaire doit être configuré. Au lieu de hana1b et hana1a, le nom d'hôte pourrait être hana1a-rep et hana1b-rep.
+
+
