@@ -587,13 +587,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
-      
-      <lastmod>2022-11-17T07:44:14+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/sap-hana-ops/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
@@ -608,14 +601,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/installation/delete_reference_copyright.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/delete_reference_copyright.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/installation/delete_reference_copyright.html</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
@@ -636,14 +629,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/installation/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/delete_reference_copyright.html</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/installation/delete_reference_trademark.html</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
@@ -664,14 +657,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/installation/</loc>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/delete_reference_trademark.html</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/</loc>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/installation/</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
@@ -686,6 +679,13 @@
   
     <url>
       <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/domino-ops/</loc>
+      
+      <lastmod>2022-11-17T07:44:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/</loc>
       
       <lastmod>2022-11-17T07:44:14+00:00</lastmod>
       
@@ -946,7 +946,7 @@
     <url>
       <loc>https://docs.netapp.com/fr-fr/snap-creator-framework/administration/reference_parameters_to_set_up_snapvault.html</loc>
       
-      <lastmod>2022-11-17T07:44:14+00:00</lastmod>
+      <lastmod>2022-12-05T18:33:22+00:00</lastmod>
       
     </url>
   
@@ -1177,7 +1177,7 @@
     <url>
       <loc>https://docs.netapp.com/fr-fr/snap-creator-framework//search.html</loc>
       
-      <lastmod>2022-11-17T07:44:31+00:00</lastmod>
+      <lastmod>2022-12-05T18:33:33+00:00</lastmod>
       
     </url>
   

@@ -4627,7 +4627,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 07:44:14 +0000">11/17/2022</time>
+    <time datetime="2022-12-05 18:33:22 +0000">12/05/2022</time>
     
   
 
@@ -4642,9 +4642,9 @@
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
@@ -4655,26 +4655,28 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>NTAP_SNAPVAULT_UPDATE</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>(Y</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NTAP_SNAPVAULT_UPDATE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(O/N)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Permet d&#8217;activer et de désactiver la fonction de mise à jour SnapVault.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Permet d&#8217;activer et de désactiver la fonction de mise à jour SnapVault.</p>
+<p>NTAP_ALLOW_MIRRORVULT_AS_MIRROR</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>(O/N)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Vous permet d&#8217;utiliser le type de stratégie de protection mirror_vault en tant que SnapVault ou SnapMirror. (Valeur par défaut) N : active le type de stratégie de protection mirror_vault pour SnapVault. Y : active le type de règle de protection mirror_vault pour SnapMirror.</p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>VOLUMES SnapVault_</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Le répertorie les systèmes de stockage source et les volumes sur lesquels vous souhaitez effectuer une mise à jour SnapVault (par exemple, contrôler1:vol1,vol2,vol3;contrôler2:vol1;controller3:vol2,vol3). <strong>Remarque :</strong></p>
+<p>Le répertorie les systèmes de stockage source et les volumes sur lesquels vous souhaitez effectuer une mise à jour SnapVault (par exemple, contrôler1:vol1,vol2,vol3;contrôler2:vol1;controller3:vol2,vol3).</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4695,54 +4697,52 @@
 </li>
 </ul>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>SNAPVAULT_QTREE_INCLUDE</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Le répertorie les systèmes de stockage source et les chemins qtree qui doivent être inclus dans la mise à jour de SnapVault. Sans cette option, toutes les instances qtree d&#8217;un volume sont archivées par SnapVault en cas de relation. Les qtrees répertoriés dans l&#8217;exemple suivant sont voûtés par SnapVault et le reste sont ignorés par SnapVault : contrôler1:/vol/qtree/qtre1,/vol/volume/qtre2;contrôler2:/vol/volume/qtre1.</p>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>NTAP_SNAPVAULT_RETENTIONS</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Détermine le nombre de copies Snapshot sur le système SnapVault secondaire que vous souhaitez conserver pour une règle donnée (par exemple, Daily:21, hebdomadaire:12, mensuel:3).</p>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>NTAP_SNAPVAULT_CONSERVATION_AGE</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Définition d&#8217;une durée de conservation (en jours) pour les copies Snapshot SnapVault Si les copies Snapshot SnapVault sont configurées, elles ne sont supprimées que si le nombre dépasse le nombre défini dans NTAP_SNAPVAULT_RETENTIONS et si elles ont plus de l&#8217;âge de conservation (en jours).</p>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>NTAP_SNAPVAULT_SNAPSHOT</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>(Y</p>
+<p>(O/N)</p>
 </div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Permet d&#8217;utiliser les copies Snapshot SnapVault, c&#8217;est-à-dire les copies Snapshot compatibles avec le planificateur SnapVault de contrôleur de stockage. Si vous utilisez cette option, la suppression de la copie Snapshot est gérée par le contrôleur de stockage et non par Snap Creator. De plus, les copies Snapshot sont nommées comme suit : sv_&lt;POLICY&gt;.&lt;##&gt;. Le nom de la règle provient du paramètre NTAP_SNAPSHOT_RETENTIONS et le jeu de conservation est également appliqué à la planification SnapVault du contrôleur de stockage.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>NTAP_SNAPVAULT_ NODELETE</p>
-</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>(Y</p>
+<p>NTAP_SNAPVAULT_ NODELETE</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>(O/N)</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Elle remplace les VERSIONS NTAP_SNAPVAULT_RETENTIONS et empêche la suppression des copies Snapshot. Si vous laissez cette option activée, votre volume peut se remplir.</p>
 </div></div></td>
@@ -4752,27 +4752,29 @@
 <p>NTAP_SNAPVAULT_RESTORE_WAIT</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>(Y</p>
+<p>(O/N)</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N)</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Dans le cas d&#8217;une restauration SnapVault, Snap Creator attend la fin de l&#8217;opération. Cette opération est recommandée car une fois la restauration SnapVault terminée, Snap Creator invite l&#8217;utilisateur à supprimer les copies Snapshot qui sont créées sur le stockage primaire et qui ne sont plus nécessaires.</p>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>NTAP_SNAPVAULT_WAIT</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Le délai d&#8217;attente (en minutes) pendant la mise à jour de SnapVault avant la création d&#8217;une copie Snapshot sur le système secondaire SnapVault.</p>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>NTAP_SNAPVAULT_MAX_TRANSFER</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>La bande passante maximale SnapVault est autorisée, en Kbit/s. S&#8217;il n&#8217;est pas défini, SnapVault utilise la bande passante disponible maximale.</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
