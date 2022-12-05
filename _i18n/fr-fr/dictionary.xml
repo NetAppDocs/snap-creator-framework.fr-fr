@@ -2948,7 +2948,6 @@
   <block id="fecc8aff3c88a0445bf428ef692f1cea" category="paragraph">NTAP_SNAPVAULT_UPDATE</block>
   <block id="dbd64b7506acb36055eca79b8b364a18" category="paragraph">Permet d'activer et de désactiver la fonction de mise à jour SnapVault.</block>
   <block id="d1ba6e7eb95663aa596dd570add83f9a" category="paragraph">VOLUMES SnapVault_</block>
-  <block id="a1fc7f749c5ea5718722bdebdc587614" category="paragraph">Le répertorie les systèmes de stockage source et les volumes sur lesquels vous souhaitez effectuer une mise à jour SnapVault (par exemple, contrôler1:vol1,vol2,vol3;contrôler2:vol1;controller3:vol2,vol3). *Remarque :*</block>
   <block id="487eb327be46517fae6f993840d60362" category="list-text">Pour que les mises à jour de SnapVault et de SnapMirror fonctionnent, les relations doivent exister.</block>
   <block id="b3b87058bbcfac523b85dde91deb1c09" category="paragraph">Snap Creator ne crée pas de relations.</block>
   <block id="1ea062b82f2f00248618134e362b06c1" category="list-text">Les noms d'hôte de la relation SnapMirror ou SnapVault doivent être identiques à ceux spécifiés dans les options VOLUMES, SNAPMIRROR_VOLUMES et SNAPVAULT_VOLUMES. En outre, l'hôte sur lequel Snap Creator s'exécute doit pouvoir résoudre les noms d'hôtes.</block>
@@ -4597,4 +4596,9 @@
   <block id="3fa7ec916163970da88e2e2759209761" category="sidebar">Opérations du plug-in IBM® Domino®</block>
   <block id="3cc13999b80491b390e27e7298102ccb" category="sidebar">Opérations du plug-in SAP HANA®</block>
   <block id="7258e7251413465e0a3eb58094430bde" category="sidebar">L'administration</block>
+  <block id="eae66b4b74b6b82ce35a83d2757f6d46" category="cell">(O/N)</block>
+  <block id="0fed4fd40330e62e1aa81d896b62ecb5" category="paragraph">NTAP_ALLOW_MIRRORVULT_AS_MIRROR</block>
+  <block id="069d4fc9438ae257bab719c9b98b55ff" category="paragraph">Vous permet d'utiliser le type de stratégie de protection mirror_vault en tant que SnapVault ou SnapMirror. (Valeur par défaut) N : active le type de stratégie de protection mirror_vault pour SnapVault. Y : active le type de règle de protection mirror_vault pour SnapMirror.</block>
+  <block id="6235e974fbd5143adbb2a8573ca76e9a" category="paragraph">Le répertorie les systèmes de stockage source et les volumes sur lesquels vous souhaitez effectuer une mise à jour SnapVault (par exemple, contrôler1:vol1,vol2,vol3;contrôler2:vol1;controller3:vol2,vol3).</block>
+  <block id="2a8806d1dbd2f7d98c2367f622afe0f8" category="paragraph">La bande passante maximale SnapVault est autorisée, en Kbit/s. S'il n'est pas défini, SnapVault utilise la bande passante disponible maximale.</block>
 </blocks>
