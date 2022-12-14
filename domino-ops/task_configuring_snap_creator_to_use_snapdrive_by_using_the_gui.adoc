@@ -82,6 +82,6 @@ où ?
 
 
 . Lorsque vous êtes satisfait de votre entrée, appuyez sur *entrée*.
-. Répéter les étapes ,#STEP_3F9C83DD05D84075AD0277213FD67C56 à ,#STEP_FBEDD7AE105F42138EB35315EA9FA7CC pour ajouter une autre commande.
+. Répéter les étapes <<STEP_3F9C83DD05D84075AD0277213FD67C56,#STEP_3F9C83DD05D84075AD0277213FD67C56>> à <<STEP_FBEDD7AE105F42138EB35315EA9FA7CC,#STEP_FBEDD7AE105F42138EB35315EA9FA7CC>> pour ajouter une autre commande.
 . Cliquez sur *Enregistrer* dans le volet contenu de configuration pour enregistrer vos modifications.
 

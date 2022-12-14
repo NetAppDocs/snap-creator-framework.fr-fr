@@ -299,7 +299,7 @@ La règle applicable aux copies Snapshot en miroir est identique à la règle ap
 
 .. Cliquez sur *SnapVault* pour archiver les copies Snapshot.
 .. Spécifiez la règle pour les copies Snapshot archivées.
-.. Les instructions sont présentées à l'étape suivante,13.
+.. Les instructions sont présentées à l'étape suivante<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13>>.
 .. Dans *SnapVault Wait Time*, entrez le nombre de minutes pendant lesquelles Snap Creator doit attendre la fin de l'opération SnapVault.
 .. Vous devez avoir configuré les relations SnapMirror et SnapVault avant de réaliser la réplication sur le stockage secondaire. Pour plus d'informations, voir xref:concept_snapmirror_and_snapvault_setup.adoc[Configuration SnapMirror et SnapVault].
 
