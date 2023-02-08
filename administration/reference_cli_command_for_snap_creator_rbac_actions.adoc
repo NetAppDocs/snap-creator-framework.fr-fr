@@ -22,7 +22,7 @@ Le tableau suivant fournit l'équivalent de ligne de commande pour les actions R
  a| 
 Utilisateurs
  a| 
-Créez un nouvel utilisateur.
+Créez un nouvel utilisateur
  a| 
 [listing]
 ----
@@ -38,9 +38,7 @@ snapcreator
 ----
 
 
- a| 
-Supprimer un utilisateur.
- a| 
+|  | Supprimer un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -51,12 +49,11 @@ snapcreator
 --action userDelete
 --username user_name
 --verbose
----- a| 
-Répertorier tous les utilisateurs.
-
+----
 
 
  a| 
+| Répertorier tous les utilisateurs  a| 
 [listing]
 ----
 snapcreator
@@ -66,9 +63,11 @@ snapcreator
 --passwd Password
 --action userList
 --verbose
----- a| 
-Répertorier tous les utilisateurs affectés pour un rôle.
+----
+
+
  a| 
+| Répertorier tous les utilisateurs affectés pour un rôle  a| 
 [listing]
 ----
 snapcreator
@@ -83,8 +82,7 @@ snapcreator
 
 
  a| 
-Répertorie tous les utilisateurs affectés à un profil.
- a| 
+| Répertorie tous les utilisateurs affectés à un profil  a| 
 [listing]
 ----
 snapcreator
@@ -95,13 +93,13 @@ snapcreator
 --profile Profile
 --action userListForProfile
 --verbose
----- a| 
-Rôles
-
+----
 
 
  a| 
-Créer un nouveau rôle.
+Rôles
+ a| 
+Créer un nouveau rôle
  a| 
 [listing]
 ----
@@ -114,12 +112,11 @@ snapcreator
 --roleName role_name
 --roleDesc role_description
 --verbose
----- a| 
-Supprimer un rôle.
-
+----
 
 
  a| 
+| Supprimer un rôle  a| 
 [listing]
 ----
 snapcreator
@@ -130,9 +127,11 @@ snapcreator
 --action roleDelete
 --roleName role_name
 --verbose
----- a| 
-Attribuez un rôle à un utilisateur.
+----
+
+
  a| 
+| Attribuez un rôle à un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -148,8 +147,7 @@ snapcreator
 
 
  a| 
-Annuler l'affectation d'un rôle à un utilisateur.
- a| 
+| Annuler l'affectation d'un rôle à un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -161,12 +159,11 @@ snapcreator
 --userName user_name
 --roleName role_name
 --verbose
----- a| 
-Répertorie tous les rôles attribués à un utilisateur.
-
+----
 
 
  a| 
+| Répertorie tous les rôles attribués à un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -177,13 +174,13 @@ snapcreator
 --action roleListAssigned
 --userName user_name
 --verbose
----- a| 
+----
+
+
+ a| 
 Autorisations
  a| 
-Créez une nouvelle autorisation.
-
-
-
+Créez une nouvelle autorisation
  a| 
 [listing]
 ----
@@ -196,9 +193,11 @@ snapcreator
 --permName permission_name
 --permDesc permission_description
 --verbose
----- a| 
-Supprimer une autorisation.
+----
+
+
  a| 
+| Supprimer une autorisation  a| 
 [listing]
 ----
 snapcreator
@@ -213,8 +212,7 @@ snapcreator
 
 
  a| 
-Attribuez une autorisation à un utilisateur.
- a| 
+| Attribuez une autorisation à un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -226,12 +224,11 @@ snapcreator
 --permName permission_name
 --roleName role_name
 --verbose
----- a| 
-Annuler l'attribution d'une autorisation à un utilisateur.
-
+----
 
 
  a| 
+| Annuler l'attribution d'une autorisation à un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -243,9 +240,11 @@ snapcreator
 --permName
 --roleName role_name
 --verbose
----- a| 
-Répertorier toutes les autorisations.
+----
+
+
  a| 
+| Répertorier toutes les autorisations  a| 
 [listing]
 ----
 snapcreator
@@ -259,8 +258,7 @@ snapcreator
 
 
  a| 
-Répertorier toutes les autorisations attribuées à un rôle.
- a| 
+| Répertorier toutes les autorisations attribuées à un rôle  a| 
 [listing]
 ----
 snapcreator
@@ -271,13 +269,13 @@ snapcreator
 --action permListAssigned
 --roleName role_name
 --verbose
----- a| 
-Exploitation
-
+----
 
 
  a| 
-Attribuez une opération à une autorisation.
+Exploitation
+ a| 
+Attribuez une opération à une autorisation
  a| 
 [listing]
 ----
@@ -290,12 +288,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-Annuler l'affectation d'une opération d'une autorisation.
-
+----
 
 
  a| 
+| Annuler l'affectation d'une opération d'une autorisation.  a| 
 [listing]
 ----
 snapcreator
@@ -307,9 +304,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-Répertorier toutes les opérations.
+----
+
+
  a| 
+| Répertorier toutes les opérations  a| 
 [listing]
 ----
 snapcreator
@@ -323,8 +322,7 @@ snapcreator
 
 
  a| 
-Répertorier toutes les opérations affectées à une autorisation.
- a| 
+| Répertorier toutes les opérations affectées à une autorisation  a| 
 [listing]
 ----
 snapcreator
@@ -335,11 +333,11 @@ snapcreator
 --action opListAssigned
 --permName permission_name
 --verbose
----- a| 
+----
+
+
+ a| 
 Profils
-
-
-
  a| 
 Attribuer un profil à un utilisateur.
  a| 
@@ -354,12 +352,11 @@ snapcreator
 --action profileAssign
 --userName user_name
 --verbose
----- a| 
-Annuler l'affectation d'un profil à un utilisateur.
-
+----
 
 
  a| 
+| Annuler l'affectation d'un profil à un utilisateur  a| 
 [listing]
 ----
 snapcreator
@@ -371,9 +368,11 @@ snapcreator
 --action profileUnassign
 --userName user_name
 --verbose
----- a| 
-Répertorie tous les profils affectés à un utilisateur.
+----
+
+
  a| 
+| Répertorie tous les profils affectés à un utilisateur  a| 
 [listing]
 ----
 snapcreator

@@ -15,6 +15,7 @@ Vous pouvez utiliser des commandes de l'interface de ligne de commande pour effe
 
 Le tableau suivant fournit les commandes CLI pour effectuer des actions de flux de travail basées sur l'interface graphique Snap Creator :
 
+[cols="15,40,45"]
 |===
 | Zone de flux de travail | Action/description | Commande et paramètres associés 
 
@@ -26,8 +27,7 @@ Créer une copie de sauvegarde. Effectue une sauvegarde en fonction du fichier d
  a| 
 [listing]
 ----
-
-                  snapcreator
+snapcreator
 --server IP
 --port Port
 --user User
@@ -40,8 +40,8 @@ Créer une copie de sauvegarde. Effectue une sauvegarde en fonction du fichier d
 ----
 
 
- a| 
-Créer une sauvegarde Open Systems SnapVault.effectue une sauvegarde à l'aide d'Open Systems SnapVault. Cela nécessite Snap Creator Agent. Snap Creator Server communique avec Snap Creator Agent et effectue une mise à jour de SnapVault. Aucune copie de sauvegarde primaire n'est effectuée.
+|   a| 
+Créer une sauvegarde Open Systems SnapVault. Effectue une opération de sauvegarde à l'aide d'Open Systems SnapVault. Cela nécessite Snap Creator Agent. Snap Creator Server communique avec Snap Creator Agent et effectue une mise à jour de SnapVault. Aucune copie de sauvegarde primaire n'est effectuée.
  a| 
 [listing]
 ----
@@ -55,13 +55,11 @@ snapcreator
 --action ossv
 --policy Policy
 --verbose
----- a| 
-Sauvegardes (suite...)
+----
 
 
-
- a| 
-Supprimer une copie de sauvegarde (manuellement).supprime manuellement une sauvegarde existante. Cette opération est pilotée par un menu.
+|   a| 
+Supprimer une copie de sauvegarde (manuellement). Supprime manuellement une sauvegarde existante. Cette opération est pilotée par un menu.
  a| 
 [listing]
 ----
@@ -75,11 +73,11 @@ snapcreator
 --action backupDel
 --policy Policy
 --verbose
----- a| 
+----
+
+
+|   a| 
 Supprimer une copie de sauvegarde (automatiquement).
-
-
-
  a| 
 [listing]
 ----
@@ -97,8 +95,11 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
----- a| 
-Lister les copies de sauvegarde.répertorie les copies de sauvegarde Snap Creator sur les systèmes de stockage principal et secondaire.
+----
+
+
+|   a| 
+Liste des copies de sauvegarde. Répertorie les copies de sauvegarde Snap Creator sur les systèmes de stockage principal et secondaire.
  a| 
 [listing]
 ----
@@ -115,7 +116,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Monter une copie de sauvegarde. Effectue l'opération de montage sur une sauvegarde existante. Crée un clone de volume basé sur la sauvegarde et permet le montage du clone via Snap Creator Agent à l'aide de la commande MOUNT_CMD.
  a| 
 [listing]
@@ -130,13 +131,11 @@ snapcreator
 --action mount
 --backupName name
 --verbose
----- a| 
-Sauvegardes (suite...)
+----
 
 
-
- a| 
-Démonter une copie de sauvegarde.effectue l'opération de démontage sur une sauvegarde existante. Supprime un clone de volume basé sur la sauvegarde et permet le démontage du clone via Snap Creator Agent à l'aide de la commande UMOUNT_CMDs.
+|   a| 
+Démonter une copie de sauvegarde. Effectue l'opération de démontage sur une sauvegarde existante. Supprime un clone de volume basé sur la sauvegarde et permet le démontage du clone via Snap Creator Agent à l'aide de la commande UMOUNT_CMDs.
  a| 
 [listing]
 ----
@@ -150,11 +149,11 @@ snapcreator
 --action umount
 --backupName name
 --verbose
----- a| 
+----
+
+
+ a| 
 Types de sauvegarde
-
-
-
  a| 
 Créez un nouveau type de sauvegarde.
  a| 
@@ -168,11 +167,11 @@ snapcreator
 --action backupTypeAdd
 --backupTypeName name
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à jour un type de sauvegarde existant.
-
-
-
  a| 
 [listing]
 ----
@@ -185,7 +184,10 @@ snapcreator
 --backupTypeId 1
 --backupTypeName name
 --verbose
----- a| 
+----
+
+
+|   a| 
 Supprimez un type de sauvegarde existant.
  a| 
 [listing]
@@ -197,12 +199,11 @@ snapcreator
 --passwd Password
 --action backupTypeDelete
 --backupTypeId 1
-
 --verbose
 ----
 
 
- a| 
+|   a| 
 Indiquez les types de sauvegarde.
  a| 
 [listing]
@@ -214,13 +215,13 @@ snapcreator
 --passwd Password
 --action backupTypeList
 --verbose
----- a| 
-Clones
-
+----
 
 
  a| 
-Cloner une LUN.sauvegarde le système de stockage principal, puis cloner la sauvegarde à l'aide d'un clone de LUN. Le mappage de volumes des igroups est également géré. Cela nécessite un environnement SAN ou ISAN.
+Clones
+ a| 
+Cloner une LUN. Sauvegarde le système de stockage primaire, puis clonage de la sauvegarde à l'aide d'un clone de LUN. Le mappage de volumes des igroups est également géré. Cela nécessite un environnement SAN ou ISAN.
  a| 
 [listing]
 ----
@@ -234,11 +235,11 @@ snapcreator
 --action cloneLun
 --policy Policy
 --verbose
----- a| 
-Cloner un volume.sauvegarde le système de stockage primaire, puis cloner la sauvegarde à l'aide d'un clone de volume. Le mappage de volumes des igroups, NFS ou CIFS est également géré. Cela nécessite un environnement SAN, ISAN ou NAS.
+----
 
 
-
+|   a| 
+Cloner un volume. Sauvegarde le système de stockage primaire, puis clonage de la sauvegarde à l'aide d'un clone de volume. Le mappage de volumes des igroups, NFS ou CIFS est également géré. Cela nécessite un environnement SAN, ISAN ou NAS.
  a| 
 [listing]
 ----
@@ -252,8 +253,11 @@ snapcreator
 --action cloneVol
 --policy Policy
 --verbose
----- a| 
-Supprimer un clone.exécute une opération de suppression de clone basée sur la règle de conservation spécifiée. Une seule copie du clone de LUN est conservée. Les clones de volumes ont une utilisation associée à la stratégie.
+----
+
+
+|   a| 
+Supprime un clone. Effectue une opération de suppression des clones en fonction de la règle de conservation spécifiée. Une seule copie du clone de LUN est conservée. Les clones de volumes ont une utilisation associée à la stratégie.
  a| 
 [listing]
 ----
@@ -270,8 +274,8 @@ snapcreator
 ----
 
 
- a| 
-List Snap Creator clones.répertorie les clones de volumes Snap Creator pour la configuration donnée.
+|   a| 
+Répertorier les clones Snap Creator. Le répertorie les clones de volume Snap Creator pour la configuration donnée.
  a| 
 [listing]
 ----
@@ -284,11 +288,11 @@ snapcreator
 --config Config
 --action cloneList
 --verbose
----- a| 
-List Snap Creator volumes.répertorie les volumes Snap Creator pour la configuration spécifiée sur le système de stockage principal.
+----
 
 
-
+|   a| 
+Répertorier les volumes Snap Creator. Le répertorie les volumes Snap Creator pour la configuration spécifiée sur le système de stockage principal.
  a| 
 [listing]
 ----
@@ -301,13 +305,13 @@ snapcreator
 --config Config
 --action volumeList
 --verbose
----- a| 
+----
+
+
+ a| 
 Fichiers de configuration
  a| 
 Importer une configuration.
-
-
-
  a| 
 [listing]
 ----
@@ -321,7 +325,10 @@ snapcreator
 --action configImport
 --importFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 Exporter une configuration.
  a| 
 [listing]
@@ -339,7 +346,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Importer un fichier de configuration global.
  a| 
 [listing]
@@ -352,11 +359,11 @@ snapcreator
 --action globalImport
 --importFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 Exporter un fichier de configuration globale.
-
-
-
  a| 
 [listing]
 ----
@@ -368,7 +375,10 @@ snapcreator
 --action globalExport
 --ExportFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 Supprimer un fichier de configuration globale du référentiel.
  a| 
 [listing]
@@ -384,7 +394,6 @@ snapcreator
 
 
  a| 
-Fichiers de configuration (suite...)
  a| 
 Importez un fichier de configuration global pour un profil particulier dans le référentiel.
  a| 
@@ -402,7 +411,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Exportez un fichier de configuration global pour un profil particulier depuis le référentiel.
  a| 
 [listing]
@@ -416,11 +425,11 @@ snapcreator
 --action profileglobalExport
 --exportFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 Supprimer une configuration globale pour un profil particulier du référentiel.
-
-
-
  a| 
 [listing]
 ----
@@ -432,7 +441,10 @@ snapcreator
 --profile Profile
 --action profileglobalDelete
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à niveau d'anciens fichiers de configuration dans un profil. Ajoute des paramètres récemment introduits aux anciens fichiers de configuration. Avant d'exécuter cette commande, tous les anciens fichiers de configuration doivent être copiés dans le dossier serveur/moteur/configurations avec le dossier profil.
  a| 
 [listing]
@@ -489,7 +501,6 @@ snapcreator
 
 
  a| 
-Politique (suite...)
  a| 
 Ajoutez une nouvelle règle SnapMirror.
  a| 
@@ -511,7 +522,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Ajoutez une nouvelle règle SnapVault.
  a| 
 [listing]
@@ -531,11 +542,11 @@ snapcreator
 --secondaryCount 30
 --secondaryAge 0
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à jour une règle SnapMirror.
-
-
-
  a| 
 [listing]
 ----
@@ -553,13 +564,12 @@ snapcreator
 --primaryCount 7
 --primaryAge 0
 --verbose
----- a| 
-Politique (suite...)
+----
+
+
+ a| 
  a| 
 Mettre à jour une règle SnapVault.
-
-
-
  a| 
 [listing]
 ----
@@ -579,7 +589,10 @@ snapcreator
 --secondaryCount 30
 --secondaryAge 0
 --verbose
----- a| 
+----
+
+
+|   a| 
 Suppression d'une stratégie.
  a| 
 [listing]
@@ -595,7 +608,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Répertorier toutes les stratégies.
  a| 
 [listing]
@@ -607,11 +620,11 @@ snapcreator
 --passwd Password
 --action policyList
 --verbose
----- a| 
+----
+
+
+|   a| 
 Afficher des détails supplémentaires pour une stratégie particulière.
-
-
-
  a| 
 [listing]
 ----
@@ -623,7 +636,10 @@ snapcreator
 --action policyDetails
 --policyId 1
 --verbose
----- a| 
+----
+
+
+|   a| 
 Affecter des stratégies à un profil.
  a| 
 [listing]
@@ -641,7 +657,6 @@ snapcreator
 
 
  a| 
-Politique (suite...)
  a| 
 Annuler l'affectation de stratégies pour un profil.
  a| 
@@ -658,7 +673,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Répertorier toutes les stratégies affectées à un profil.
  a| 
 [listing]
@@ -671,11 +686,11 @@ snapcreator
 --profile Profile
 --action policyListForProfile
 --verbose
----- a| 
+----
+
+
+ a| 
 Planifications de règles
-
-
-
  a| 
 Créer un planning de règles horaire.
  a| 
@@ -693,11 +708,11 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 Créer un programme de stratégies quotidien.
-
-
-
  a| 
 [listing]
 ----
@@ -714,13 +729,12 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
-Planifications de stratégies (suite...)
+----
+
+
+ a| 
  a| 
 Créer un programme de règles hebdomadaire.
-
-
-
  a| 
 [listing]
 ----
@@ -738,7 +752,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 Créer une planification de règle cron
  a| 
 [listing]
@@ -758,7 +775,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Mettre à jour un planning de stratégie horaire.
  a| 
 [listing]
@@ -776,11 +793,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
-Planifications de stratégies (suite...)
+----
 
 
-
+ a| 
  a| 
 Mettre à jour un programme de stratégies quotidien.
  a| 
@@ -800,11 +816,11 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à jour un programme de police hebdomadaire.
-
-
-
  a| 
 [listing]
 ----
@@ -823,7 +839,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à jour une planification de règle cron
  a| 
 [listing]
@@ -845,7 +864,6 @@ snapcreator
 
 
  a| 
-Planifications de stratégies (suite...)
  a| 
 Supprimer une planification de règles.
  a| 
@@ -862,7 +880,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Lister les planifications des stratégies.
  a| 
 [listing]
@@ -874,11 +892,11 @@ snapcreator
 --passwd Password
 --action policySchedList
 --verbose
----- a| 
+----
+
+
+|   a| 
 Afficher des informations supplémentaires sur un programme de police.
-
-
-
  a| 
 [listing]
 ----
@@ -890,13 +908,13 @@ snapcreator
 --action policySchedDetails
 --schedId 1
 --verbose
----- a| 
+----
+
+
+ a| 
 Profils
  a| 
 Créer un nouveau profil.
-
-
-
  a| 
 [listing]
 ----
@@ -908,8 +926,11 @@ snapcreator
 --profile Profile
 --action profileCreate
 --verbose
----- a| 
-Supprimer un profil.*Remarque :* les fichiers de configuration du profil sont également supprimés.
+----
+
+
+|   a| 
+Supprimer un profil. *Remarque :* les fichiers de configuration du profil sont également supprimés.
  a| 
 [listing]
 ----
@@ -927,7 +948,7 @@ snapcreator
  a| 
 Restaurer
  a| 
-Effectuer une restauration interactive.exécute une opération de restauration de fichier interactive ou une opération de restauration de volume interactive pour une règle donnée.
+Effectuez une restauration interactive. Exécute une opération de restauration de fichiers interactive ou une opération de restauration de volume interactive pour une stratégie donnée.
  a| 
 [listing]
 ----
@@ -944,30 +965,8 @@ snapcreator
 ----
 
 
- a| 
-Effectuer une restauration de volume non interactive.effectue une restauration de volume non interactive.
- a| 
-[listing]
-----
-snapcreator
---server IP
---port Port
---user User
---passwd Password
---profile Profile
---config Config
---action restore
---policy Policy
---verbose
---nonInteractive
---cntName controller
---volName volume
---backupName name
----- a| 
-Effectuez une restauration de fichier non interactive.effectue une restauration de fichier non interactive.
-
-
-
+|   a| 
+Effectuez une restauration de volume non interactive. Effectue une restauration de volume non interactive.
  a| 
 [listing]
 ----
@@ -985,14 +984,36 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
---files file_path1,file_path2,etc.
----- a| 
+----
+
+
+|   a| 
+Effectuez une restauration de fichier non interactive. Effectue une restauration de fichier non interactive.
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action restore
+--policy Policy
+--verbose
+--nonInteractive
+--cntName controller
+--volName volume
+--backupName name
+--fileNames file_path1,file_path2,etc.
+----
+
+
+ a| 
 Planifications
  a| 
 Créer un horaire horaire.
-
-
-
  a| 
 [listing]
 ----
@@ -1012,7 +1033,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 Créez un planning quotidien.
  a| 
 [listing]
@@ -1037,7 +1061,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Créer une nouvelle planification hebdomadaire.
  a| 
 [listing]
@@ -1060,11 +1084,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-Horaires (suite...)
+----
 
 
-
+ a| 
  a| 
 Créer une nouvelle planification cron
  a| 
@@ -1086,12 +1109,11 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-Exécuter un planning.
-
+----
 
 
  a| 
+| Exécuter un planning.  a| 
 [listing]
 ----
 snapcreator
@@ -1102,7 +1124,10 @@ snapcreator
 --action schedRun
 --schedId 1
 --verbose
----- a| 
+----
+
+
+|   a| 
 Supprimer un planning.
  a| 
 [listing]
@@ -1118,7 +1143,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Mettre à jour un horaire.
  a| 
 [listing]
@@ -1140,11 +1165,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-Horaires (suite...)
+----
 
 
-
+ a| 
  a| 
 Mettre à jour un planning quotidien.
  a| 
@@ -1168,11 +1192,11 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à jour un planning hebdomadaire.
-
-
-
  a| 
 [listing]
 ----
@@ -1195,7 +1219,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 Mettre à jour une planification cron
  a| 
 [listing]
@@ -1221,7 +1248,6 @@ snapcreator
 
 
  a| 
-Horaires (suite...)
  a| 
 Répertorier tous les agendas.
  a| 
@@ -1237,7 +1263,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Liste des actions du planificateur prises en charge.
  a| 
 [listing]
@@ -1249,11 +1275,11 @@ snapcreator
 --passwd Password
 --action schedActionList
 --verbose
----- a| 
+----
+
+
+|   a| 
 Liste des fréquences du planificateur prises en charge.
-
-
-
  a| 
 [listing]
 ----
@@ -1264,7 +1290,10 @@ snapcreator
 --passwd Password
 --action schedFreqList
 --verbose
----- a| 
+----
+
+
+|   a| 
 Afficher des détails supplémentaires pour un ID d'horaire.
  a| 
 [listing]
@@ -1318,7 +1347,6 @@ snapcreator
 
 
  a| 
-Snap Creator Server et Agent (suite...)
  a| 
 Envoyez une requête ping à Snap Creator Server.
  a| 
@@ -1334,7 +1362,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Envoyez une requête ping à un agent Snap Creator.
  a| 
 [listing]
@@ -1348,11 +1376,11 @@ snapcreator
 --agentName host_name
 --agentPort port
 --verbose
----- a| 
+----
+
+
+ a| 
 Archivage
-
-
-
  a| 
 Effectuez la gestion du journal d'archivage en fonction des paramètres du fichier de configuration. Cette opération nécessite Snap Creator Agent.
  a| 
@@ -1367,11 +1395,11 @@ snapcreator
 --config Config
 --action arch
 --verbose
----- a| 
+----
+
+
+ a| 
 Fonctionnalité de protection des données
-
-
-
  a| 
 Configurez le jeu de données de fonctionnalité de protection des données de la console de gestion NetApp pour une configuration donnée.
  a| 
@@ -1386,11 +1414,11 @@ snapcreator
 --config Config
 --action pmsetup
 --verbose
----- a| 
+----
+
+
+|   a| 
 Afficher l'état de protection des données de la relation SnapVault/SnapMirror d'un contrôleur. Si SnapVault ou SnapMirror n'est pas configuré, les résultats ne sont pas affichés.
-
-
-
  a| 
 [listing]
 ----
@@ -1403,13 +1431,13 @@ snapcreator
 --config Config
 --action dpstatus
 --verbose
----- a| 
+----
+
+
+ a| 
 Mise au repos/mise au repos
  a| 
 Exécutez l'opération de mise en attente pour une application donnée. Cette opération nécessite Snap Creator Agent.
-
-
-
  a| 
 [listing]
 ----
@@ -1422,7 +1450,10 @@ snapcreator
 --config Config
 --action quiesce
 --verbose
----- a| 
+----
+
+
+|   a| 
 Exécutez l'opération de mise en attente pour une application donnée. Cette opération nécessite Snap Creator Agent.
  a| 
 [listing]

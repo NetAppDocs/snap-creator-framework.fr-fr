@@ -1,7 +1,7 @@
 ---
 permalink: sap-hana-ops/task_backing_up_the_database_with_snap_creator_command_line.html 
 sidebar: sidebar 
-keywords: backing up, database, snap, creator, command, line 
+keywords: backing up, database, snap, creator, command, line, framework 
 summary: 'Vous pouvez également sauvegarder la base de données à l"aide de la ligne de commande Snap Creator.' 
 ---
 = Sauvegarder la base de données avec la ligne de commande Snap Creator

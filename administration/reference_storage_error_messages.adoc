@@ -15,6 +15,7 @@ Les messages d'erreur liés au stockage peuvent vous aider à résoudre tous les
 
 Le tableau suivant répertorie les codes d'erreur et les messages ainsi qu'une brève description de l'erreur et de la résolution suggérée.
 
+[cols="15,35,50"]
 |===
 | Code d'erreur | Message d'erreur | Description/résolution 
 
@@ -637,5 +638,23 @@ STOCKAGE-03094
 Échec de la liste qtree du volume [%s]
  a| 
 Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion NetApp. Les journaux peuvent révéler la cause du problème.
+
+
+
+ a| 
+STOCKAGE-04119
+ a| 
+L'affichage de la liste des vServers a échoué avec une erreur
+ a| 
+Vérifiez si les journaux ne comportent pas d'erreurs. Vous avez probablement une erreur de gestion de la solution ONTAP qui peut révéler la cause du problème.
+
+
+
+ a| 
+VSERVER_TUNNEL_ENABLED
+ a| 
+(O/N)
+ a| 
+Définissez l'établissement de tunnels Vsim. Si la valeur y est définie, la fonction d'établissement de tunnels Vsim est activée.
 
 |===

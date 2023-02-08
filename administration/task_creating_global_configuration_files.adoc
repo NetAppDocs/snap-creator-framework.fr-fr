@@ -81,7 +81,7 @@ Le port standard du type de transport sélectionné s'affiche. Si le système de
 ... Sur la page Controller/Vserver Credentials, saisissez l'adresse IP et les identifiants de connexion pour chaque contrôleur de stockage ou SVM qui contient les volumes de ce fichier de configuration.
 +
 
-NOTE: Vous devez ajouter au moins un contrôleur de stockage ou un SVM à la configuration.
+NOTE: Vous devez ajouter au moins un contrôleur de stockage ou un SVM à la configuration. Pour utiliser la fonction de tunneling vsim, cochez la case *tunneling IP* (pour le cluster uniquement).
 
 ... Sur la page Controller Credentials, vérifiez que les contrôleurs affichent les informations correctes.
 +
