@@ -98,6 +98,6 @@ sc start snapcreatorserverservice
 ----
 
 
-Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié (https://IP_address:gui_port)[].
+Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié .
 
 Vous devez vous connecter via HTTPS ; sinon, la connexion n'est pas redirigée automatiquement vers une connexion HTTPS et l'interface utilisateur ne fonctionnera pas.

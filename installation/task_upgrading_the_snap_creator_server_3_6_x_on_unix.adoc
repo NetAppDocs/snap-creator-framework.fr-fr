@@ -66,7 +66,7 @@ Supprimez également le répertoire d'installation de Snap Creator 3.6.x.
 
 IMPORTANT: Ne supprimez pas vos copies de sauvegarde tant que vous n'êtes pas certain d'avoir à revenir à une version antérieure.
 
-Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié (https://IP_address:gui_port)[].
+Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié .
 
 Vous devez vous connecter via HTTPS ; sinon, la connexion n'est pas redirigée automatiquement vers une connexion HTTPS et l'interface utilisateur ne fonctionnera pas.
 
