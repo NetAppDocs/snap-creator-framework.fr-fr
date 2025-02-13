@@ -154,7 +154,6 @@
   <block id="2c6ce5b349ba2797c4fa0d706439f60a" category="paragraph">Avant d'installer Snap Creator, vous devez également effectuer les tâches suivantes :</block>
   <block id="514f0646f4ac4f32305784313cc8cdb8" category="list-text">Téléchargez le logiciel Snap Creator.</block>
   <block id="a22ff981655293280bcb4f3d30be5b89" category="list-text">Créez un utilisateur Data ONTAP.</block>
-  <block id="5a5b4c4fc12c86700228a7c04e33b00c" category="list-text">Installez Oracle Java ou OpenJDK sur les hôtes Snap Creator Server et Agent.</block>
   <block id="f91e90f8ae064b5a2246ae7a7171f287" category="list-text">Synchronisation de l'heure sur les hôtes Snap Creator Server et Agent</block>
   <block id="ca4b78518217e66f7768c3fcb28bc1e0" category="list-text">Configurez les paramètres du plug-in IBM Domino (requis uniquement si vous utilisez le plug-in Domino).</block>
   <block id="80ad90a5e4ff120d2cc30409046e481d" category="list-text">Ajoutez des bibliothèques SSL (Secure Sockets Layer) pour l'environnement UNIX (uniquement nécessaire lors de l'exécution de Snap Creator à l'aide de l'interface de ligne de commande sur les plateformes UNIX).</block>
@@ -4350,15 +4349,6 @@
   <block id="4882c0d9418dd46f0891d1ba1f74a756" category="inline-link">Rapport technique NetApp 3917 : meilleures pratiques pour Domino sur NetApp</block>
   <block id="75f73334221fa99061c15af093964999" category="list-text"><block ref="75f73334221fa99061c15af093964999" category="inline-link-rx"></block></block>
   <block id="392849ff80c051402b522ed37941bb02" category="paragraph">Décrit les meilleures pratiques du plug-in IBM Domino.</block>
-  <block id="3ddf233671b5f67a638021b3cc39372e" category="inline-link">Rapport technique 3588 : intégration de Domino 8.5 pour Windows 2008 avec un système de stockage NetApp</block>
-  <block id="f55897b705ad4f312f2975eeead767d6" category="list-text"><block ref="f55897b705ad4f312f2975eeead767d6" category="inline-link-rx"></block></block>
-  <block id="338c1a1e4e0be6512495303eb3bc0bab" category="paragraph">Décrit l'intégration d'IBM Domino 8.5 pour Windows 2008 à un système de stockage NetApp.</block>
-  <block id="d52209ce4b45633872fe1548507ebc2d" category="inline-link">Rapport technique 3691 : intégration d'IBM Domino 8.5 pour Linux avec un système de stockage NetApp</block>
-  <block id="0e707561e622847b80c231517d846c9e" category="list-text"><block ref="0e707561e622847b80c231517d846c9e" category="inline-link-rx"></block></block>
-  <block id="1539b028181e57b8a38ce11fee51fa67" category="paragraph">Décrit l'intégration d'IBM Domino 8.0.2 pour Linux à un système de stockage NetApp.</block>
-  <block id="2edf4d2b71c54e6befe087c3e0b1576b" category="inline-link">Rapport technique 3723 : déploiement de Domino 8.0.2 dans un environnement AIX et NetApp utilisant NFS</block>
-  <block id="86ab39082091129ec8afe1b08dec276a" category="list-text"><block ref="86ab39082091129ec8afe1b08dec276a" category="inline-link-rx"></block></block>
-  <block id="41f6c38de9dd1188cd73783e789dcc24" category="paragraph">Décrit l'intégration d'IBM Domino 8.0.2 pour AIX avec un système de stockage NetApp.</block>
   <block id="b7decea4e578e5db43c72ed6d47895f6" category="paragraph">Vous permettra d'entrer en contact avec vos pairs, de poser des questions, d'échanger des idées, de trouver des ressources et de partager les meilleures pratiques Snap Creator.</block>
   <block id="1a4c203ec17c84e34e476513e8e6dd7c" category="paragraph">Permet de visionner des vidéos qui présentent les principales technologies Snap Creator.</block>
   <block id="2cb6cf8d0e89089627436c6daac7767b" category="summary">Vous pouvez ajouter des commandes supplémentaires à votre configuration après avoir créé le fichier de configuration. Vous pouvez exécuter les commandes sur Snap Creator Server ou Agent.</block>
@@ -4603,4 +4593,6 @@
   <block id="91b5d4f93ff87a8d44feaabae5e745d1" category="doc">Guide des opérations du plug-in SAP HANA</block>
   <block id="367423d79cfdd3fdc216a55f4bcd023d" category="paragraph">Vous pouvez configurer et utiliser le plug-in SAP HANA pour Snap Creator 4.3.3 pour sauvegarder et restaurer les bases de données SAP HANA.</block>
   <block id="fbd81bedca700187dabfca4bf4718312" category="sidebar">Opérations du plug-in SAP HANA</block>
+  <block id="8712f94c0adf6f85a8f736374d93a2f4" category="doc">Configuration requise pour la préinstallation de ONTAP Snap Creator</block>
+  <block id="715ea6698bcadbb2aa63560067f0847c" category="list-text">Installez Oracle Java ou OpenJDK Java Runtime Environment (JRE) 1.8 Update 72 ou versions ultérieures sur les hôtes Snap Creator Server et Agent.</block>
 </blocks>
