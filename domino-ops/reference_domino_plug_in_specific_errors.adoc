@@ -14,7 +14,7 @@ summary: 'Les erreurs Snap Creator courantes se divisent en deux catégories : l
 Les erreurs Snap Creator courantes se divisent en deux catégories : les erreurs snap Creator génériques et les erreurs spécifiques au plug-in Domino. Les erreurs spécifiques au plug-in Domino impliquent généralement des problèmes de préinstallation, des bases de données incorrectes ou des problèmes liés à une action de restauration personnalisée.
 
 
-NOTE: Pour plus d'informations sur les erreurs Snap Creator génériques, reportez-vous au link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guide d'administration de Snap Creator Framework 4.1.2"].
+NOTE: Pour plus d'informations sur les erreurs génériques de Snap Creator, consultez la documentation.link:../administration/index.html["Guide d'administration de Snap Creator Framework 4.3.3"] .
 
 
 
@@ -47,7 +47,7 @@ Ces messages d'erreur s'affichent si l'une des conditions suivantes n'est pas re
 * Les étapes de préinstallation n'ont pas été effectuées ou ont été effectuées de façon incorrecte :
 +
 ** Sur les hôtes UNIX, vous devez créer des liens symboliques vers les fichiers d'objets partagés IBM Domino.
-** Sur les hôtes Windows, vous devez ajouter le chemin d'installation d'IBM Domino à la variable d'environnement PATH. Pour plus d'informations, reportez-vous à la section link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["Guide d'installation de Snap Creator Framework 4.1.2"].
+** Sur les hôtes Windows, vous devez ajouter le chemin d'installation d'IBM Domino à la variable d'environnement PATH. Pour plus d'informations, consultez lelink:https://docs.netapp.com/us-en/snap-creator-framework/installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html["Guide d'installation de Snap Creator Framework - Ajout du chemin aux variables d'environnement"] .
 
 
 * Le niveau de bit de Domino est différent du niveau de bit de Snap Creator. Par exemple, si vous utilisez Domino 32 bits, utilisez Snap Creator 32 bits.
