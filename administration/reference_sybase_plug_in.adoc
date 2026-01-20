@@ -92,55 +92,52 @@ Voici un exemple : `%S_%D_%T.log`
  a| 
 SYBASE_TRAN_DUMP_COMPRESS
  a| 
-(Y
-| N ) 
-
-
+(O|N)
  a| 
 Active ou désactive la compression native de vidage des transactions Sybase.
+
+
+
  a| 
 SYBASE_ISQL_CMD
  a| 
 Exemple : /opt/sybase/OCS-15__0/bin/isql
-
-
-
  a| 
 Définit le chemin d'accès à la commande isql.
+
+
+
  a| 
 SYBASE
  a| 
 Exemple : /sybase
-
-
-
  a| 
 Indique l'emplacement de l'installation Sybase.
+
+
+
  a| 
 SYBASE_LOGDIR
  a| 
 Exemple : /usr/local/ntap/scServer/logs
-
-
-
  a| 
 Définit le répertoire dans lequel les journaux Snap Creator sont placés.
+
+
+
  a| 
 SYBASE_MANIFEST
  a| 
 Exemple : `DBAtest2:/t_inf_nzl_devs/`
-
-
-
  a| 
 Spécifie les bases de données pour lesquelles le fichier manifeste doit être créé, ainsi que l'emplacement où le fichier manifeste doit être placé.
+
+
+
  a| 
 SYBASE_MANIFEST_FORMAT
  a| 
 %S__%D_%T.manifeste exemple : `%S_%D_%T.manifest`
-
-
-
  a| 
 Vous permet de spécifier la convention d'attribution de nom de fichier manifeste. Les touches suivantes peuvent être spécifiées :
 
@@ -148,23 +145,23 @@ Vous permet de spécifier la convention d'attribution de nom de fichier manifest
 * %D = base de données de SYBASE_DATABASES
 * %T = horodatage unique, identique à celui utilisé pour la dénomination de copie Snapshot
 
+
+
+
  a| 
 SYBASE_MANIFEST_DELETE
  a| 
-(Y
-
-
-
-| N )  a| 
+(O|N)
+ a| 
 Permet de supprimer le manifeste une fois la copie Snapshot créée. Le fichier manifeste doit être capturé dans la copie Snapshot et est donc toujours disponible avec la sauvegarde.
+
+
+
  a| 
 SYBASE_EXCLUDE_TEMPDB
-
-
-
  a| 
-(Y
-| N )  a| 
+(O|N)
+ a| 
 Permet l'exclusion automatique des bases de données temporaires créées par l'utilisateur.
 
 |===

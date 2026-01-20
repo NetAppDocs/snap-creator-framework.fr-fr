@@ -22,47 +22,44 @@ Le tableau suivant répertorie les paramètres du plug-in du journal d'archivage
  a| 
 ARCHIVE_LOG_ENABLE
  a| 
-(Y
-| N 
-
-
-| police:âge)  a| 
+(O|N|politique : âge)
+ a| 
 Permet de gérer les journaux d'archivage (suppression des anciens journaux d'archivage).
+
+
+
  a| 
 ARCHIVAGE_LOG_RÉTENTION
-
-
-
  a| 
 nombre_de_jours
  a| 
 Indique le nombre de jours pendant lesquels les journaux d'archive sont conservés. Ce paramètre doit être supérieur ou égal à NTAP_SNAPSHOT_ RETENTIONS.
+
+
+
  a| 
 ARCHIVE_LOG_DIR
-
-
-
  a| 
 change_info_répertoire/logs
  a| 
 Indique le chemin d'accès au répertoire contenant les journaux d'archive.
+
+
+
  a| 
 ARCHIVE_LOG_EXT
-
-
-
  a| 
 extension_fichier
  a| 
 Spécifie l'extension de fichier des journaux d'archive. Par exemple, si les journaux d'archivage sont 10192091019.log, spécifiez ce paramètre pour ENREGISTRER.
+
+
+
  a| 
 ARCHIVE_LOG_RÉCURSIVE_SEARCH
-
-
-
  a| 
-(Y
-| N)  a| 
+(O/N)
+ a| 
 Permet la gestion des journaux d'archivage dans les sous-répertoires. Si les journaux d'archivage sont situés sous des sous-répertoires, vous devez utiliser ce paramètre.
 
 |===

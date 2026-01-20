@@ -75,11 +75,8 @@ Chemin d'accès au répertoire pour stocker le fichier temporaire, par exemple, 
  a| 
 ARCHIVE_LOG_ONLY
  a| 
-(Y
-| N 
-
-
-| Règle : < y | N>)  a| 
+(O|N|politique : <O|N>)
+ a| 
 Informe le plug-in Oracle d'effectuer uniquement une opération du journal des commutateurs. Ce paramètre est utile si vous gérez les sauvegardes des journaux d'archivage séparément des sauvegardes de données.
 
 
@@ -103,24 +100,31 @@ Chemin vers le répertoire racine Oracle pour un identifiant système donné (SI
  a| 
 PARAMÈTRES_EXPORT_ORACLE
  a| 
-(Y
-| N ) 
-
-
+(O|N)
  a| 
 Les paramètres d'environnement ORACLE_HOME et ORACLE_SID sont exportés à l'aide de la commande export. Cette fonction est applicable uniquement dans les environnements UNIX ou Linux.
+
+
+
  a| 
 ORACLE_BACKUPMODE
  a| 
-
-
-
  a| 
 Option permettant de configurer des sauvegardes hors ligne ou en ligne à l'aide de la stratégie Snap Creator L'option par défaut est en ligne. ORACLE_BACKUPMODE=horaire:en ligne,quotidien:hors ligne
+
+
+
  a| 
 ORACLE_SHUTDOWNABORT
  a| 
-(Y
+(O|N)
+ a| 
+Si cette option est définie sur Y lors de l'exécution de la sauvegarde hors ligne d'Oracle, elle utilise le mécanisme d'annulation d'arrêt pour garantir que la base de données s'arrête dans un état cohérent. La procédure d'arrêt pour le paramètre ORACLE_SHUTDOWNABORT est la suivante :
+
+* Arrêt interrompu
+* Restriction des startups
+* Arrêt immédiat
+
 
 |===
 *Informations connexes*

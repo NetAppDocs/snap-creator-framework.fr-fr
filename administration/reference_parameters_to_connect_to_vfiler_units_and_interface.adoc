@@ -47,15 +47,17 @@ NOTE: Les relations SnapVault et SnapMirror doivent être configurées de sorte 
  a| 
 UTILISER_PROXY
  a| 
-(Y
-| N) 
-
-
+(O/N)
  a| 
 Permet aux appels API de passer directement par le proxy du serveur Active IQ Unified Manager au lieu du contrôleur de stockage. Si cette option est utilisée, NTAP_USERS n'est pas nécessaire.
+
+
+
  a| 
 ALLOW_IP_ADDR
  a| 
-(Y
+(O/N)
+ a| 
+Permet d'utiliser l'adresse IP pour le système de stockage. Ceci s'applique à SnapVault, SnapMirror et à la fonctionnalité de protection des données de la console de gestion NetApp . L'utilisation d'adresses IP peut engendrer des problèmes et ne devrait être utilisée que sous certaines conditions.
 
 |===

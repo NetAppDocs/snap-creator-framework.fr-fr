@@ -1202,17 +1202,13 @@
   <block id="3420213108d85f921270d8bf4116781c" category="paragraph">ORA_TEMP</block>
   <block id="122ad43559cb7c871a7232ce20c529b1" category="paragraph">Chemin d'accès au répertoire pour stocker le fichier temporaire, par exemple, /tmp.l'utilisateur Oracle doit disposer des autorisations appropriées pour ce répertoire.</block>
   <block id="f5078f21f47485897c87d1fbf5d9e19f" category="paragraph">ARCHIVE_LOG_ONLY</block>
-  <block id="b3ece1f3eecb9db7cbfc880c8f76c58d" category="paragraph">(Y</block>
   <block id="8d9c307cb7f3c4a32822a51922d1ceaa" category="cell">N</block>
-  <block id="971063cd9d6a788d0c6a3fe3ea0df2ff" category="cell">Règle : &lt; y</block>
-  <block id="ed6602eb57ddaa11f48abca427c60f87" category="cell">N&gt;)</block>
   <block id="101f18023eaa7790ef6ba727af65d6be" category="paragraph">Informe le plug-in Oracle d'effectuer uniquement une opération du journal des commutateurs. Ce paramètre est utile si vous gérez les sauvegardes des journaux d'archivage séparément des sauvegardes de données.</block>
   <block id="e1f651debac4f720c13ae930ff3ca14a" category="paragraph">ORACLE_HOME</block>
   <block id="84f63854b03bc743e9613cb2423fba8f" category="paragraph">Chemin d'accès au répertoire racine Oracle</block>
   <block id="d9d6fdba68448106aac5729e8c538906" category="paragraph">SID ORACLE_HOME_SID</block>
   <block id="7564a8506de540057f4a75b92113eddd" category="paragraph">Chemin vers le répertoire racine Oracle pour un identifiant système donné (SID) lors de la sauvegarde de plusieurs bases de données, il peut être important de spécifier plusieurs répertoires locaux Oracle.</block>
   <block id="65fc35d1054d0995c4d10ad24cd695fa" category="paragraph">PARAMÈTRES_EXPORT_ORACLE</block>
-  <block id="6cf67f81440dbb166c74c36ba4c92808" category="cell">N )</block>
   <block id="e38df05b7bc8106cbcaa3d5564d87ff8" category="paragraph">Les paramètres d'environnement ORACLE_HOME et ORACLE_SID sont exportés à l'aide de la commande export. Cette fonction est applicable uniquement dans les environnements UNIX ou Linux.</block>
   <block id="8b2da37f068707b163e017f0609318eb" category="paragraph">ORACLE_BACKUPMODE</block>
   <block id="5907a203d13cd6e76d9e09273adbfef7" category="paragraph">Option permettant de configurer des sauvegardes hors ligne ou en ligne à l'aide de la stratégie Snap Creator L'option par défaut est en ligne. ORACLE_BACKUPMODE=horaire:en ligne,quotidien:hors ligne</block>
@@ -2399,7 +2395,6 @@
   <block id="a49f27ed85d7cc90f7976cd39ec12a78" category="doc">Plug-in de journal d'archivage</block>
   <block id="8c7dc9b130a71ed7c1a47474378707c8" category="paragraph">Le tableau suivant répertorie les paramètres du plug-in du journal d'archivage, fournit leurs paramètres et les décrit :</block>
   <block id="96611acf5bf8bf22163153db770f7f60" category="paragraph">ARCHIVE_LOG_ENABLE</block>
-  <block id="2fb33ec1462b9029d75715a12e44964a" category="cell">police:âge)</block>
   <block id="3291ad0946050f7aa4f9a9380b2bec20" category="paragraph">Permet de gérer les journaux d'archivage (suppression des anciens journaux d'archivage).</block>
   <block id="0012a5e5e44a9bf77fffdc82e8b485cd" category="paragraph">ARCHIVAGE_LOG_RÉTENTION</block>
   <block id="21f2f76c313df826d6e15803c794ee11" category="paragraph">nombre_de_jours</block>
@@ -4601,4 +4596,32 @@
   <block id="b76926cf8f58acc96af344359c5d2b2c" category="admonition">Pour plus d'informations sur les erreurs génériques de Snap Creator, consultez la documentation.<block ref="3b0c025e228e0d658ee39b24066f4d94" category="inline-link-macro-rx"></block> .</block>
   <block id="1d7ce8621814d7cbb17fc470a4344f97" category="inline-link-macro">Guide d'installation de Snap Creator Framework - Ajout du chemin aux variables d'environnement</block>
   <block id="b407da2907a6b37afb80f35075ea8531" category="list-text">Sur les hôtes Windows, vous devez ajouter le chemin d'installation d'IBM Domino à la variable d'environnement PATH. Pour plus d'informations, consultez le<block ref="48a25fc471122170a85c7c8edf958c44" category="inline-link-macro-rx"></block> .</block>
+  <block id="a4b10ba4184c91876de7584578453006" category="paragraph">(O|N|politique : âge)</block>
+  <block id="6c66b4d2e5944ca886c4b9a9893da0b7" category="paragraph">(O/N)</block>
+  <block id="8d777f385d3dfec8815d20f7496026dc" category="paragraph">données</block>
+  <block id="29052802445f7d4f3d102b5c718b66ce" category="paragraph">Vérifie que tous les volumes sur lesquels réside la base de données font partie de l'opération de sauvegarde. Actuellement, il existe des limitations :</block>
+  <block id="44d74d7cf83cd1c3bf4ab4bb1ae30dc5" category="list-text">Seul le système de fichiers réseau (NFS) est pris en charge.</block>
+  <block id="26a3433cdd66ec88654d1ebf84e4d35b" category="list-text">Seuls les fichiers de données des bases de données prises en charge sont vérifiés.</block>
+  <block id="9585cd9ea994c167725cd420361fa76e" category="paragraph">(O|N)</block>
+  <block id="798b04090e54a1cdf065909a17bb574e" category="paragraph">Ce paramètre fonctionne pour la configuration de base de données maître-esclave MySQL.</block>
+  <block id="ec33ae0eab0cbcf0f68a1beeebab63c0" category="paragraph">Si la valeur est définie sur OUI, les journaux binaires seront purgés vers le fichier journal binaire le plus récent disponible.</block>
+  <block id="489a578ac452aa637e84a849df71b5f0" category="paragraph">Si la valeur est N, la requête de purge utilise l'horodatage récent.</block>
+  <block id="dcf1732d7559ab7b8aa81bdea2e96a8c" category="paragraph">(O|N|politique : &lt;O|N&gt;)</block>
+  <block id="757be32f0616f9f740892c8c0fc80776" category="paragraph">Si cette option est définie sur Y lors de l'exécution de la sauvegarde hors ligne d'Oracle, elle utilise le mécanisme d'annulation d'arrêt pour garantir que la base de données s'arrête dans un état cohérent. La procédure d'arrêt pour le paramètre ORACLE_SHUTDOWNABORT est la suivante :</block>
+  <block id="5d1c258a7bd4c15972e657524837311b" category="list-text">Arrêt interrompu</block>
+  <block id="672525866c66061a202ac9dd9e123406" category="list-text">Restriction des startups</block>
+  <block id="89e2c99b632a7bfeb86bb5d15d993ac7" category="list-text">Arrêt immédiat</block>
+  <block id="ea9053cb7d9a5295733a4c597e3c402f" category="paragraph">Permet d'utiliser l'adresse IP pour le système de stockage. Ceci s'applique à SnapVault, SnapMirror et à la fonctionnalité de protection des données de la console de gestion NetApp . L'utilisation d'adresses IP peut engendrer des problèmes et ne devrait être utilisée que sous certaines conditions.</block>
+  <block id="fc663145389e04ad399fafe44ed4e642" category="paragraph">Paramètre optionnel pour le format des copies Snapshot secondaires lors de l'utilisation de la fonction de protection des données de la console de gestion NetApp . Cette option nécessite OnCommand 5.0 ou une version ultérieure. Variable obligatoire :</block>
+  <block id="b3d419be703283d1c8ff46f1a9162193" category="list-text">Horodatage : %T</block>
+  <block id="2f865c4db2240014a15a1afb9250d27e" category="paragraph">Variables facultatives :</block>
+  <block id="ba7a8922105719869fea7de673955831" category="list-text">Type de rétention : %R</block>
+  <block id="811cf16f1a1fba73bff1d3e73cc09894" category="list-text">Étiquette du jeu de données : %L</block>
+  <block id="c5995da4091638026ed9470567f8c933" category="list-text">Contrôleur de stockage : %H</block>
+  <block id="cbe2e8252606346bc2a477117e7c22db" category="list-text">Nom du volume : %N</block>
+  <block id="b49c482aa020f7e97d705602777a831b" category="list-text">Données spécifiques à l'application : %A</block>
+  <block id="936fd30e8735631071cb62e403722ec4" category="paragraph">Si cette option n'est pas définie, la convention d'appellation par défaut pour la fonctionnalité de protection des données de la console de gestion NetApp est utilisée. La convention d'appellation ne peut être définie qu'au moment de la création du jeu de données.</block>
+  <block id="388306add449258c47380d6b7db98378" category="paragraph">Active ou désactive la création d'événements dans la console Operations Manager.</block>
+  <block id="957338adada6845bcc51f661d173fbb3" category="paragraph">Exécutez ces scripts ou commandes pendant ou avant le processus de sauvegarde OSSV, où ## est un nombre de 01 à 99. Cela peut être utilisé pour effectuer des copies de sauvegarde du système de fichiers (snapshot) à l'aide d'OSSV.</block>
+  <block id="17c3a9f520927a583d184a69999e24cf" category="paragraph">Active ou désactive l'utilisation de la version 32 bits de PowerShell.</block>
 </blocks>

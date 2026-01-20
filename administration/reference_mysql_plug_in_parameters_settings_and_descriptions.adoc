@@ -62,10 +62,7 @@ Liste des bases de données et des ports qu'elles écoutent, par exemple `db1:33
  a| 
 MAÎTRE_ESCLAVE
  a| 
-(Y
-| N) 
-
-
+(O/N)
  a| 
 Spécifie l'environnement de la base de données de sauvegarde:si la valeur y est définie, sauvegarde la base de données maître.
 
@@ -73,10 +70,19 @@ Si la valeur est définie sur N, la sauvegarde de la base de données esclave ou
 
 
 NOTE: La sauvegarde Snap Creator Framework supprime les fichiers journaux binaires MySQL requis sur le serveur MySQL lorsque l'option Master_Slave est activée. La sauvegarde de la base de données MySQL (master) à l'aide de Snap Creator Framework supprime tous les fichiers journaux binaires et ne laisse qu'un seul fichier journal binaire vide avec la numérotation de réinitialisation (.000001). En raison de ce problème, le serveur esclave ne démarre pas après l'opération de sauvegarde.
+
+
+
  a| 
 PURGE_BINARY_LOG
  a| 
-(Y
+(O|N)
+ a| 
+Ce paramètre fonctionne pour la configuration de base de données maître-esclave MySQL.
+
+Si la valeur est définie sur OUI, les journaux binaires seront purgés vers le fichier journal binaire le plus récent disponible.
+
+Si la valeur est N, la requête de purge utilise l'horodatage récent.
 
 |===
 *Informations connexes*

@@ -52,6 +52,8 @@ Le port à utiliser pour les communications avec la console Operations Manager ;
  a| 
 OM_EVENT_GENERATE
  a| 
-(Y
-| N) 
+(O/N)
+ a| 
+Active ou désactive la création d'événements dans la console Operations Manager.
+
 |===

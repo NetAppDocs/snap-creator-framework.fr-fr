@@ -60,8 +60,10 @@ Spécifie le nom de SnapManager pour Microsoft SQL Server.
  a| 
 SMSQL_32 bits
  a| 
-(Y
-| N) 
+(O/N)
+ a| 
+Active ou désactive l'utilisation de la version 32 bits de PowerShell.
+
 |===
 *Informations connexes*
 

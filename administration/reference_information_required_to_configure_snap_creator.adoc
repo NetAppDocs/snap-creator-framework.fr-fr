@@ -43,29 +43,26 @@ Détermine l'application en cours de sauvegarde. Snap Creator prend en charge le
  a| 
 APP_IGNORE_ERROR
  a| 
-(Y
-| N) 
-
-
+(O/N)
  a| 
 Détermine si Snap Creator doit ignorer les erreurs des plug-ins d'application. Cette fonction est utile lorsque vous souhaitez sauvegarder plusieurs bases de données et ne souhaitez pas arrêter la sauvegarde en cas d'échec des opérations de mise au repos ou de mise au repos d'une base de données.
+
+
+
  a| 
 SAUVEGARDE_DÉFINIE_APP
  a| 
-(Y
-
-
-
-| N)  a| 
+(O/N)
+ a| 
 Le plug-in d'application doit effectuer l'opération de sauvegarde complète, notamment la suspension, la création d'une copie Snapshot et la suspension. Les plug-ins intégrés ne prennent pas en charge ce type de sauvegarde.
+
+
+
  a| 
 RESTAURATION_DÉFINIE_APP
-
-
-
  a| 
-(Y
-| N)  a| 
+(O/N)
+ a| 
 Permet d'effectuer des restaurations basées sur les applications. En cas d'opération de restauration, Snap Creator envoie une requête au plug-in de l'application et le plug-in gère la demande.
 
 
@@ -73,29 +70,26 @@ Permet d'effectuer des restaurations basées sur les applications. En cas d'opé
  a| 
 APP_DEFINED_MOUNT
  a| 
-(Y
-| N) 
-
-
+(O/N)
  a| 
 Les capacités de montage intégrées de Snap Creator sont ignorées. Le plug-in est responsable de toutes les activités de montage, y compris la création du clone de volume ou de LUN. Les plug-ins intégrés ne prennent pas en charge ce type de montage.
+
+
+
  a| 
 APP_DEFINED_UMOUNT
  a| 
-(Y
-
-
-
-| N)  a| 
+(O/N)
+ a| 
 Les capacités de démontage intégrées de Snap Creator sont ignorées. Le plug-in est cependant responsable de la gestion de toutes les activités de démontage, y compris la suppression des clones de volumes ou de LUN. Les plug-ins intégrés ne prennent pas en charge ce type d'opération de démontage.
+
+
+
  a| 
 APP_AUTO_DISCOVERY
-
-
-
  a| 
-(Y
-| N)  a| 
+(O/N)
+ a| 
 Active la découverte automatique des applications. Snap Creator envoie une demande de détection au plug-in d'application, et le plug-in est alors responsable de la découverte de la configuration du stockage. Cela peut être fait dynamiquement ou persistant à l'aide du paramètre APP_CONF_PERSISTANCE, si les informations doivent être enregistrées dans le fichier de configuration.
 
 
@@ -103,102 +97,110 @@ Active la découverte automatique des applications. Snap Creator envoie une dema
  a| 
 APP_CONF_PERSISTANCE
  a| 
-(Y
-| N) 
-
-
+(O/N)
  a| 
 La détection automatique est persistante, ce qui signifie que les modifications sont mises à jour dynamiquement dans le fichier de configuration.
+
+
+
  a| 
 CLONE_DÉFINI_APP
  a| 
-(Y
-
-
-
-| N)  a| 
+(O/N)
+ a| 
 Les capacités de clonage intégrées de Snap Creator sont ignorées. Il est en revanche responsable de la gestion de toutes les activités de clonage, y compris la création et la suppression des clones de volumes ou de LUN. Les plug-ins intégrés ne prennent pas en charge ce type de clone.
+
+
+
  a| 
 NOM_FS
-
-
-
  a| 
 intégration
  a| 
 Détermine quel plug-in est utilisé pour les opérations du système de fichiers.
+
+
+
  a| 
 JAVA_HOME
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre pointe sur la machine virtuelle Java (JVM) qui doit être utilisée pour exécuter des fichiers .class et .jar.
+
+
+
  a| 
 JVM_ARGS
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre contrôle les paramètres JVM lorsque des fichiers Java .class ou .jar natifs sont exécutés. Le paramètre par défaut est -Xms32M -Xmx128M.
+
+
+
  a| 
 JAVA_CLASSPATH
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre définit le chemin de classe Java. Par défaut, les plug-ins/natifs sont configurés et peuvent être complétés à l'aide de cette variable d'environnement, qui est ajoutée à la valeur par défaut.
+
+
+
  a| 
 MÉTAVOLUME_DONNÉES
-
-
-
  a| 
  a| 
 Permet de créer une copie Snapshot du volume spécifié après l'opération de mise au repos. Ce point peut être utile pour certains plug-ins pour lesquels la copie Snapshot des données doit être créée à des moments différents. Le paramètre ne doit pas uniquement spécifier le volume mais le contrôleur (par exemple, `controller1:volume1,volume2;controller2:volume3,volume4;controller3:volume5,volume6`).
+
+
+
  a| 
 PERL_HOME
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre pointe vers l'interpréteur Perl qui doit être utilisé pour exécuter des fichiers .pl.
+
+
+
  a| 
 PERL_OPTS
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre contrôle les paramètres de l'interpréteur PERL lorsque des fichiers Perl natifs sont exécutés. Les options pour d'autres paramètres incluent les répertoires (-i) qui peuvent être transmis à l'interpréteur Perl.
+
+
+
  a| 
 PYTHON_HOME
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre pointe vers l'interpréteur Python qui doit être utilisé pour exécuter des fichiers .py.
+
+
+
  a| 
 PYTHON_OPTS
-
-
-
  a| 
 Texte
  a| 
 Ce paramètre contrôle les paramètres de l'interpréteur Python lors de l'exécution de fichiers Python natifs.
+
+
+
  a| 
 VALIDER_VOLUMES
+ a| 
+données
+ a| 
+Vérifie que tous les volumes sur lesquels réside la base de données font partie de l'opération de sauvegarde. Actuellement, il existe des limitations :
+
+* Seul le système de fichiers réseau (NFS) est pris en charge.
+* Seuls les fichiers de données des bases de données prises en charge sont vérifiés.
+
 
 |===
