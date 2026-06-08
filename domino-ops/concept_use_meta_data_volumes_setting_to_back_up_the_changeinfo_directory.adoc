@@ -13,7 +13,7 @@ summary: 'Si vous avez l"intention de sauvegarder le répertoire changeinfo, vou
 [role="lead"]
 Si vous avez l'intention de sauvegarder le répertoire changeinfo, vous devez configurer le volume contenant le répertoire en tant que volume de métadonnées. Cela indique au plug-in IBM Domino de créer une copie Snapshot du volume changeinfo _après_ création de la copie Snapshot pour les fichiers de base de données.
 
-Vous devriez déjà avoir identifié le volume changeinfo comme volume à sauvegarder lorsque vous avez créé le fichier de configuration. Pour plus d'informations, reportez-vous à l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_2036E43A6921415985798979F2226786["tâche à l'aide de l'interface graphique pour créer une configuration"].
+Vous auriez déjà dû identifier le volume changeinfo comme un volume à sauvegarder lors de la création du fichier de configuration. Pour plus d'informations, consultez l'étape link:task_using_the_gui_to_create_a_configuration_file.html["tâche à l'aide de l'interface graphique pour créer une configuration"].
 
 Vous utilisez le paramètre META_DATA_VOLUME dans le fichier de configuration pour identifier le volume changeinfo comme volume de métadonnées. Le paramètre n'est pas disponible dans l'interface utilisateur graphique.
 

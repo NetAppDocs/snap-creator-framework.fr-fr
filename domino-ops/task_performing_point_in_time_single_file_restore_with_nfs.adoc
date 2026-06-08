@@ -55,7 +55,7 @@ La sélection de *Restore* lance automatiquement l'assistant Snap Creator Framew
 
 +
 
-NOTE: Si vous restaurez à partir d'une copie SnapVault, vous êtes invité à effectuer une restauration à partir d'un stockage primaire ou secondaire. Votre sélection dépend de la manière dont vous gérez la limitation décrite dans link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["Concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"].
+NOTE: Si vous effectuez une restauration à partir d'une copie SnapVault, vous serez invité à choisir entre la restauration à partir du stockage principal ou secondaire. Votre choix dépend de la manière dont vous gérez la limitation décrite dans link:concept_domino_database_restore_overview.html["Concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"].
 
 . Sur la page Détails de la restauration, spécifiez les détails de la restauration :
 +

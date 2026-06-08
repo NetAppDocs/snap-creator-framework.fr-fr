@@ -139,7 +139,6 @@
   <block id="74d2faddaa547931ca9717f658540ca1" category="list-text">Mettez à niveau Snap Creator en entrant la commande suivante : java -jar snapcreator.jar -upgrade</block>
   <block id="67e6a8afa377814d428d285906805661" category="paragraph">Une fois le processus de mise à niveau terminé, démarrez le service Snap Creator Server à l'aide de l'une des méthodes suivantes :</block>
   <block id="2fbafc4b4a85cfb4134cc539b4ba70e1" category="list-text">Depuis une invite de commande, entrez la commande suivante :<block ref="7e0a7e1890445e68cfe6d85805820cb0" prefix=" " category="inline-code"></block></block>
-  <block id="442e9767828a85b26ac377a4071f0799" category="paragraph">Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>.</block>
   <block id="82e84f69df06c74df48a9fb785545b73" category="paragraph">Vous devez vous connecter via HTTPS ; sinon, la connexion n'est pas redirigée automatiquement vers une connexion HTTPS et l'interface utilisateur ne fonctionnera pas.</block>
   <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">*Informations connexes*</block>
   <block id="c9143915a0a3e586dd4f0c977fe4093e" category="paragraph"><block ref="c9143915a0a3e586dd4f0c977fe4093e" category="inline-xref-macro-rx"></block></block>
@@ -435,7 +434,6 @@
   <block id="250387257b482e82243fcc2912148272" category="list-text">Entrez le port du serveur, l'adresse IP du système et le chemin du bac JAVA, puis continuez avec les invites.</block>
   <block id="05d1639bb77ce574920dce6d4b2862fc" category="admonition">Bien que la valeur maximale acceptée pour la *taille du moniteur de tâches* soit de 10,000, la taille maximale recommandée est de 1000.</block>
   <block id="bbf93e416f960162a1c199472da774e1" category="list-text">Démarrez Snap Creator Framework Server :</block>
-  <block id="5d160ed8ae07687a00086523c3503a4e" category="list-text">Valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié (par exemple,<block ref="4c1ad3a67f3cf2eeb8131c381a9574c4" category="inline-link-rx"></block>.</block>
   <block id="bbb6a1e01690e523a1f4ab3c70489eae" category="paragraph">Vous devez vous connecter via HTTPS ; sinon, l'interface graphique ne fonctionne pas.</block>
   <block id="da12800860861c59633dbfc17ffe6d2a" category="paragraph">Si la communication passe par un pare-feu, ouvrez le port réseau.</block>
   <block id="95686cc5f9e33dd2af1fe6459eee615c" category="paragraph"><block ref="95686cc5f9e33dd2af1fe6459eee615c" category="inline-xref-macro-rx"></block></block>
@@ -497,7 +495,6 @@
   <block id="bd2bccd6198bdccd22e66e9485fa2289" category="paragraph">/Chemin_installation/serveur_SCServer4.1.x/bin/serveur_scServer démarrer</block>
   <block id="ef425eaddb04838ede8034d5ce0eb177" category="paragraph">Supprimez également le répertoire d'installation de Snap Creator 3.6.x.</block>
   <block id="5150edb9c1bf87eeedd8a4f61d2a2256" category="admonition">Ne supprimez pas vos copies de sauvegarde tant que vous n'êtes pas certain d'avoir à revenir à une version antérieure.</block>
-  <block id="60423eb91f721e0a33aed7e4eac50e20" category="paragraph">Vous devez également valider le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>.</block>
   <block id="4158b3408fd5cbc02c13a182201195cd" category="paragraph"><block ref="4158b3408fd5cbc02c13a182201195cd" category="inline-xref-macro-rx"></block></block>
   <block id="24364de3c05b647b7985958878079df8" category="summary">Vous devez effectuer cette procédure pour ajouter des liens symboliques pour le plug-in Domino sur les hôtes AIX.</block>
   <block id="45e955927ab7d938bb34002d5d113616" category="doc">Création de liens symboliques pour le plug-in Domino sur les hôtes AIX</block>
@@ -591,7 +588,6 @@
   <block id="c54ee80e8593e201f44b1a6e9c01d904" category="list-text">Une fois l'installation terminée, cliquez sur *Suivant*.</block>
   <block id="01903e3b334cdd16d2701b61eda9e874" category="paragraph">Lors de l'installation du service Snap Creator Server, une invite de commande s'affiche si un service a été sélectionné dans le cadre des options d'installation. Ce processus tente de démarrer les services existants ; il est donc courant de voir les messages d'échec répertoriés dans cette étape.</block>
   <block id="5b3c9afe30619ae787968e6b584f143f" category="list-text">Cliquez sur *Terminer* pour fermer le programme d'installation de Windows.</block>
-  <block id="50e4c75af866aed1b9452d9e9751d5e1" category="list-text">Validez le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>.</block>
   <block id="1e123287cf021a38205b497b35a4de67" category="paragraph"><block ref="1e123287cf021a38205b497b35a4de67" category="inline-xref-macro-rx"></block></block>
   <block id="5a986384fd249f1dd4b4ccc0e4ad59c2" category="summary">Les actions Snap Creator sont lancées par Snap Creator Server.</block>
   <block id="bac1ce86458b8b7af7e05fcb2564dade" category="doc">Snap Creator Server</block>
@@ -3579,7 +3575,6 @@
   <block id="9513b610088816a7e37ccb371a526262" category="admonition">Vous devez autoriser un temps d'attente qui est deux fois la valeur du paramètre fs.xfs.xfssyncd_centisec. Par exemple, avec la valeur par défaut 30 secondes, la commande Sleep doit être configurée avec 60 secondes.</block>
   <block id="d0485c7814c605733673c3eb73b6d38b" category="summary">Vous devez configurer Snap Creator Framework et la sauvegarde de la base de données SAP HANA.</block>
   <block id="e62168db839f7eced532152bd538a398" category="doc">Configuration de la sauvegarde des bases de données Snap Creator Framework et SAP HANA</block>
-  <block id="02910bd24028b122233e4482d05964fd" category="list-text">Connectez-vous à l'interface utilisateur graphique Snap Creator :<block ref="9dc9badd5cd8ab37fd392481173e134c" category="inline-link-rx"></block>.</block>
   <block id="9c570b1c700912cd7b2e96ed902081dc" category="list-text">Connectez-vous à l'aide du nom d'utilisateur et du mot de passe qui ont été configurés lors de l'installation. Cliquez sur *connexion*.</block>
   <block id="ebe42e5e31c12cacd2dd99c2a7331bab" category="image-alt">Affiche la connexion à l'interface utilisateur graphique Snap Creator</block>
   <block id="00ae7e41c9df04aef30fcd6c4ea3c8e5" category="list-text">Entrez un nom de profil et cliquez sur *OK*.</block>
@@ -3956,7 +3951,6 @@
   <block id="60b704346dc8e1674230c7eca7c45a51" category="doc">Sauvegarde du répertoire changeinfo</block>
   <block id="528f591c9fce803647c99e04c216ba50" category="paragraph">Si vous avez l'intention de sauvegarder le répertoire changeinfo, vous devez configurer le volume contenant le répertoire en tant que volume de métadonnées. Cela indique au plug-in IBM Domino de créer une copie Snapshot du volume changeinfo _après_ création de la copie Snapshot pour les fichiers de base de données.</block>
   <block id="805179e4a7f11d19d7cd612c2379d246" category="inline-link-macro">tâche à l'aide de l'interface graphique pour créer une configuration</block>
-  <block id="c4a9b25f3868fd8e8d03e3aed8aa5ddc" category="paragraph">Vous devriez déjà avoir identifié le volume changeinfo comme volume à sauvegarder lorsque vous avez créé le fichier de configuration. Pour plus d'informations, reportez-vous à l'étape <block ref="47c62e0ad4db2535299629d225b69b91" category="inline-link-macro-rx"></block>.</block>
   <block id="c867ca66c93d3fa2afedd9a86d4962a4" category="paragraph">Vous utilisez le paramètre META_DATA_VOLUME dans le fichier de configuration pour identifier le volume changeinfo comme volume de métadonnées. Le paramètre n'est pas disponible dans l'interface utilisateur graphique.</block>
   <block id="d5ed1725653091705c56d535ed18e9a3" category="list-text">Ouvrez le fichier de configuration dans un éditeur de texte.</block>
   <block id="4d06ba727c36904a50e5cc898cc0946f" category="paragraph">Les fichiers de configuration résident dans le répertoire d'installation de Snap Creator, dans un sous-répertoire nommé pour le profil. Sur un hôte Windows, par exemple, C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\ENGINE\configs\Domino\Fuji15.conf, où Domino est le nom du profil et Fuji15.conf est le nom du fichier de configuration.</block>
@@ -3985,8 +3979,6 @@
   <block id="2e906a1fc4d6a16c8e26307bd6cbb910" category="paragraph">Vous ne pouvez pas utiliser Snap Creator pour restaurer une copie SnapMirror des données. Si vous souhaitez restaurer une copie miroir, vous devez d'abord interrompre le miroir, puis restaurer manuellement les données. Pour plus d'informations, reportez-vous à la section <block ref="77ae7c406b27cd3b7525056c4177e7bc" category="inline-link-macro-rx"></block>.</block>
   <block id="9ee26bc2d4a82589202bf23e8d486bfa" category="paragraph">Seules les restaurations de volume ponctuelles sont disponibles lorsque vous restaurez une copie SnapVault à partir d'un stockage secondaire. Vous ne pouvez pas effectuer une restauration de volume en moins d'une minute ou une restauration de fichier unique. Cette limitation peut être contourner en restaurant d'abord le stockage secondaire vers le stockage primaire. À partir du stockage primaire, vous pouvez ensuite effectuer une restauration de volume en moins d'une minute ou une restauration de fichier unique, si nécessaire.</block>
   <block id="46e54b4752f39069f3449eca307220cf" category="section-title">Présentation des répertoires de destination</block>
-  <block id="ef0b3823b79ebf9bb3590e86169e315f" category="inline-link-macro">Task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B</block>
-  <block id="3fc45d4ffd0c24ca01102983a71df3fd" category="paragraph">Les restaurations de volumes et les restaurations de fichiers uniques utilisent en général des répertoires de destination différents. Vous spécifiez le répertoire de destination dans le paramètre Data Restore Directory du fichier de configuration de sauvegarde et de restauration (voir l'étape <block ref="67143f3be6464ba99ce577b07c16b02e" category="inline-link-macro-rx"></block>) :</block>
   <block id="f8b4c0dcfaae97b701b513a39f4bf73f" category="list-text">Pour une restauration de volume, vous devez définir Data Restore Directory sur le répertoire de données Domino.</block>
   <block id="99f35710a15900a2a9fa6811f679f67f" category="list-text">Pour une restauration de fichier unique, vous devez définir Data Restore Directory sur un sous-répertoire du volume de données Domino.</block>
   <block id="9565a7ad06ece04d3f20f5adecdadda9" category="paragraph">Cela signifie que si vous utilisez d'autres types de restauration, vous devez modifier le répertoire de restauration des données pour qu'il pointe vers le paramètre correct pour chaque type de restauration. Sinon, les informations de modification ne seront pas appliquées correctement et les données seront incohérentes avec l'état de la base de données à restaurer. Bien sûr, vous pouvez créer différentes configurations pour les restaurations de volumes et de fichiers individuels si vous préférez.</block>
@@ -4113,7 +4105,6 @@
   <block id="50aaf22c31cd5a034a44905a602cf38e" category="list-text">Dans le volet profils et configurations, sélectionnez le fichier de configuration, puis cliquez sur *actions* &gt; *Restaurer*.</block>
   <block id="3e5e0d72f574d33f42a3a54dc2f68a21" category="paragraph">La sélection de *Restore* lance automatiquement l'assistant Snap Creator Framework Restore. Dans l'assistant de restauration, cliquez sur *Suivant* pour passer à la page suivante et cliquez sur *Retour* pour revenir à la page précédente.</block>
   <block id="0026be306327635206bae50042c4079d" category="inline-link-macro">Concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9</block>
-  <block id="790db2e499d327d9a188c2688b4b0ad7" category="admonition">Si vous restaurez à partir d'une copie SnapVault, vous êtes invité à effectuer une restauration à partir d'un stockage primaire ou secondaire. Votre sélection dépend de la manière dont vous gérez la limitation décrite dans <block ref="0ffc1830d80e572080cbd8ec075981fd" category="inline-link-macro-rx"></block>.</block>
   <block id="d12fe3333ddf65e2514bd1ce60f2e5ef" category="list-text">Sur la page Détails de la restauration, spécifiez les détails de la restauration :</block>
   <block id="d3fb9ca7c42a294269c72ef6bd26adb7" category="paragraph">Nom du contrôleur/Vserver</block>
   <block id="28756ee618b489d09d61436ea38eac5f" category="paragraph">Sélectionnez la SVM sur le système de stockage à partir de lequel vous souhaitez restaurer.</block>
@@ -4159,8 +4150,6 @@
   <block id="1653f8d09197faddd964f0eb6e719c65" category="list-text">Répertorier les bases de données, modèles et boîtes aux lettres dans les volumes à sauvegarder.</block>
   <block id="fa1251539c7cc5324177b6f6745a3d99" category="list-text">Mettez les fichiers en mode sauvegarde, une base de données à la fois.</block>
   <block id="a6b13afc8745a813586f4caf09ae7961" category="list-text">Recherchez des bases de données incohérentes ou corrompues.</block>
-  <block id="064a52274f32140c04205f882712fd78" category="inline-link-macro">Task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A245B7845367CB967F99</block>
-  <block id="0913569dece5fad64895431cefcba650" category="admonition">Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l'étape <block ref="acadadf5aacd131fbb7a4816c7029d73" category="inline-link-macro-rx"></block>.</block>
   <block id="e46a0dd5d1c9ef41b0d2f406e51dca97" category="list-text">Créer une copie Snapshot de chaque volume.</block>
   <block id="e17d26fc621a96f9d352fae8af3cb983" category="list-text">Si l'enregistrement des transactions Domino est en cours d'utilisation, archivez des copies des journaux de transactions Domino afin de les utiliser dans les opérations de restauration à chaud.</block>
   <block id="e5f46f136d89dd33c0ff8c6dfcb09236" category="list-text">Extraire les fichiers du mode de sauvegarde, une base de données à la fois.</block>
@@ -4194,7 +4183,6 @@
   <block id="9ad524478b1e43346db798b7df29ca7d" category="list-text">Le niveau de bit de Domino est différent du niveau de bit de Snap Creator. Par exemple, si vous utilisez Domino 32 bits, utilisez Snap Creator 32 bits.</block>
   <block id="fab2d7050c1fb6ae0a19b0c4085dc9b9" category="section-title">La sauvegarde Snap Creator échoue en raison d'une base de données incorrecte</block>
   <block id="3039512c0a947e1baa63b77622d683fc" category="inline-link-macro">tâche à l'aide de l'interface graphique pour créer un fichier de configuration</block>
-  <block id="169bde998ccd22889a188ad2688e9636" category="paragraph">Par défaut, une opération de sauvegarde échoue si une ou plusieurs bases de données sont dans un état incohérent ou corrompu. Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l'étape <block ref="68713facb150aaf8a16ec3bc033545b5" category="inline-link-macro-rx"></block>.</block>
   <block id="ac083052e450f94307ce17bfb9e4c0f0" category="section-title">Échec de la restauration de Domino à l'aide de l'action personnalisée</block>
   <block id="b35b37e5dfd02fb2c4f68017ce62f3cf" category="paragraph">Les erreurs de restauration se produisent généralement lorsque les chemins de restauration ne sont pas correctement définis. Vérifiez si des caractères supplémentaires et des barres obliques inverses sont disponibles sur les chemins. Vérifiez également que le répertoire de restauration des données est correctement défini.</block>
   <block id="d5d3b5388b67bf2822cc7c1e49259268" category="paragraph">Les erreurs sont similaires à ce qui suit :</block>
@@ -4202,8 +4190,6 @@
   <block id="d947dd54ac49e308f166a0faa174fce7" category="paragraph">Le tableau suivant répertorie les messages d'erreur spécifiques au plug-in IBM Domino au format de référence :</block>
   <block id="db72f16b2e63a3aac561590ad879345b" category="paragraph">ltd-00001</block>
   <block id="0d0770cb57fe9fb140dff3bd4b362c28" category="paragraph">Le plug-in Domino ne peut pas fonctionner avec SNAP_TIMESTAMP_ONLY = N. SNAP_TIMESTAMP_ONLY doit être défini sur Y.</block>
-  <block id="8147fc928886ba91d35a3899022159e5" category="inline-link-macro">Task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3</block>
-  <block id="26f81fcc7c8f5bf64ccf1abad19d3885" category="paragraph">Pour plus d'informations, reportez-vous à l'étape <block ref="1dfb6713ea8755b74139965c9df333ce" category="inline-link-macro-rx"></block>.</block>
   <block id="8a273526af815a83f5749723414ec744" category="paragraph">ltd-00002</block>
   <block id="b4cd68010b738e02134627a7be58a2c2" category="paragraph">Mise au repos des bases de données terminée avec des erreurs</block>
   <block id="edd5c8c3a27f07220e438eacc5042616" category="paragraph">Le plug-in Domino n'a pas pu mettre toutes les bases de données en mode de sauvegarde. Consultez les journaux pour trouver la raison exacte de l'erreur ou exécutez Snap Creator en mode débogage pour trouver l'erreur.</block>
@@ -4361,9 +4347,6 @@
   <block id="c65b651594cbe290578ca53308ef1569" category="list-text">%SNAME-%SNAP_TYPE_%SNAP_TIME indique que le nom de la copie Snapshot doit être formé à partir du nom du fichier de configuration, de la stratégie Snapshot (horaire, quotidien ou mensuel), ainsi que de l'heure et de la date de création de la copie Snapshot.</block>
   <block id="0ae2161f56fadd7adc1b267bd110fa66" category="list-text">D est le commutateur et F G H sont les points de montage des données à sauvegarder. CONSEIL : pour exécuter la commande sur le serveur, placez la commande en préfixe avec LE SERVEUR de texte, suivi de deux points (:).</block>
   <block id="16bd5c3a470a850289f84a3609e8cbdc" category="list-text">Lorsque vous êtes satisfait de votre entrée, appuyez sur *entrée*.</block>
-  <block id="8d59aaca41546d470ad46ddacfd14ff2" category="inline-xref">#STEP_3F9C83DD05D84075AD0277213FD67C56</block>
-  <block id="a912e7fa35c4b085dbefa935ce952134" category="inline-xref">#STEP_FBEDD7AE105F42138EB35315EA9FA7CC</block>
-  <block id="9bef9a9588579445462a340a5ab8f1c9" category="list-text">Répéter les étapes <block ref="54cf7e79e142d6e0d2e79d5ce4457f91" category="inline-xref-macro-rx"></block> à <block ref="24344f94f5c5aa5c497bbae13d30cbab" category="inline-xref-macro-rx"></block> pour ajouter une autre commande.</block>
   <block id="2f28eb64f17e6bf1d213d072c9273b3a" category="summary">Nous vous conseillons de sauvegarder vos bases de données dès qu'elles sont disponibles dans le système de stockage NetApp. Vous pouvez planifier des sauvegardes récurrentes après la sauvegarde initiale.</block>
   <block id="1a425e1f4282b809b07987410795027a" category="list-text">Dans le volet profils et configurations, sélectionnez le fichier de configuration et cliquez sur *actions* &gt; *sauvegarde*.</block>
   <block id="2d45128154906133aea3513ead54d002" category="list-text">Dans la boîte de dialogue Paramètres supplémentaires, sélectionnez la stratégie pour la tâche de sauvegarde dans la liste déroulante *Stratégie* et cliquez sur *OK*.</block>
@@ -4473,7 +4456,6 @@
   <block id="d477fc52ef5c76f36eeacd624d112260" category="paragraph">Les volumes spécifiés sont affichés sur la page Controller/Vserver Credentials.</block>
   <block id="6444a7987b5250fb710f5e1df916a0fd" category="admonition">Si vous avez l'intention de sauvegarder le répertoire changeinfo, vous devez configurer le volume contenant le répertoire en tant que volume de métadonnées, comme indiqué dans la section <block ref="a52a18b3ffb480e5ada8a0b65641afaa" category="inline-xref-macro-rx"></block>. Cette option indique au plug-in IBM Domino de créer une copie Snapshot du volume changeinfo _après_ création de la copie Snapshot pour les fichiers de base de données.</block>
   <block id="243877d5557b57d0b9875c6f5696c880" category="list-text">Sur la page Controller/Vserver Credentials, cliquez sur *Add* pour spécifier les détails des SVM et les volumes à sauvegarder pour un autre système de stockage primaire.</block>
-  <block id="0e33d0f095749d70239b8072d114880e" category="list-text">Sur la page de détails des snapshots, spécifiez les informations de configuration des snapshots :</block>
   <block id="d2e55fe2815a901d5273ef24b1df02f0" category="paragraph">Nom de la copie Snapshot</block>
   <block id="a41a68c5e4b3590257035029ec213a71" category="paragraph">Indiquez le nom de la copie Snapshot. *Conseil :* cliquez sur *Autoriser le duplication du nom de copie snapshot* si vous souhaitez réutiliser les noms de copie snapshot dans les fichiers de configuration.</block>
   <block id="046a079d340e681724bcb031c0b84fe4" category="paragraph">Étiquette de copie Snapshot</block>
@@ -4492,7 +4474,6 @@
   <block id="35eea9b89c19c0fc43a4d34027a1f92f" category="list-text">Cliquez sur *SnapVault* pour archiver les copies Snapshot.</block>
   <block id="07d3cfdf2930165b1835cca001593bb3" category="list-text">Spécifiez la règle pour les copies Snapshot archivées.</block>
   <block id="c51ce410c124a10e0db5e4b97fc2af39" category="inline-xref">13</block>
-  <block id="5fd345bfd34f1dbedd6eea8ecba43b53" category="list-text">Les instructions sont présentées à l'étape suivante<block ref="dc8c8989a76c527157eaaaba08f215b4" category="inline-xref-macro-rx"></block>.</block>
   <block id="90391274a8ef2fb943542f2c5bb3f276" category="list-text">Dans *SnapVault Wait Time*, entrez le nombre de minutes pendant lesquelles Snap Creator doit attendre la fin de l'opération SnapVault.</block>
   <block id="d5a4f1ba59f569126d478fbb7b62f69f" category="list-text">Vous devez avoir configuré les relations SnapMirror et SnapVault avant de réaliser la réplication sur le stockage secondaire. Pour plus d'informations, voir <block ref="677c6346df1833887064805e07455305" category="inline-xref-macro-rx"></block>.</block>
   <block id="48f4893c5290e5ab6988032734c66fe6" category="list-text">Sur la page protection des volumes de données, cliquez sur *Add*, puis sélectionnez le SVM pour le système de stockage primaire.</block>
@@ -4624,4 +4605,19 @@
   <block id="388306add449258c47380d6b7db98378" category="paragraph">Active ou désactive la création d'événements dans la console Operations Manager.</block>
   <block id="957338adada6845bcc51f661d173fbb3" category="paragraph">Exécutez ces scripts ou commandes pendant ou avant le processus de sauvegarde OSSV, où ## est un nombre de 01 à 99. Cela peut être utilisé pour effectuer des copies de sauvegarde du système de fichiers (snapshot) à l'aide d'OSSV.</block>
   <block id="17c3a9f520927a583d184a69999e24cf" category="paragraph">Active ou désactive l'utilisation de la version 32 bits de PowerShell.</block>
+  <block id="d686234adc6679bd997bc84acf405f7a" category="inline-link-macro">tâche_utiliser_l'interface_graphique_pour_créer_un_fichier_de_configuration</block>
+  <block id="389dbc83cdd33ec2f9525698c2615867" category="admonition">Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l’étape <block ref="ae4c2ceef95239719683584bbf3a84c3" category="inline-link-macro-rx"></block>.</block>
+  <block id="5f85fca306c01161913eac827fa6977a" category="paragraph">La restauration de volumes et la restauration de fichiers uniques utilisent généralement des répertoires de destination différents. Vous spécifiez le répertoire de destination dans le paramètre « Répertoire de restauration des données » du fichier de configuration de sauvegarde et de restauration (voir l’étape <block ref="92738f9d1e8860cb12901f6ce8c9efe3" category="inline-link-macro-rx"></block>):</block>
+  <block id="b092a130c3c3d9105c19f0dff663a5c1" category="paragraph">Vous auriez déjà dû identifier le volume changeinfo comme un volume à sauvegarder lors de la création du fichier de configuration. Pour plus d'informations, consultez l'étape <block ref="8e943375bddb4a1ec79831ef3c9ae1a9" category="inline-link-macro-rx"></block>.</block>
+  <block id="21d3a5e27bcde8ce5d792042cd07cbcf" category="paragraph">Par défaut, une opération de sauvegarde échouera si une ou plusieurs bases de données sont dans un état incohérent ou corrompu. Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l’étape <block ref="92738f9d1e8860cb12901f6ce8c9efe3" category="inline-link-macro-rx"></block>.</block>
+  <block id="22995ec68e29b5e3a880224d8117937a" category="paragraph">Pour plus d'informations, voir l'étape <block ref="ae4c2ceef95239719683584bbf3a84c3" category="inline-link-macro-rx"></block>.</block>
+  <block id="d61982de022c35ef712a538121143630" category="list-text">Répétez les étapes 3 et 4 pour ajouter une autre commande.</block>
+  <block id="a1173661431508b0244246d26cb1441c" category="admonition">Si vous effectuez une restauration à partir d'une copie SnapVault, vous serez invité à choisir entre la restauration à partir du stockage principal ou secondaire. Votre choix dépend de la manière dont vous gérez la limitation décrite dans <block ref="ec60fee3293ee9dd2dd29a8210e13018" category="inline-link-macro-rx"></block>.</block>
+  <block id="bc8a82dc9ff08c82ef1214b79d2a1443" category="list-text">[[treizième étape]]Sur la page de détails de l'instantané, spécifiez les informations de configuration de l'instantané :</block>
+  <block id="76db4967480a049adfd4fc0c6b74e3f2" category="list-text">Les instructions se trouvent à l'étape suivante<block ref="d9b421d83918fed17b926e47f4dfb9d5" category="inline-xref-macro-rx"></block>.</block>
+  <block id="6977d3a07cd73545be9fa7fb44508127" category="list-text">Validez le démarrage de l'interface graphique Snap Creator Framework en accédant à l'hôte local sur le port spécifié +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block>.</block>
+  <block id="bce09b564bd742f6b47bceaa26bdd913" category="list-text">Validez le démarrage de l'interface graphique du Snap Creator Framework en accédant à l'hôte local sur le port spécifié (par exemple,<block ref="d620275798bb903394d688f46f99577f" category="inline-link-rx"></block>.</block>
+  <block id="e86dfb50925745c4423fcca952f011c3" category="paragraph">Vous devez également valider le démarrage de l'interface graphique du Snap Creator Framework en accédant à l'hôte local sur le port spécifié +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block>.</block>
+  <block id="a0fece1967628d0210d289574bbf0262" category="paragraph">Vous devez également valider le démarrage de l'interface graphique de Snap Creator Framework en accédant à l'hôte local sur le port spécifié +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block>.</block>
+  <block id="1bb7a8af421762475cdc4503924535c1" category="list-text">Connectez-vous à l'interface graphique utilisateur (GUI) de Snap Creator : +https://host:8443/ui/+.</block>
 </blocks>

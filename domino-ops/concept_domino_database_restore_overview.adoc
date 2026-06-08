@@ -25,7 +25,7 @@ Seules les restaurations de volume ponctuelles sont disponibles lorsque vous res
 
 == Présentation des répertoires de destination
 
-Les restaurations de volumes et les restaurations de fichiers uniques utilisent en général des répertoires de destination différents. Vous spécifiez le répertoire de destination dans le paramètre Data Restore Directory du fichier de configuration de sauvegarde et de restauration (voir l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["Task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B"]) :
+La restauration de volumes et la restauration de fichiers uniques utilisent généralement des répertoires de destination différents. Vous spécifiez le répertoire de destination dans le paramètre « Répertoire de restauration des données » du fichier de configuration de sauvegarde et de restauration (voir l’étape link:task_using_the_gui_to_create_a_configuration_file.html["tâche à l'aide de l'interface graphique pour créer un fichier de configuration"]):
 
 * Pour une restauration de volume, vous devez définir Data Restore Directory sur le répertoire de données Domino.
 * Pour une restauration de fichier unique, vous devez définir Data Restore Directory sur un sous-répertoire du volume de données Domino.

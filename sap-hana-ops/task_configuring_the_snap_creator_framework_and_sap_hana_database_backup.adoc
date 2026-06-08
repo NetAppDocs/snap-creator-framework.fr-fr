@@ -13,7 +13,7 @@ summary: Vous devez configurer Snap Creator Framework et la sauvegarde de la bas
 [role="lead"]
 Vous devez configurer Snap Creator Framework et la sauvegarde de la base de données SAP HANA.
 
-. Connectez-vous à l'interface utilisateur graphique Snap Creator : https://host:8443/ui/[].
+. Connectez-vous à l'interface graphique utilisateur (GUI) de Snap Creator : +https://host:8443/ui/+.
 . Connectez-vous à l'aide du nom d'utilisateur et du mot de passe qui ont été configurés lors de l'installation. Cliquez sur *connexion*.
 +
 image::../media/snap_creator_gui.gif[Affiche la connexion à l'interface utilisateur graphique Snap Creator]

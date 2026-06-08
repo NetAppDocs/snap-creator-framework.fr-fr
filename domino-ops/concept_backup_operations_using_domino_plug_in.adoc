@@ -22,7 +22,7 @@ Voici plusieurs étapes générales :
 . Recherchez des bases de données incohérentes ou corrompues.
 +
 
-NOTE: Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["Task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A245B7845367CB967F99"].
+NOTE: Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l’étape link:task_using_the_gui_to_create_a_configuration_file.html["tâche_utiliser_l'interface_graphique_pour_créer_un_fichier_de_configuration"].
 
 . Créer une copie Snapshot de chaque volume.
 . Si l'enregistrement des transactions Domino est en cours d'utilisation, archivez des copies des journaux de transactions Domino afin de les utiliser dans les opérations de restauration à chaud.

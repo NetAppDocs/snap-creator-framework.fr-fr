@@ -57,7 +57,7 @@ Ces messages d'erreur s'affichent si l'une des conditions suivantes n'est pas re
 
 == La sauvegarde Snap Creator échoue en raison d'une base de données incorrecte
 
-Par défaut, une opération de sauvegarde échoue si une ou plusieurs bases de données sont dans un état incohérent ou corrompu. Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["tâche à l'aide de l'interface graphique pour créer un fichier de configuration"].
+Par défaut, une opération de sauvegarde échouera si une ou plusieurs bases de données sont dans un état incohérent ou corrompu. Vous pouvez forcer le plug-in à poursuivre les opérations de sauvegarde malgré les erreurs, comme décrit à l’étape link:task_using_the_gui_to_create_a_configuration_file.html["tâche à l'aide de l'interface graphique pour créer un fichier de configuration"].
 
 
 
@@ -97,7 +97,7 @@ ltd-00001
  a| 
 Le plug-in Domino ne peut pas fonctionner avec SNAP_TIMESTAMP_ONLY = N. SNAP_TIMESTAMP_ONLY doit être défini sur Y.
  a| 
-Pour plus d'informations, reportez-vous à l'étape link:task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3["Task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3"].
+Pour plus d'informations, voir l'étape link:task_using_the_gui_to_create_a_configuration_file.html["tâche_utiliser_l'interface_graphique_pour_créer_un_fichier_de_configuration"].
 
 
 
