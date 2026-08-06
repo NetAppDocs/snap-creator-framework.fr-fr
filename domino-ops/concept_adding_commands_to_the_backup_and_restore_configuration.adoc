@@ -15,6 +15,7 @@ Il peut arriver qu'une opération de sauvegarde ou de restauration soit nécessa
 
 
 
+[[where-to-run-supplemental-commands]]
 == Où exécuter des commandes supplémentaires
 
 Par défaut, des commandes supplémentaires s'exécutent sur Snap Creator Agent. Vous pouvez exécuter une commande supplémentaire sur le serveur en préattendant la commande avec le SERVEUR de texte, suivie de deux points (:). Par exemple, SERVER:C:\myscript.bat.
@@ -23,6 +24,7 @@ Si vous souhaitez exécuter une commande supplémentaire sur l'agent, vous devez
 
 
 
+[[where-to-add-supplemental-commands]]
 == Où ajouter des commandes supplémentaires
 
 Vous pouvez utiliser l'interface graphique Snap Creator ou l'interface de ligne de commande Snap Creator pour ajouter des commandes à votre configuration de sauvegarde et de restauration.

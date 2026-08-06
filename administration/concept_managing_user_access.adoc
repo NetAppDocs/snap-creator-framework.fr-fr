@@ -17,6 +17,7 @@ Le contrôle d'accès basé sur les rôles (RBAC) implique des utilisateurs, des
 
 
 
+[[users]]
 == Utilisateurs
 
 * Les utilisateurs sont identifiés de manière unique par un nom d'utilisateur et un mot de passe.
@@ -27,6 +28,7 @@ Le contrôle d'accès basé sur les rôles (RBAC) implique des utilisateurs, des
 
 
 
+[[roles]]
 == Rôles
 
 Les rôles disposent d'une ou plusieurs autorisations. Les autorisations attribuées déterminent les actions qu'un utilisateur peut effectuer et les éléments de l'interface utilisateur auxquels il peut accéder. Il existe trois rôles intégrés :
@@ -49,6 +51,7 @@ Ces rôles intégrés ne peuvent pas être ajoutés, supprimés ou modifiés.
 
 
 
+[[permissions]]
 == Autorisations
 
 Les autorisations sont un ensemble d'opérations que l'utilisateur est autorisé à effectuer. Les autorisations intégrées suivantes sont les suivantes :
@@ -105,6 +108,7 @@ Autorisation pour les opérations en lecture seule.
 
 
 
+[[operations]]
 == Exploitation
 
 Les opérations sont les valeurs de base que Snap Creator vérifie pour l'autorisation. Voici quelques exemples d'opérations : getTask, fileCloneCreate, createTask, dirCreate, etc.
@@ -114,6 +118,7 @@ NOTE: Les opérations ne peuvent pas être ajoutées, supprimées ou modifiées.
 
 
 
+[[profiles]]
 == Profils
 
 * Les profils sont attribués aux utilisateurs.
@@ -127,6 +132,7 @@ Par exemple, si un utilisateur souhaite un statut de travail, RBAC vérifie si l
 
 
 
+[[managing-user-access-for-storage-controllers]]
 == Gestion de l'accès des utilisateurs aux contrôleurs de stockage
 
 Si vous n'utilisez pas le proxy Active IQ Unified Manager, vous avez besoin d'un nom d'utilisateur et d'un mot de passe pour communiquer avec les contrôleurs de stockage. Les mots de passe peuvent être chiffrés pour des raisons de sécurité.

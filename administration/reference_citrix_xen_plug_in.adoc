@@ -42,6 +42,7 @@ Pour plusieurs machines virtuelles, la durée de la machine virtuelle en pause l
 
 
 
+[[supported-citrix-xenserver-configurations]]
 == Configurations Citrix XenServer prises en charge
 
 Les configurations Citrix XenServer suivantes sont prises en charge :
@@ -62,6 +63,7 @@ Les configurations Citrix XenServer suivantes sont prises en charge :
 
 
 
+[[parameters]]
 == Paramètres
 
 Le tableau suivant répertorie et décrit les paramètres du plug-in Citrix XenServer :

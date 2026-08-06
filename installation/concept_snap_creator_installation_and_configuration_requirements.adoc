@@ -15,6 +15,7 @@ Avant d'installer Snap Creator Framework, vous devez connaître certaines exigen
 
 
 
+[[license-requirements]]
 == Conditions de licence
 
 Bien que Snap Creator ne nécessite pas de licence, les licences suivantes peuvent être requises, en fonction des actions que vous souhaitez effectuer lors de l'utilisation de Snap Creator :
@@ -32,6 +33,7 @@ Consultez la matrice d'interopérabilité, qui est en ligne sur http://mysupport
 
 
 
+[[software-information]]
 == Informations logicielles
 
 En fonction de votre environnement, vous pouvez avoir besoin des logiciels suivants :
@@ -76,6 +78,7 @@ Consultez la matrice d'interopérabilité, qui est en ligne sur http://mysupport
 
 
 
+[[hardware-requirements]]
 == Configuration matérielle requise
 
 La configuration matérielle requise pour Snap Creator est la suivante :

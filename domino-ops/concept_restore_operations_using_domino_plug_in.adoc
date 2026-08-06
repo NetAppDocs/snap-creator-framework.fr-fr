@@ -22,6 +22,7 @@ Voici plusieurs étapes générales :
 
 
 
+[[restore-options]]
 == Options de restauration
 
 Le plug-in offre une large gamme d'options de restauration :

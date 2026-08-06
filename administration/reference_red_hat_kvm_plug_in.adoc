@@ -54,6 +54,7 @@ Pour plusieurs machines virtuelles, la durée de la machine virtuelle en état d
 
 
 
+[[supported-kvm-configurations]]
 == Configurations KVM prises en charge
 
 * SAN : prend en charge les machines virtuelles invitées installées sur un périphérique multivoie brut (LUN avec plusieurs chemins).
